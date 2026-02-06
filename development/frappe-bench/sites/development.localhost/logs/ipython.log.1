@@ -1,0 +1,1610 @@
+2026-01-27 23:26:59,072 INFO ipython if leads:
+    lead_name = leads[0].name
+    task = frappe.new_doc("CRM Task")
+    task.title = "Test activité"
+    task.reference_doctype = "CRM Lead"
+    task.reference_docname = lead_name
+    task.status = "Open"
+    task.priority = "Medium"
+    task.due_date = frappe.utils.add_to_date(frappe.utils.now(), hours=1)
+    task.insert(ignore_permissions=True)
+    print(f"  Créée: {task.name}")
+    
+2026-01-27 23:26:59,084 INFO ipython     # Lister les tâches du lead
+2026-01-27 23:26:59,087 INFO ipython     tasks = frappe.get_all("CRM Task", 
+        filters={"reference_doctype": "CRM Lead", "reference_docname": lead_name},
+        fields=["name", "title", "status", "due_date"])
+2026-01-27 23:26:59,088 INFO ipython     print(f"  Tâches du lead: {tasks}")
+2026-01-27 23:26:59,089 INFO ipython === session end ===
+2026-01-27 23:27:53,680 INFO ipython === bench console session ===
+2026-01-27 23:27:53,681 INFO ipython import frappe
+2026-01-27 23:27:53,682 INFO ipython # Test CRUD Activités
+2026-01-27 23:27:53,683 INFO ipython leads = frappe.get_all("CRM Lead", limit=1)
+2026-01-27 23:27:53,683 INFO ipython if leads:
+    lead_name = leads[0].name
+    print(f"=== Test Activités sur: {lead_name} ===\n")
+    
+2026-01-27 23:27:53,703 INFO ipython     from vooroo_saas.api.prospect import create_activity, get_activities, update_activity, complete_activity, delete_activity
+2026-01-27 23:27:53,704 INFO ipython     # 1. Créer avec preset
+2026-01-27 23:27:53,705 INFO ipython     print("1. CREATE avec preset '1h'...")
+2026-01-27 23:27:53,706 INFO ipython     result = create_activity(lead_name, title=None, preset="1h")
+2026-01-27 23:27:53,707 INFO ipython     print(f"   Créée: {result['activity']['name']} - {result['activity']['title']}")
+2026-01-27 23:27:53,708 INFO ipython     print(f"   Due: {result['activity']['due_date']}")
+2026-01-27 23:27:53,709 INFO ipython     activity_name = result['activity']['name']
+2026-01-27 23:27:53,709 INFO ipython     # 2. Créer manuellement
+2026-01-27 23:27:53,710 INFO ipython     print("\n2. CREATE manuelle...")
+2026-01-27 23:27:53,711 INFO ipython     result2 = create_activity(lead_name, title="Appeler le client", description="Discuter du devis", priority="High")
+2026-01-27 23:27:53,712 INFO ipython     print(f"   Créée: {result2['activity']['name']}")
+2026-01-27 23:27:53,712 INFO ipython     # 3. Lister
+2026-01-27 23:27:53,713 INFO ipython     print("\n3. READ - Lister les activités...")
+2026-01-27 23:27:53,714 INFO ipython     activities = get_activities(lead_name)
+2026-01-27 23:27:53,714 INFO ipython     print(f"   Nombre: {len(activities)}")
+2026-01-27 23:27:53,715 INFO ipython     for a in activities:
+        print(f"   - {a['title']} ({a['status']}) - Due: {a['due_date']}")
+    
+2026-01-27 23:27:53,715 INFO ipython     # 4. Update
+2026-01-27 23:27:53,716 INFO ipython     print("\n4. UPDATE...")
+2026-01-27 23:27:53,717 INFO ipython     result = update_activity(activity_name, title="Rappel modifié", priority="high")
+2026-01-27 23:27:53,718 INFO ipython     print(f"   Titre: {result['activity']['title']}")
+2026-01-27 23:27:53,719 INFO ipython     # 5. Complete
+2026-01-27 23:27:53,719 INFO ipython     print("\n5. COMPLETE...")
+2026-01-27 23:27:53,720 INFO ipython     result = complete_activity(activity_name)
+2026-01-27 23:27:53,721 INFO ipython     print(f"   Status: {result['activity']['status']}")
+2026-01-27 23:27:53,722 INFO ipython     # 6. Delete
+2026-01-27 23:27:53,741 INFO ipython     print("\n6. DELETE...")
+2026-01-27 23:27:53,743 INFO ipython     result = delete_activity(activity_name)
+2026-01-27 23:27:53,744 INFO ipython     print(f"   {result['message']}")
+2026-01-27 23:27:53,746 INFO ipython     # Cleanup
+2026-01-27 23:27:53,747 INFO ipython     for a in get_activities(lead_name):
+        delete_activity(a['name'])
+    
+2026-01-27 23:27:53,747 INFO ipython     print("\n✅ CRUD Activités: TOUS LES TESTS PASSÉS!")
+2026-01-27 23:27:53,748 INFO ipython === session end ===
+2026-01-28 00:09:06,697 INFO ipython === bench console session ===
+2026-01-28 00:09:06,699 INFO ipython import frappe
+2026-01-28 00:09:06,700 INFO ipython # Get a prospect with some data
+2026-01-28 00:09:06,700 INFO ipython lead = frappe.get_all(
+    "CRM Lead",
+    filters={"status": ["!=", "Converted"]},
+    fields=["name", "lead_name", "custom_lead_label", "custom_estimated_value", "creation", "modified", "custom_internal_notes"],
+    order_by="modified desc",
+    limit=1
+)
+2026-01-28 00:09:06,701 INFO ipython if lead:
+    print(f"Test prospect: {lead[0]['name']}")
+    print(f"Name: {lead[0]['lead_name']}")
+    print(f"Label: {lead[0]['custom_lead_label']}")
+    print(f"Value: {lead[0]['custom_estimated_value']}")
+    print(f"Created: {lead[0]['creation']}")
+    print(f"Notes: {lead[0]['custom_internal_notes'][:100] if lead[0]['custom_internal_notes'] else 'None'}")
+    
+2026-01-28 00:09:06,702 INFO ipython     # Check activities
+2026-01-28 00:09:06,702 INFO ipython     activities = frappe.get_all(
+        "CRM Task",
+        filters={
+            "reference_doctype": "CRM Lead",
+            "reference_docname": lead[0]["name"]
+        },
+        fields=["name", "title", "status", "due_date"]
+    )
+2026-01-28 00:09:06,703 INFO ipython     print(f"Activities: {len(activities)}")
+2026-01-28 00:09:06,704 INFO ipython     for a in activities[:3]:
+        print(f"  - {a['title']} ({a['status']})")
+else:
+    print("No prospects found")
+2026-01-28 00:09:06,704 INFO ipython === session end ===
+2026-01-28 00:09:16,509 INFO ipython === bench console session ===
+2026-01-28 00:09:16,510 INFO ipython import frappe
+2026-01-28 00:09:16,510 INFO ipython # Get all custom fields for CRM Lead
+2026-01-28 00:09:16,511 INFO ipython custom_fields = frappe.get_all(
+    "Custom Field",
+    filters={"dt": "CRM Lead"},
+    fields=["fieldname", "label", "fieldtype"]
+)
+2026-01-28 00:09:16,511 INFO ipython print("Custom fields on CRM Lead:")
+2026-01-28 00:09:16,512 INFO ipython for cf in custom_fields:
+    print(f"  - {cf['fieldname']}: {cf['label']} ({cf['fieldtype']})")
+2026-01-28 00:09:16,512 INFO ipython # Also check standard fields related to value
+2026-01-28 00:09:16,513 INFO ipython meta = frappe.get_meta("CRM Lead")
+2026-01-28 00:09:16,513 INFO ipython value_fields = [f for f in meta.fields if 'value' in f.fieldname.lower() or 'amount' in f.fieldname.lower()]
+2026-01-28 00:09:16,514 INFO ipython print("\nStandard value-related fields:")
+2026-01-28 00:09:16,515 INFO ipython === session end ===
+2026-01-28 00:10:17,421 INFO ipython === bench console session ===
+2026-01-28 00:10:17,421 INFO ipython import frappe
+2026-01-28 00:10:17,422 INFO ipython # Get a prospect with some data
+2026-01-28 00:10:17,423 INFO ipython leads = frappe.get_all(
+    "CRM Lead",
+    filters={"status": ["!=", "Converted"]},
+    fields=["name", "lead_name", "custom_lead_label", "custom_expected_value", "creation", "modified", "email", "mobile_no"],
+    order_by="modified desc",
+    limit=3
+)
+2026-01-28 00:10:17,423 INFO ipython for lead in leads:
+    print(f"\n{lead['name']}: {lead['lead_name']}")
+    print(f"  Label: {lead['custom_lead_label']}")
+    print(f"  Value: {lead['custom_expected_value']}")
+    print(f"  Email: {lead['email']}")
+    print(f"  Phone: {lead['mobile_no']}")
+    print(f"  Created: {lead['creation']}")
+    
+2026-01-28 00:10:17,423 INFO ipython     # Get activities count
+2026-01-28 00:10:17,424 INFO ipython     act_count = frappe.db.count("CRM Task", {
+        "reference_doctype": "CRM Lead",
+        "reference_docname": lead["name"]
+    })
+2026-01-28 00:10:17,425 INFO ipython     print(f"  Activities: {act_count}")
+2026-01-28 00:10:17,425 INFO ipython === session end ===
+2026-01-28 00:10:29,946 INFO ipython === bench console session ===
+2026-01-28 00:10:29,947 INFO ipython import frappe
+2026-01-28 00:10:29,949 INFO ipython from datetime import datetime, timedelta
+2026-01-28 00:10:29,950 INFO ipython # Create a test activity
+2026-01-28 00:10:29,951 INFO ipython task = frappe.get_doc({
+    "doctype": "CRM Task",
+    "title": "Appel de suivi",
+    "status": "Done",
+    "priority": "High",
+    "reference_doctype": "CRM Lead",
+    "reference_docname": "CRM-LEAD-2026-00033",
+    "due_date": datetime.now() - timedelta(days=2)
+})
+2026-01-28 00:10:29,952 INFO ipython task.insert(ignore_permissions=True)
+2026-01-28 00:10:29,953 INFO ipython frappe.db.commit()
+2026-01-28 00:10:29,955 INFO ipython print(f"Created activity: {task.name}")
+2026-01-28 00:10:29,956 INFO ipython # Create another pending
+2026-01-28 00:10:29,957 INFO ipython task2 = frappe.get_doc({
+    "doctype": "CRM Task",
+    "title": "Envoyer proposition",
+    "status": "Todo",
+    "priority": "Medium",
+    "reference_doctype": "CRM Lead",
+    "reference_docname": "CRM-LEAD-2026-00033",
+    "due_date": datetime.now() + timedelta(days=3)
+})
+2026-01-28 00:10:29,957 INFO ipython task2.insert(ignore_permissions=True)
+2026-01-28 00:10:29,958 INFO ipython frappe.db.commit()
+2026-01-28 00:10:29,959 INFO ipython print(f"Created activity: {task2.name}")
+2026-01-28 00:10:29,959 INFO ipython === session end ===
+2026-01-28 00:10:40,365 INFO ipython === bench console session ===
+2026-01-28 00:10:40,366 INFO ipython import frappe
+2026-01-28 00:10:40,367 INFO ipython from vooroo_saas.api.prospect import get_activities
+2026-01-28 00:10:40,368 INFO ipython # Test getting activities for the prospect
+2026-01-28 00:10:40,369 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:10:40,369 INFO ipython result = get_activities("CRM-LEAD-2026-00033")
+2026-01-28 00:10:40,370 INFO ipython print(f"Activities found: {len(result)}")
+2026-01-28 00:10:40,371 INFO ipython === session end ===
+2026-01-28 00:25:44,847 INFO ipython === bench console session ===
+2026-01-28 00:25:44,849 INFO ipython import frappe
+2026-01-28 00:25:44,849 INFO ipython import base64
+2026-01-28 00:25:44,850 INFO ipython from vooroo_saas.api.prospect import preview_csv_import, import_prospects_csv
+2026-01-28 00:25:44,850 INFO ipython # Lire le fichier CSV
+2026-01-28 00:25:44,851 INFO ipython with open('/tmp/test_import.csv', 'rb') as f:
+    content = base64.b64encode(f.read()).decode()
+2026-01-28 00:25:44,852 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:25:44,853 INFO ipython # 1. Tester la preview
+2026-01-28 00:25:44,854 INFO ipython print("=== PREVIEW ===")
+2026-01-28 00:25:44,855 INFO ipython preview = preview_csv_import(file_content=content)
+2026-01-28 00:25:44,856 INFO ipython print(f"Headers: {preview['headers']}")
+2026-01-28 00:25:44,857 INFO ipython print(f"Mapping suggéré: {preview['mapping']}")
+2026-01-28 00:25:44,857 INFO ipython print(f"Total lignes: {preview['total_rows']}")
+2026-01-28 00:25:44,858 INFO ipython print(f"Preview première ligne: {preview['preview'][0] if preview['preview'] else 'Aucune'}")
+2026-01-28 00:25:44,859 INFO ipython # 2. Tester l'import
+2026-01-28 00:25:44,860 INFO ipython print("\n=== IMPORT ===")
+2026-01-28 00:25:44,860 INFO ipython import json
+2026-01-28 00:25:44,861 INFO ipython mapping = preview['mapping']
+2026-01-28 00:25:44,861 INFO ipython options = {
+    "skip_duplicates": True,
+    "default_label": "Froid",
+    "default_status": "New",
+    "default_type": "Particulier"
+}
+2026-01-28 00:25:44,862 INFO ipython result = import_prospects_csv(
+    file_content=content,
+    mapping=json.dumps(mapping),
+    options=json.dumps(options)
+)
+2026-01-28 00:25:44,863 INFO ipython print(f"Succès: {result['success_count']}")
+2026-01-28 00:25:44,863 INFO ipython print(f"Erreurs: {result['error_count']}")
+2026-01-28 00:25:44,864 INFO ipython print(f"Doublons: {result['duplicate_count']}")
+2026-01-28 00:25:44,865 INFO ipython === session end ===
+2026-01-28 00:25:58,001 INFO ipython === bench console session ===
+2026-01-28 00:25:58,002 INFO ipython import frappe
+2026-01-28 00:25:58,003 INFO ipython import base64
+2026-01-28 00:25:58,004 INFO ipython import json
+2026-01-28 00:25:58,005 INFO ipython from vooroo_saas.api.prospect import preview_csv_import, import_prospects_csv
+2026-01-28 00:25:58,005 INFO ipython with open('/tmp/test_import.csv', 'rb') as f:
+    content = base64.b64encode(f.read()).decode()
+2026-01-28 00:25:58,006 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:25:58,007 INFO ipython preview = preview_csv_import(file_content=content)
+2026-01-28 00:25:58,008 INFO ipython mapping = preview['mapping']
+2026-01-28 00:25:58,008 INFO ipython options = {"skip_duplicates": True, "default_label": "Froid", "default_status": "New", "default_type": "Particulier"}
+2026-01-28 00:25:58,009 INFO ipython result = import_prospects_csv(file_content=content, mapping=json.dumps(mapping), options=json.dumps(options))
+2026-01-28 00:25:58,010 INFO ipython print("Erreurs détaillées:")
+2026-01-28 00:25:58,011 INFO ipython === session end ===
+2026-01-28 00:26:11,688 INFO ipython === bench console session ===
+2026-01-28 00:26:11,690 INFO ipython import frappe
+2026-01-28 00:26:11,692 INFO ipython import base64
+2026-01-28 00:26:11,693 INFO ipython import json
+2026-01-28 00:26:11,695 INFO ipython from vooroo_saas.api.prospect import preview_csv_import, import_prospects_csv
+2026-01-28 00:26:11,696 INFO ipython with open('/tmp/test_import.csv', 'rb') as f:
+    content = base64.b64encode(f.read()).decode()
+2026-01-28 00:26:11,697 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:26:11,698 INFO ipython preview = preview_csv_import(file_content=content)
+2026-01-28 00:26:11,699 INFO ipython mapping = preview['mapping']
+2026-01-28 00:26:11,700 INFO ipython options = {"skip_duplicates": True, "default_label": "Froid", "default_status": "New", "default_type": "Particulier"}
+2026-01-28 00:26:11,701 INFO ipython result = import_prospects_csv(file_content=content, mapping=json.dumps(mapping), options=json.dumps(options))
+2026-01-28 00:26:11,703 INFO ipython print(f"Result: {result}")
+2026-01-28 00:26:11,704 INFO ipython === session end ===
+2026-01-28 00:26:25,008 INFO ipython === bench console session ===
+2026-01-28 00:26:25,009 INFO ipython import frappe
+2026-01-28 00:26:25,010 INFO ipython # Chercher les pays disponibles
+2026-01-28 00:26:25,011 INFO ipython countries = frappe.get_all("Country", filters={}, fields=["name"], limit=10)
+2026-01-28 00:26:25,012 INFO ipython print("Exemples de pays:")
+2026-01-28 00:26:25,012 INFO ipython for c in countries:
+    print(f"  - {c['name']}")
+2026-01-28 00:26:25,013 INFO ipython # Chercher Côte d'Ivoire
+2026-01-28 00:26:25,014 INFO ipython ci = frappe.get_all("Country", filters=[["name", "like", "%Ivoire%"]], fields=["name"])
+2026-01-28 00:26:25,014 INFO ipython print(f"\nCôte d'Ivoire: {ci}")
+2026-01-28 00:26:25,015 INFO ipython ci2 = frappe.get_all("Country", filters=[["name", "like", "%Cote%"]], fields=["name"])
+2026-01-28 00:26:25,016 INFO ipython print(f"Cote: {ci2}")
+2026-01-28 00:26:25,017 INFO ipython === session end ===
+2026-01-28 00:26:45,940 INFO ipython === bench console session ===
+2026-01-28 00:26:45,943 INFO ipython import frappe
+2026-01-28 00:26:45,945 INFO ipython # Chercher Ivory Coast
+2026-01-28 00:26:45,947 INFO ipython ci = frappe.get_all("Country", filters=[["name", "like", "%Ivory%"]], fields=["name"])
+2026-01-28 00:26:45,948 INFO ipython print(f"Ivory: {ci}")
+2026-01-28 00:26:45,950 INFO ipython === session end ===
+2026-01-28 00:27:40,051 INFO ipython === bench console session ===
+2026-01-28 00:27:40,053 INFO ipython import frappe
+2026-01-28 00:27:40,053 INFO ipython import base64
+2026-01-28 00:27:40,054 INFO ipython import json
+2026-01-28 00:27:40,055 INFO ipython from vooroo_saas.api.prospect import preview_csv_import, import_prospects_csv
+2026-01-28 00:27:40,055 INFO ipython with open('/tmp/test_import.csv', 'rb') as f:
+    content = base64.b64encode(f.read()).decode()
+2026-01-28 00:27:40,056 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:27:40,057 INFO ipython preview = preview_csv_import(file_content=content)
+2026-01-28 00:27:40,057 INFO ipython mapping = preview['mapping']
+2026-01-28 00:27:40,058 INFO ipython options = {"skip_duplicates": True, "default_label": "Froid", "default_status": "New", "default_type": "Particulier"}
+2026-01-28 00:27:40,058 INFO ipython result = import_prospects_csv(file_content=content, mapping=json.dumps(mapping), options=json.dumps(options))
+2026-01-28 00:27:40,059 INFO ipython print(f"Succès: {result['success_count']}")
+2026-01-28 00:27:40,060 INFO ipython print(f"Erreurs: {result['error_count']}")
+2026-01-28 00:27:40,060 INFO ipython print(f"Doublons: {result['duplicate_count']}")
+2026-01-28 00:27:40,061 INFO ipython === session end ===
+2026-01-28 00:27:52,525 INFO ipython === bench console session ===
+2026-01-28 00:27:52,526 INFO ipython import frappe
+2026-01-28 00:27:52,527 INFO ipython import base64
+2026-01-28 00:27:52,528 INFO ipython import json
+2026-01-28 00:27:52,528 INFO ipython from vooroo_saas.api.prospect import preview_csv_import, import_prospects_csv
+2026-01-28 00:27:52,529 INFO ipython with open('/tmp/test_import.csv', 'rb') as f:
+    content = base64.b64encode(f.read()).decode()
+2026-01-28 00:27:52,529 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:27:52,530 INFO ipython preview = preview_csv_import(file_content=content)
+2026-01-28 00:27:52,531 INFO ipython mapping = preview['mapping']
+2026-01-28 00:27:52,532 INFO ipython options = {"skip_duplicates": True, "default_label": "Froid", "default_status": "New", "default_type": "Particulier"}
+2026-01-28 00:27:52,533 INFO ipython result = import_prospects_csv(file_content=content, mapping=json.dumps(mapping), options=json.dumps(options))
+2026-01-28 00:27:52,533 INFO ipython print(result['errors'])
+2026-01-28 00:27:52,534 INFO ipython === session end ===
+2026-01-28 00:28:30,375 INFO ipython === bench console session ===
+2026-01-28 00:28:30,376 INFO ipython import frappe
+2026-01-28 00:28:30,377 INFO ipython import csv
+2026-01-28 00:28:30,378 INFO ipython import base64
+2026-01-28 00:28:30,379 INFO ipython import json
+2026-01-28 00:28:30,380 INFO ipython from io import StringIO
+2026-01-28 00:28:30,381 INFO ipython from vooroo_saas.api.prospect import _normalize_value, _check_duplicate, _create_or_update_contact, _validate_email
+2026-01-28 00:28:30,382 INFO ipython # Lire le fichier
+2026-01-28 00:28:30,383 INFO ipython with open('/tmp/test_import.csv', 'rb') as f:
+    content = base64.b64decode(base64.b64encode(f.read())).decode('utf-8-sig')
+2026-01-28 00:28:30,384 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:28:30,384 INFO ipython # Mapping
+2026-01-28 00:28:30,385 INFO ipython mapping = {
+    'nom': 'lead_name', 'prenom': 'first_name', 'email': 'email', 
+    'telephone': 'mobile_no', 'whatsapp': 'custom_whatsapp',
+    'organisation': 'organization', 'type': 'custom_prospect_type', 
+    'etiquette': 'custom_lead_label', 'valeur': 'custom_expected_value',
+    'profession': 'custom_profession', 'pays': 'custom_residence_country',
+    'ville': 'custom_residence_city'
+}
+2026-01-28 00:28:30,386 INFO ipython # Parser
+2026-01-28 00:28:30,386 INFO ipython dialect = csv.Sniffer().sniff(content[:2048], delimiters=',;\t|')
+2026-01-28 00:28:30,387 INFO ipython reader = csv.DictReader(StringIO(content), dialect=dialect)
+2026-01-28 00:28:30,388 INFO ipython for row_num, row in enumerate(reader, start=2):
+    print(f"\n=== Ligne {row_num} ===")
+    prospect_data = {
+        "doctype": "CRM Lead",
+        "lead_owner": "Administrator",
+        "status": "New",
+        "custom_lead_label": "Froid",
+        "custom_prospect_type": "Particulier"
+    }
+    
+2026-01-28 00:28:30,388 INFO ipython     for csv_col, frappe_field in mapping.items():
+        if csv_col in row and row[csv_col]:
+            value = _normalize_value(frappe_field, row[csv_col])
+            if value:
+                prospect_data[frappe_field] = value
+    
+2026-01-28 00:28:30,389 INFO ipython     print(f"Data: {prospect_data}")
+2026-01-28 00:28:30,390 INFO ipython     try:
+        doc = frappe.get_doc(prospect_data)
+        doc.insert(ignore_permissions=True)
+        print(f"SUCCESS: {doc.name}")
+        _create_or_update_contact(doc)
+    except Exception as e:
+        print(f"ERROR: {e}")
+2026-01-28 00:28:30,391 INFO ipython frappe.db.commit()
+2026-01-28 00:28:30,391 INFO ipython === session end ===
+2026-01-28 00:29:30,272 INFO ipython === bench console session ===
+2026-01-28 00:29:30,274 INFO ipython import frappe
+2026-01-28 00:29:30,274 INFO ipython import base64
+2026-01-28 00:29:30,275 INFO ipython import json
+2026-01-28 00:29:30,276 INFO ipython from vooroo_saas.api.prospect import preview_csv_import, import_prospects_csv
+2026-01-28 00:29:30,277 INFO ipython # Créer un nouveau fichier CSV pour ne pas avoir de doublons
+2026-01-28 00:29:30,279 INFO ipython csv_content = """nom,prenom,email,telephone,whatsapp,organisation,type,etiquette,valeur,profession,pays,ville
+Bakayoko Ahmed,Ahmed,ahmed.bakayoko@test.com,+2250102030406,+2250102030406,Bakayoko SA,Particulier,Chaud,1500000,Directeur,Côte d'Ivoire,Abidjan
+Ouattara Salimata,Salimata,salimata.ouattara@test.com,+2250708091012,+2250708091012,,Particulier,Tiède,500000,Comptable,Côte d'Ivoire,Bouaké
+"""
+2026-01-28 00:29:30,280 INFO ipython with open('/tmp/test_import2.csv', 'w') as f:
+    f.write(csv_content)
+2026-01-28 00:29:30,281 INFO ipython with open('/tmp/test_import2.csv', 'rb') as f:
+    content = base64.b64encode(f.read()).decode()
+2026-01-28 00:29:30,282 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:29:30,283 INFO ipython preview = preview_csv_import(file_content=content)
+2026-01-28 00:29:30,284 INFO ipython mapping = preview['mapping']
+2026-01-28 00:29:30,285 INFO ipython options = {"skip_duplicates": True, "default_label": "Froid", "default_status": "New", "default_type": "Particulier"}
+2026-01-28 00:29:30,286 INFO ipython result = import_prospects_csv(file_content=content, mapping=json.dumps(mapping), options=json.dumps(options))
+2026-01-28 00:29:30,287 INFO ipython print(f"Succès: {result['success_count']}")
+2026-01-28 00:29:30,288 INFO ipython print(f"Erreurs: {result['error_count']}")
+2026-01-28 00:29:30,289 INFO ipython print(f"Doublons: {result['duplicate_count']}")
+2026-01-28 00:29:30,290 INFO ipython === session end ===
+2026-01-28 00:29:44,794 INFO ipython === bench console session ===
+2026-01-28 00:29:44,796 INFO ipython import frappe
+2026-01-28 00:29:44,797 INFO ipython # Vérifier les prospects créés
+2026-01-28 00:29:44,800 INFO ipython leads = frappe.get_all(
+    "CRM Lead",
+    filters={"lead_name": ["like", "%Bakayoko%"]},
+    fields=["name", "lead_name", "email", "custom_lead_label", "custom_expected_value", "custom_residence_country"],
+    limit=5
+)
+2026-01-28 00:29:44,801 INFO ipython print("Prospects importés:")
+2026-01-28 00:29:44,802 INFO ipython for lead in leads:
+    print(f"  - {lead['name']}: {lead['lead_name']}")
+    print(f"    Email: {lead['email']}")
+    print(f"    Label: {lead['custom_lead_label']}")
+    print(f"    Value: {lead['custom_expected_value']}")
+    print(f"    Pays: {lead['custom_residence_country']}")
+    
+2026-01-28 00:29:44,803 INFO ipython # Vérifier aussi les contacts
+2026-01-28 00:29:44,807 INFO ipython contacts = frappe.get_all(
+    "Contact",
+    filters={"email_id": ["like", "%bakayoko%"]},
+    fields=["name", "first_name", "last_name", "email_id"]
+)
+2026-01-28 00:29:44,809 INFO ipython print(f"\nContacts créés: {len(contacts)}")
+2026-01-28 00:29:44,810 INFO ipython === session end ===
+2026-01-28 00:29:54,672 INFO ipython === bench console session ===
+2026-01-28 00:29:54,673 INFO ipython import frappe
+2026-01-28 00:29:54,673 INFO ipython # Vérifier les 5 derniers prospects créés
+2026-01-28 00:29:54,674 INFO ipython leads = frappe.get_all(
+    "CRM Lead",
+    fields=["name", "lead_name", "email", "custom_lead_label", "custom_expected_value", "custom_residence_country"],
+    order_by="creation desc",
+    limit=5
+)
+2026-01-28 00:29:54,675 INFO ipython print("5 derniers prospects:")
+2026-01-28 00:29:54,675 INFO ipython === session end ===
+2026-01-28 00:30:40,792 INFO ipython === bench console session ===
+2026-01-28 00:30:40,793 INFO ipython import frappe
+2026-01-28 00:30:40,794 INFO ipython # Vérifier les DocTypes de facturation
+2026-01-28 00:30:40,794 INFO ipython for dt in ["Quotation", "Sales Invoice"]:
+    exists = frappe.db.exists("DocType", dt)
+    print(f"{dt}: {'✓ Existe' if exists else '✗ N existe pas'}")
+2026-01-28 00:30:40,795 INFO ipython # Voir les champs de Quotation
+2026-01-28 00:30:40,795 INFO ipython === session end ===
+2026-01-28 00:46:39,682 INFO ipython === bench console session ===
+2026-01-28 00:46:39,684 INFO ipython import frappe
+2026-01-28 00:46:39,684 INFO ipython # Vérifier si les DocTypes existent
+2026-01-28 00:46:39,685 INFO ipython === session end ===
+2026-01-28 00:46:50,251 INFO ipython === bench console session ===
+2026-01-28 00:46:50,251 INFO ipython import frappe
+2026-01-28 00:46:50,252 INFO ipython for dt in ["Vooroo Quotation", "Vooroo Quotation Item", "Vooroo Invoice", "Vooroo Invoice Item", "Vooroo Payment"]:
+    exists = frappe.db.exists("DocType", dt)
+    print(f"{dt}: {'OK' if exists else 'MISSING'}")
+exit()
+2026-01-28 00:46:50,253 INFO ipython === session end ===
+2026-01-28 00:48:08,389 INFO ipython === bench console session ===
+2026-01-28 00:48:08,391 INFO ipython import frappe
+2026-01-28 00:48:08,391 INFO ipython from vooroo_saas.api.quotation import create_from_prospect, get_prospect_quotations
+2026-01-28 00:48:08,392 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:48:08,393 INFO ipython # Créer un devis depuis un prospect
+2026-01-28 00:48:08,393 INFO ipython result = create_from_prospect("CRM-LEAD-2026-00033")
+2026-01-28 00:48:08,394 INFO ipython print(f"Devis créé: {result}")
+2026-01-28 00:48:08,395 INFO ipython # Récupérer les devis du prospect
+2026-01-28 00:48:08,395 INFO ipython quotations = get_prospect_quotations("CRM-LEAD-2026-00033")
+2026-01-28 00:48:08,396 INFO ipython print(f"Devis du prospect: {len(quotations)}")
+2026-01-28 00:48:08,396 INFO ipython for q in quotations:
+    print(f"  - {q['name']}: {q['title']} - {q['total_ttc']} FCFA ({q['status']})")
+exit()
+2026-01-28 00:48:08,397 INFO ipython === session end ===
+2026-01-28 00:52:18,708 INFO ipython === bench console session ===
+2026-01-28 00:52:18,709 INFO ipython import frappe
+2026-01-28 00:52:18,710 INFO ipython import json
+2026-01-28 00:52:18,710 INFO ipython # Test get_prospect_quotations API
+2026-01-28 00:52:18,711 INFO ipython from vooroo_saas.api.quotation import get_prospect_quotations
+2026-01-28 00:52:18,711 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:52:18,712 INFO ipython # Get quotations for our test prospect
+2026-01-28 00:52:18,712 INFO ipython quotations = get_prospect_quotations("CRM-LEAD-2026-00033")
+2026-01-28 00:52:18,713 INFO ipython print("=== Devis du prospect CRM-LEAD-2026-00033 ===")
+2026-01-28 00:52:18,713 INFO ipython print(json.dumps(quotations, indent=2, default=str))
+2026-01-28 00:52:18,714 INFO ipython # Test get_quotations to list all
+2026-01-28 00:52:18,715 INFO ipython from vooroo_saas.api.quotation import get_quotations
+2026-01-28 00:52:18,715 INFO ipython all_quotations = get_quotations()
+2026-01-28 00:52:18,716 INFO ipython print(f"\n=== Total devis dans le système: {all_quotations['total']} ===")
+2026-01-28 00:52:18,716 INFO ipython for q in all_quotations['quotations']:
+    print(f"  - {q['name']}: {q['title']} - {q['status']}")
+2026-01-28 00:52:18,717 INFO ipython === session end ===
+2026-01-28 00:55:01,704 INFO ipython === bench console session ===
+2026-01-28 00:55:01,706 INFO ipython import frappe
+2026-01-28 00:55:01,706 INFO ipython import json
+2026-01-28 00:55:01,707 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:55:01,708 INFO ipython # Test create_quotation API
+2026-01-28 00:55:01,708 INFO ipython from vooroo_saas.api.quotation import create_quotation
+2026-01-28 00:55:01,709 INFO ipython data = {
+    "title": "Test API Devis",
+    "client_type": "Particulier",
+    "client_name": "Test Client API",
+    "client_email": "test@api.ci",
+    "client_phone": "+225 01 02 03 04 05",
+    "lead": "CRM-LEAD-2026-00033",
+    "payment_terms": "Comptant",
+    "tax_rate": 18,
+    "items": [
+        {
+            "item_name": "Service de test",
+            "description": "Description du service",
+            "quantity": 2,
+            "unit_price": 100000,
+            "tax_rate": 18,
+            "discount": 0
+        }
+    ]
+}
+2026-01-28 00:55:01,710 INFO ipython result = create_quotation(json.dumps(data))
+2026-01-28 00:55:01,710 INFO ipython print("Devis créé:", json.dumps(result, indent=2, default=str))
+2026-01-28 00:55:01,711 INFO ipython === session end ===
+2026-01-28 00:55:10,527 INFO ipython === bench console session ===
+2026-01-28 00:55:10,529 INFO ipython import frappe
+2026-01-28 00:55:10,530 INFO ipython import json
+2026-01-28 00:55:10,531 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:55:10,531 INFO ipython from vooroo_saas.api.quotation import get_quotations
+2026-01-28 00:55:10,532 INFO ipython result = get_quotations()
+2026-01-28 00:55:10,533 INFO ipython print(f"Total devis: {result['total']}")
+2026-01-28 00:55:10,533 INFO ipython for q in result['quotations']:
+    print(f"  - {q['name']}: {q['title']} - {q['status']} - {q['total_ttc']} FCFA")
+2026-01-28 00:55:10,534 INFO ipython === session end ===
+2026-01-28 00:55:19,600 INFO ipython === bench console session ===
+2026-01-28 00:55:19,601 INFO ipython import frappe
+2026-01-28 00:55:19,602 INFO ipython doc = frappe.get_doc("Vooroo Quotation", "DEV-2026-00002")
+2026-01-28 00:55:19,602 INFO ipython print(f"Devis: {doc.name}")
+2026-01-28 00:55:19,603 INFO ipython print(f"Items: {doc.items}")
+2026-01-28 00:55:19,603 INFO ipython print(f"Total HT: {doc.total_ht}")
+2026-01-28 00:55:19,604 INFO ipython print(f"Total TTC: {doc.total_ttc}")
+2026-01-28 00:55:19,604 INFO ipython # Check if items were added
+2026-01-28 00:55:19,605 INFO ipython if not doc.items:
+    print("\nLes items n'ont pas été ajoutés. Vérifions le DocType...")
+    meta = frappe.get_meta("Vooroo Quotation")
+    for field in meta.fields:
+        if field.fieldtype == "Table":
+            print(f"Table field: {field.fieldname} -> {field.options}")
+exit()
+2026-01-28 00:55:19,606 INFO ipython === session end ===
+2026-01-28 00:57:50,682 INFO ipython === bench console session ===
+2026-01-28 00:57:50,683 INFO ipython import frappe
+2026-01-28 00:57:50,683 INFO ipython import json
+2026-01-28 00:57:50,684 INFO ipython frappe.set_user("Administrator")
+2026-01-28 00:57:50,685 INFO ipython from vooroo_saas.api.quotation import create_quotation
+2026-01-28 00:57:50,685 INFO ipython data = {
+    "title": "Test API Devis Correct Format",
+    "client_type": "Particulier",
+    "client_name": "Test Format Client",
+    "client_email": "test@format.ci",
+    "client_phone": "+225 01 02 03 04 05",
+    "lead": "CRM-LEAD-2026-00033",
+    "payment_terms": "Comptant",
+    "items": [
+        {
+            "item_name": "Service test format",
+            "description": "Desc",
+            "qty": 2,
+            "rate": 100000,
+            "tax_rate": 18,
+            "discount_percent": 0
+        }
+    ]
+}
+2026-01-28 00:57:50,686 INFO ipython result = create_quotation(json.dumps(data))
+2026-01-28 00:57:50,686 INFO ipython print(f"Devis créé: {result['name']}")
+2026-01-28 00:57:50,687 INFO ipython # Vérifier les totaux
+2026-01-28 00:57:50,687 INFO ipython doc = frappe.get_doc("Vooroo Quotation", result['name'])
+2026-01-28 00:57:50,688 INFO ipython print(f"Total HT: {doc.total_ht}")
+2026-01-28 00:57:50,688 INFO ipython print(f"Total Tax: {doc.total_tax}")
+2026-01-28 00:57:50,689 INFO ipython print(f"Total TTC: {doc.total_ttc}")
+2026-01-28 00:57:50,689 INFO ipython === session end ===
+2026-01-28 01:11:13,025 INFO ipython === bench console session ===
+2026-01-28 01:11:13,027 INFO ipython import frappe
+2026-01-28 01:11:13,028 INFO ipython # Vérifier les permissions sur Vooroo Quotation
+2026-01-28 01:11:13,028 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:11:13,029 INFO ipython print("Permissions Vooroo Quotation:")
+2026-01-28 01:11:13,030 INFO ipython perms = frappe.get_all("DocPerm", filters={"parent": "Vooroo Quotation"}, fields=["role", "read", "write", "create", "delete"])
+2026-01-28 01:11:13,031 INFO ipython for p in perms:
+    print(f"  {p}")
+2026-01-28 01:11:13,033 INFO ipython # Test appel API direct
+2026-01-28 01:11:13,034 INFO ipython from vooroo_saas.api.quotation import create_quotation
+2026-01-28 01:11:13,035 INFO ipython import json
+2026-01-28 01:11:13,035 INFO ipython data = {
+    "title": "Test Debug",
+    "client_name": "Test Client",
+    "client_email": "test@test.ci",
+    "items": [{"item_name": "Test", "qty": 1, "rate": 50000, "tax_rate": 18}]
+}
+2026-01-28 01:11:13,037 INFO ipython try:
+    result = create_quotation(json.dumps(data))
+    print(f"\nCréation réussie: {result}")
+except Exception as e:
+    print(f"\nErreur: {e}")
+2026-01-28 01:11:13,038 INFO ipython === session end ===
+2026-01-28 01:13:59,380 INFO ipython === bench console session ===
+2026-01-28 01:13:59,381 INFO ipython import frappe
+2026-01-28 01:13:59,382 INFO ipython from vooroo_saas.api.quotation import get_quotations
+2026-01-28 01:13:59,383 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:13:59,384 INFO ipython result = get_quotations()
+2026-01-28 01:13:59,384 INFO ipython for q in result['quotations'][:3]:
+    print(f"Status: '{q['status']}' | Name: {q['name']}")
+exit()
+2026-01-28 01:13:59,385 INFO ipython === session end ===
+2026-01-28 01:15:34,576 INFO ipython === bench console session ===
+2026-01-28 01:15:34,578 INFO ipython import frappe
+2026-01-28 01:15:34,579 INFO ipython from vooroo_saas.api.quotation import get_quotations, get_prospect_quotations
+2026-01-28 01:15:34,580 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:15:34,581 INFO ipython # Tous les devis
+2026-01-28 01:15:34,582 INFO ipython result = get_quotations()
+2026-01-28 01:15:34,583 INFO ipython print(f"=== TOUS LES DEVIS ({result['total']}) ===")
+2026-01-28 01:15:34,583 INFO ipython for q in result['quotations']:
+    print(f"  {q['name']}: {q['title']} | {q['status']} | {q['total_ttc']} FCFA | lead={q.get('lead')}")
+2026-01-28 01:15:34,584 INFO ipython # Devis du prospect
+2026-01-28 01:15:34,585 INFO ipython print("\n=== DEVIS du prospect CRM-LEAD-2026-00033 ===")
+2026-01-28 01:15:34,586 INFO ipython prospect_quotations = get_prospect_quotations("CRM-LEAD-2026-00033")
+2026-01-28 01:15:34,587 INFO ipython for q in prospect_quotations:
+    print(f"  {q['name']}: {q['title']} | {q['status']} | {q['total_ttc']} FCFA")
+2026-01-28 01:15:34,588 INFO ipython === session end ===
+2026-01-28 01:15:44,083 INFO ipython === bench console session ===
+2026-01-28 01:15:44,084 INFO ipython import frappe
+2026-01-28 01:15:44,084 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:15:44,085 INFO ipython leads = frappe.get_all("CRM Lead", fields=["name", "lead_name", "email"], limit=5)
+2026-01-28 01:15:44,086 INFO ipython print("Prospects disponibles :")
+2026-01-28 01:15:44,086 INFO ipython for l in leads:
+    print(f"  {l['name']}: {l['lead_name']} - {l['email']}")
+exit()
+2026-01-28 01:15:44,087 INFO ipython === session end ===
+2026-01-28 01:15:52,513 INFO ipython === bench console session ===
+2026-01-28 01:15:52,514 INFO ipython import frappe
+2026-01-28 01:15:52,515 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:15:52,516 INFO ipython # Check the prospect we've been using
+2026-01-28 01:15:52,517 INFO ipython lead = frappe.get_doc("CRM Lead", "CRM-LEAD-2026-00033")
+2026-01-28 01:15:52,517 INFO ipython print(f"Prospect: {lead.name}")
+2026-01-28 01:15:52,518 INFO ipython print(f"  Nom: {lead.lead_name}")
+2026-01-28 01:15:52,519 INFO ipython print(f"  Email: {lead.email}")
+2026-01-28 01:15:52,520 INFO ipython print(f"  Status: {lead.status}")
+2026-01-28 01:15:52,521 INFO ipython === session end ===
+2026-01-28 01:18:53,451 INFO ipython === bench console session ===
+2026-01-28 01:18:53,452 INFO ipython import frappe
+2026-01-28 01:18:53,452 INFO ipython import json
+2026-01-28 01:18:53,453 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:18:53,454 INFO ipython print("=" * 60)
+2026-01-28 01:18:53,454 INFO ipython print("TEST 1: Création d'un devis complet")
+2026-01-28 01:18:53,455 INFO ipython print("=" * 60)
+2026-01-28 01:18:53,456 INFO ipython from vooroo_saas.api.quotation import create_quotation, get_quotation
+2026-01-28 01:18:53,456 INFO ipython devis_data = {
+    "title": "Devis Test Complet",
+    "client_type": "Entreprise",
+    "client_name": "SARL Test CI",
+    "client_email": "contact@testci.com",
+    "client_phone": "+225 27 22 11 22 33",
+    "client_address": "Abidjan, Cocody",
+    "contact_person": "M. Kouassi",
+    "lead": "CRM-LEAD-2026-00033",
+    "payment_terms": "30 jours",
+    "notes": "Test de création de devis",
+    "items": [
+        {"item_name": "Licence CRM", "description": "Licence annuelle", "qty": 1, "rate": 500000, "tax_rate": 18},
+        {"item_name": "Formation", "description": "2 jours sur site", "qty": 2, "rate": 150000, "tax_rate": 18},
+        {"item_name": "Support", "description": "12 mois", "qty": 1, "rate": 200000, "tax_rate": 18}
+    ]
+}
+2026-01-28 01:18:53,457 INFO ipython result = create_quotation(json.dumps(devis_data))
+2026-01-28 01:18:53,458 INFO ipython print(f"✅ Devis créé: {result['name']}")
+2026-01-28 01:18:53,459 INFO ipython print(f"   Client: {result['client_name']}")
+2026-01-28 01:18:53,460 INFO ipython print(f"   Total HT: {result['total_ht']:,.0f} FCFA")
+2026-01-28 01:18:53,460 INFO ipython print(f"   TVA 18%: {result['total_tax']:,.0f} FCFA")
+2026-01-28 01:18:53,461 INFO ipython print(f"   Total TTC: {result['total_ttc']:,.0f} FCFA")
+2026-01-28 01:18:53,461 INFO ipython print(f"   Status: {result['status']}")
+2026-01-28 01:18:53,462 INFO ipython devis_name = result['name']
+2026-01-28 01:18:53,463 INFO ipython # Vérifier les détails
+2026-01-28 01:18:53,463 INFO ipython details = get_quotation(devis_name)
+2026-01-28 01:18:53,464 INFO ipython print(f"\n   Items ({len(details['items'])}):")
+2026-01-28 01:18:53,464 INFO ipython for item in details['items']:
+    print(f"     - {item['item_name']}: {item['qty']} x {item['rate']:,.0f} = {item['amount']:,.0f} FCFA")
+2026-01-28 01:18:53,465 INFO ipython === session end ===
+2026-01-28 01:19:10,023 INFO ipython === bench console session ===
+2026-01-28 01:19:10,024 INFO ipython import frappe
+2026-01-28 01:19:10,024 INFO ipython import json
+2026-01-28 01:19:10,024 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:19:10,025 INFO ipython print("=" * 60)
+2026-01-28 01:19:10,026 INFO ipython print("TEST 2: Conversion Devis → Facture")
+2026-01-28 01:19:10,026 INFO ipython print("=" * 60)
+2026-01-28 01:19:10,027 INFO ipython from vooroo_saas.api.quotation import convert_to_invoice, get_quotation, get_invoice
+2026-01-28 01:19:10,027 INFO ipython devis_name = "DEV-2026-00005"
+2026-01-28 01:19:10,027 INFO ipython # Convertir le devis en facture
+2026-01-28 01:19:10,028 INFO ipython print(f"\nConversion du devis {devis_name}...")
+2026-01-28 01:19:10,028 INFO ipython try:
+    result = convert_to_invoice(devis_name)
+    print(f"✅ Facture créée: {result['name']}")
+    print(f"   Status facture: {result.get('status', 'N/A')}")
+    print(f"   Message: {result.get('message', 'N/A')}")
+    
+    facture_name = result['name']
+    
+    # Vérifier la facture créée
+    facture = get_invoice(facture_name)
+    print(f"\n📄 Détails facture {facture_name}:")
+    print(f"   Client: {facture['client_name']}")
+    print(f"   Total TTC: {facture['total_ttc']:,.0f} FCFA")
+    print(f"   Montant payé: {facture.get('paid_amount', 0):,.0f} FCFA")
+    print(f"   Reste à payer: {facture.get('outstanding_amount', facture['total_ttc']):,.0f} FCFA")
+    print(f"   Status: {facture['status']}")
+    print(f"   Devis source: {facture.get('quotation', 'N/A')}")
+    
+    # Vérifier que le devis est marqué comme converti
+    devis = get_quotation(devis_name)
+    print(f"\n📋 Status du devis après conversion: {devis['status']}")
+    
+except Exception as e:
+    print(f"❌ Erreur: {e}")
+    import traceback
+    traceback.print_exc()
+2026-01-28 01:19:10,029 INFO ipython === session end ===
+2026-01-28 01:19:42,017 INFO ipython === bench console session ===
+2026-01-28 01:19:42,018 INFO ipython import frappe
+2026-01-28 01:19:42,019 INFO ipython import json
+2026-01-28 01:19:42,020 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:19:42,021 INFO ipython print("=" * 60)
+2026-01-28 01:19:42,022 INFO ipython print("TEST 2: Conversion Devis → Facture")
+2026-01-28 01:19:42,022 INFO ipython print("=" * 60)
+2026-01-28 01:19:42,023 INFO ipython from vooroo_saas.api.quotation import convert_to_invoice, get_quotation, get_invoice
+2026-01-28 01:19:42,024 INFO ipython # Créer un nouveau devis pour ce test
+2026-01-28 01:19:42,026 INFO ipython from vooroo_saas.api.quotation import create_quotation
+2026-01-28 01:19:42,027 INFO ipython devis_data = {
+    "title": "Devis à convertir",
+    "client_name": "Client Test Conversion",
+    "client_email": "convert@test.ci",
+    "items": [
+        {"item_name": "Service A", "qty": 3, "rate": 75000, "tax_rate": 18},
+        {"item_name": "Service B", "qty": 1, "rate": 125000, "tax_rate": 18}
+    ]
+}
+2026-01-28 01:19:42,027 INFO ipython result = create_quotation(json.dumps(devis_data))
+2026-01-28 01:19:42,028 INFO ipython devis_name = result['name']
+2026-01-28 01:19:42,028 INFO ipython print(f"\n1. Devis créé: {devis_name}")
+2026-01-28 01:19:42,029 INFO ipython print(f"   Total TTC: {result['total_ttc']:,.0f} FCFA")
+2026-01-28 01:19:42,030 INFO ipython print(f"   Status: {result['status']}")
+2026-01-28 01:19:42,030 INFO ipython # Convertir en facture
+2026-01-28 01:19:42,031 INFO ipython print(f"\n2. Conversion en facture...")
+2026-01-28 01:19:42,031 INFO ipython result = convert_to_invoice(devis_name)
+2026-01-28 01:19:42,032 INFO ipython print(f"   ✅ Facture créée: {result['name']}")
+2026-01-28 01:19:42,032 INFO ipython print(f"   Total TTC: {result['total_ttc']:,.0f} FCFA")
+2026-01-28 01:19:42,033 INFO ipython print(f"   Status: {result['status']}")
+2026-01-28 01:19:42,033 INFO ipython print(f"   Devis source: {result['quotation']}")
+2026-01-28 01:19:42,034 INFO ipython facture_name = result['name']
+2026-01-28 01:19:42,035 INFO ipython # Vérifier la facture
+2026-01-28 01:19:42,035 INFO ipython facture = get_invoice(factura_name := result['name'])
+2026-01-28 01:19:42,036 INFO ipython print(f"\n3. Détails facture:")
+2026-01-28 01:19:42,036 INFO ipython print(f"   Items: {len(facture['items'])}")
+2026-01-28 01:19:42,037 INFO ipython for item in facture['items']:
+    print(f"     - {item['item_name']}: {item['qty']} x {item['rate']:,.0f}")
+2026-01-28 01:19:42,038 INFO ipython # Vérifier le devis est bien marqué converti
+2026-01-28 01:19:42,038 INFO ipython devis = get_quotation(devis_name)
+2026-01-28 01:19:42,039 INFO ipython print(f"\n4. Status devis après conversion: {devis['status']}")
+2026-01-28 01:19:42,040 INFO ipython === session end ===
+2026-01-28 01:20:02,385 INFO ipython === bench console session ===
+2026-01-28 01:20:02,388 INFO ipython import frappe
+2026-01-28 01:20:02,392 INFO ipython import json
+2026-01-28 01:20:02,393 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:20:02,396 INFO ipython print("=" * 60)
+2026-01-28 01:20:02,398 INFO ipython print("TEST 3: Enregistrement de paiements")
+2026-01-28 01:20:02,399 INFO ipython print("=" * 60)
+2026-01-28 01:20:02,400 INFO ipython from vooroo_saas.api.quotation import get_invoice, record_payment
+2026-01-28 01:20:02,401 INFO ipython facture_name = "FAC-2026-00008"
+2026-01-28 01:20:02,402 INFO ipython # Vérifier la facture
+2026-01-28 01:20:02,403 INFO ipython facture = get_invoice(facture_name)
+2026-01-28 01:20:02,405 INFO ipython print(f"\n1. Facture {facture_name}:")
+2026-01-28 01:20:02,406 INFO ipython print(f"   Total TTC: {facture['total_ttc']:,.0f} FCFA")
+2026-01-28 01:20:02,406 INFO ipython print(f"   Payé: {facture.get('paid_amount', 0):,.0f} FCFA")
+2026-01-28 01:20:02,407 INFO ipython print(f"   Reste: {facture.get('outstanding_amount', facture['total_ttc']):,.0f} FCFA")
+2026-01-28 01:20:02,408 INFO ipython print(f"   Status: {facture['status']}")
+2026-01-28 01:20:02,409 INFO ipython # Enregistrer un paiement partiel
+2026-01-28 01:20:02,410 INFO ipython print(f"\n2. Enregistrement paiement partiel (200 000 FCFA)...")
+2026-01-28 01:20:02,411 INFO ipython result = record_payment(
+    invoice_name=facture_name,
+    amount=200000,
+    payment_method="Virement bancaire",
+    reference="VIR-2026-001",
+    notes="Acompte 50%"
+)
+2026-01-28 01:20:02,412 INFO ipython print(f"   ✅ Paiement enregistré: {result['payment_name']}")
+2026-01-28 01:20:02,413 INFO ipython print(f"   Status facture: {result['invoice_status']}")
+2026-01-28 01:20:02,413 INFO ipython print(f"   Reste à payer: {result['outstanding_amount']:,.0f} FCFA")
+2026-01-28 01:20:02,415 INFO ipython # Vérifier la facture mise à jour
+2026-01-28 01:20:02,415 INFO ipython facture = get_invoice(facture_name)
+2026-01-28 01:20:02,416 INFO ipython print(f"\n3. Facture après paiement partiel:")
+2026-01-28 01:20:02,417 INFO ipython print(f"   Payé: {facture.get('paid_amount', 0):,.0f} FCFA")
+2026-01-28 01:20:02,417 INFO ipython print(f"   Reste: {facture.get('outstanding_amount', facture['total_ttc']):,.0f} FCFA")
+2026-01-28 01:20:02,419 INFO ipython print(f"   Status: {facture['status']}")
+2026-01-28 01:20:02,420 INFO ipython # Enregistrer le solde
+2026-01-28 01:20:02,421 INFO ipython print(f"\n4. Enregistrement du solde ({facture.get('outstanding_amount', 0):,.0f} FCFA)...")
+2026-01-28 01:20:02,421 INFO ipython result = record_payment(
+    invoice_name=facture_name,
+    amount=facture.get('outstanding_amount', 213000),
+    payment_method="Espèces",
+    reference="ESP-2026-001",
+    notes="Solde"
+)
+2026-01-28 01:20:02,422 INFO ipython print(f"   ✅ Paiement enregistré: {result['payment_name']}")
+2026-01-28 01:20:02,423 INFO ipython print(f"   Status facture: {result['invoice_status']}")
+2026-01-28 01:20:02,424 INFO ipython # Facture finale
+2026-01-28 01:20:02,425 INFO ipython facture = get_invoice(facture_name)
+2026-01-28 01:20:02,426 INFO ipython print(f"\n5. Facture finale:")
+2026-01-28 01:20:02,426 INFO ipython print(f"   Payé: {facture.get('paid_amount', 0):,.0f} FCFA")
+2026-01-28 01:20:02,428 INFO ipython print(f"   Reste: {facture.get('outstanding_amount', 0):,.0f} FCFA")
+2026-01-28 01:20:02,429 INFO ipython print(f"   Status: {facture['status']}")
+2026-01-28 01:20:02,430 INFO ipython === session end ===
+2026-01-28 01:20:32,306 INFO ipython === bench console session ===
+2026-01-28 01:20:32,307 INFO ipython import frappe
+2026-01-28 01:20:32,307 INFO ipython import json
+2026-01-28 01:20:32,308 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:20:32,308 INFO ipython print("=" * 60)
+2026-01-28 01:20:32,309 INFO ipython print("TEST COMPLET: Devis → Facture → Paiements")
+2026-01-28 01:20:32,310 INFO ipython print("=" * 60)
+2026-01-28 01:20:32,311 INFO ipython from vooroo_saas.api.quotation import (
+    create_quotation, get_quotation, get_quotations,
+    convert_to_invoice, get_invoice, get_invoices,
+    record_payment
+)
+2026-01-28 01:20:32,311 INFO ipython # 1. Créer un devis
+2026-01-28 01:20:32,312 INFO ipython print("\n📋 ÉTAPE 1: Création devis")
+2026-01-28 01:20:32,313 INFO ipython devis_data = {
+    "title": "Projet CRM Entreprise XYZ",
+    "client_type": "Entreprise",
+    "client_name": "Entreprise XYZ SARL",
+    "client_email": "contact@xyz.ci",
+    "client_phone": "+225 27 22 99 88 77",
+    "payment_terms": "30 jours",
+    "items": [
+        {"item_name": "Licence CRM 20 utilisateurs", "qty": 1, "rate": 2000000, "tax_rate": 18},
+        {"item_name": "Installation & configuration", "qty": 1, "rate": 500000, "tax_rate": 18},
+        {"item_name": "Formation (3 jours)", "qty": 3, "rate": 150000, "tax_rate": 18}
+    ]
+}
+2026-01-28 01:20:32,313 INFO ipython result = create_quotation(json.dumps(devis_data))
+2026-01-28 01:20:32,314 INFO ipython devis_name = result['name']
+2026-01-28 01:20:32,314 INFO ipython print(f"   ✅ {devis_name}: {result['total_ttc']:,.0f} FCFA (Status: {result['status']})")
+2026-01-28 01:20:32,315 INFO ipython # 2. Convertir en facture
+2026-01-28 01:20:32,316 INFO ipython print("\n📄 ÉTAPE 2: Conversion en facture")
+2026-01-28 01:20:32,316 INFO ipython result = convert_to_invoice(devis_name)
+2026-01-28 01:20:32,317 INFO ipython facture_name = result['name']
+2026-01-28 01:20:32,317 INFO ipython print(f"   ✅ {facture_name}: {result['total_ttc']:,.0f} FCFA (Status: {result['status']})")
+2026-01-28 01:20:32,318 INFO ipython # Vérifier le devis
+2026-01-28 01:20:32,318 INFO ipython devis = get_quotation(devis_name)
+2026-01-28 01:20:32,319 INFO ipython print(f"   📋 Devis {devis_name} maintenant: {devis['status']}")
+2026-01-28 01:20:32,319 INFO ipython # 3. Enregistrer un paiement partiel
+2026-01-28 01:20:32,320 INFO ipython print("\n💰 ÉTAPE 3: Paiement partiel")
+2026-01-28 01:20:32,321 INFO ipython result = record_payment(
+    invoice_name=facture_name,
+    amount=1500000,
+    payment_method="Virement",  # Mode correct
+    reference="VIR-XYZ-001"
+)
+2026-01-28 01:20:32,321 INFO ipython facture = get_invoice(facture_name)
+2026-01-28 01:20:32,322 INFO ipython print(f"   ✅ Paiement: 1 500 000 FCFA")
+2026-01-28 01:20:32,323 INFO ipython print(f"   📄 Facture: Payé {facture['paid_amount']:,.0f} / {facture['total_ttc']:,.0f} FCFA")
+2026-01-28 01:20:32,323 INFO ipython print(f"   📄 Status: {facture['status']}")
+2026-01-28 01:20:32,323 INFO ipython # 4. Paiement du solde
+2026-01-28 01:20:32,324 INFO ipython print("\n💰 ÉTAPE 4: Solde")
+2026-01-28 01:20:32,324 INFO ipython result = record_payment(
+    invoice_name=facture_name,
+    amount=facture['outstanding_amount'],
+    payment_method="Mobile Money",
+    reference="MOMO-XYZ-002"
+)
+2026-01-28 01:20:32,324 INFO ipython facture = get_invoice(facture_name)
+2026-01-28 01:20:32,325 INFO ipython print(f"   ✅ Paiement: {facture['paid_amount'] - 1500000:,.0f} FCFA")
+2026-01-28 01:20:32,325 INFO ipython print(f"   📄 Facture: Payé {facture['paid_amount']:,.0f} / {facture['total_ttc']:,.0f} FCFA")
+2026-01-28 01:20:32,326 INFO ipython print(f"   📄 Status: {facture['status']}")
+2026-01-28 01:20:32,326 INFO ipython # 5. Résumé
+2026-01-28 01:20:32,327 INFO ipython print("\n" + "=" * 60)
+2026-01-28 01:20:32,327 INFO ipython print("RÉSUMÉ")
+2026-01-28 01:20:32,328 INFO ipython print("=" * 60)
+2026-01-28 01:20:32,328 INFO ipython all_quotations = get_quotations()
+2026-01-28 01:20:32,328 INFO ipython all_invoices = get_invoices()
+2026-01-28 01:20:32,329 INFO ipython print(f"Total devis: {all_quotations['total']}")
+2026-01-28 01:20:32,329 INFO ipython print(f"Total factures: {all_invoices['total']}")
+2026-01-28 01:20:32,330 INFO ipython === session end ===
+2026-01-28 01:33:09,677 INFO ipython === bench console session ===
+2026-01-28 01:33:09,679 INFO ipython import frappe
+2026-01-28 01:33:09,679 INFO ipython import json
+2026-01-28 01:33:09,680 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:33:09,681 INFO ipython print("TEST: Création devis avec payment_terms français")
+2026-01-28 01:33:09,681 INFO ipython from vooroo_saas.api.quotation import create_quotation
+2026-01-28 01:33:09,682 INFO ipython # Test avec les valeurs françaises
+2026-01-28 01:33:09,682 INFO ipython devis_data = {
+    "title": "Test Payment Terms FR",
+    "client_name": "Client Test FR",
+    "client_email": "test@fr.ci",
+    "payment_terms": "Comptant",  # Valeur française
+    "items": [
+        {"item_name": "Service", "qty": 1, "rate": 100000, "tax_rate": 18}
+    ]
+}
+2026-01-28 01:33:09,683 INFO ipython result = create_quotation(json.dumps(devis_data))
+2026-01-28 01:33:09,683 INFO ipython print(f"✅ Devis créé: {result['name']}")
+2026-01-28 01:33:09,684 INFO ipython print(f"   Payment Terms: {frappe.get_doc('Vooroo Quotation', result['name']).payment_terms}")
+2026-01-28 01:33:09,685 INFO ipython === session end ===
+2026-01-28 01:33:21,247 INFO ipython === bench console session ===
+2026-01-28 01:33:21,247 INFO ipython import frappe
+2026-01-28 01:33:21,248 INFO ipython frappe.set_user("Administrator")
+2026-01-28 01:33:21,249 INFO ipython from vooroo_saas.api.prospect import get_activities
+2026-01-28 01:33:21,249 INFO ipython # Test avec prospect_name vide
+2026-01-28 01:33:21,250 INFO ipython print("Test 1: prospect_name vide")
+2026-01-28 01:33:21,251 INFO ipython result = get_activities("")
+2026-01-28 01:33:21,252 INFO ipython print(f"  Résultat: {result}")
+2026-01-28 01:33:21,253 INFO ipython # Test avec prospect_name None
+2026-01-28 01:33:21,253 INFO ipython print("\nTest 2: prospect_name None")
+2026-01-28 01:33:21,254 INFO ipython result = get_activities(None)
+2026-01-28 01:33:21,255 INFO ipython print(f"  Résultat: {result}")
+2026-01-28 01:33:21,256 INFO ipython # Test avec prospect valide
+2026-01-28 01:33:21,256 INFO ipython print("\nTest 3: prospect_name valide")
+2026-01-28 01:33:21,258 INFO ipython result = get_activities("CRM-LEAD-2026-00033")
+2026-01-28 01:33:21,258 INFO ipython print(f"  Résultat: {len(result)} activités")
+2026-01-28 01:33:21,259 INFO ipython === session end ===
+2026-01-28 14:55:30,075 INFO ipython === bench console session ===
+2026-01-28 14:55:30,076 INFO ipython # Test get_prospect_history
+2026-01-28 14:55:30,077 INFO ipython from vooroo_saas.api.prospect import get_prospect_history
+2026-01-28 14:55:30,077 INFO ipython # Get first prospect
+2026-01-28 14:55:30,078 INFO ipython leads = frappe.get_all("CRM Lead", limit=1)
+2026-01-28 14:55:30,079 INFO ipython === session end ===
+2026-01-28 14:55:50,648 INFO ipython === bench console session ===
+2026-01-28 14:55:50,649 INFO ipython from vooroo_saas.api.prospect import get_prospect_history
+2026-01-28 14:55:50,649 INFO ipython result = get_prospect_history("CRM-LEAD-2026-00018")
+2026-01-28 14:55:50,650 INFO ipython print("Stats:", result.get('stats'))
+2026-01-28 14:55:50,650 INFO ipython print("Events:", len(result.get('events', [])))
+2026-01-28 14:55:50,651 INFO ipython === session end ===
+2026-01-28 15:01:34,563 INFO ipython === bench console session ===
+2026-01-28 15:01:34,564 INFO ipython from vooroo_saas.api.deal import get_deal_history
+2026-01-28 15:01:34,565 INFO ipython result = get_deal_history("CRM-DEAL-2026-00006")
+2026-01-28 15:01:34,566 INFO ipython print("Stats:", result.get('stats'))
+2026-01-28 15:01:34,567 INFO ipython print("Events:", len(result.get('events', [])))
+2026-01-28 15:01:34,567 INFO ipython === session end ===
+2026-01-28 15:02:15,535 INFO ipython === bench console session ===
+2026-01-28 15:02:15,536 INFO ipython from vooroo_saas.api.deal import get_deal_history
+2026-01-28 15:02:15,536 INFO ipython result = get_deal_history("CRM-DEAL-2026-00006")
+2026-01-28 15:02:15,537 INFO ipython print("Stats:", result.get('stats'))
+2026-01-28 15:02:15,538 INFO ipython print("Events:", len(result.get('events', [])))
+2026-01-28 15:02:15,538 INFO ipython === session end ===
+2026-01-28 15:35:46,505 INFO ipython === bench console session ===
+2026-01-28 15:35:46,506 INFO ipython from vooroo_saas.api.deal import get_deal_data, get_deal_comments, get_deal_files
+2026-01-28 15:35:46,507 INFO ipython # Test with a deal
+2026-01-28 15:35:46,508 INFO ipython result = get_deal_data("CRM-DEAL-2026-00006")
+2026-01-28 15:35:46,508 INFO ipython print("=== DEAL DATA ===")
+2026-01-28 15:35:46,509 INFO ipython print(f"KPIs: {result.get('kpis')}")
+2026-01-28 15:35:46,510 INFO ipython print(f"Engagement: {result.get('engagement_score')}")
+2026-01-28 15:35:46,511 INFO ipython print(f"Recommendations: {len(result.get('recommendations', []))}")
+2026-01-28 15:35:46,511 INFO ipython comments = get_deal_comments("CRM-DEAL-2026-00006")
+2026-01-28 15:35:46,512 INFO ipython print(f"\nComments: {len(comments)}")
+2026-01-28 15:35:46,513 INFO ipython files = get_deal_files("CRM-DEAL-2026-00006")
+2026-01-28 15:35:46,514 INFO ipython print(f"Files: {len(files)}")
+2026-01-28 15:35:46,514 INFO ipython === session end ===
+2026-01-28 15:36:57,534 INFO ipython === bench console session ===
+2026-01-28 15:36:57,536 INFO ipython from vooroo_saas.api.deal import get_deal_data
+2026-01-28 15:36:57,536 INFO ipython result = get_deal_data("CRM-DEAL-2026-00006")
+2026-01-28 15:36:57,537 INFO ipython print("=== DEAL DATA ===")
+2026-01-28 15:36:57,537 INFO ipython print(f"KPIs: {result.get('kpis')}")
+2026-01-28 15:36:57,538 INFO ipython print(f"Engagement: {result.get('engagement_score')}")
+2026-01-28 15:36:57,539 INFO ipython print(f"Activity stats: {result.get('activity_stats')}")
+2026-01-28 15:36:57,539 INFO ipython print(f"Comm stats: {result.get('communication_stats')}")
+2026-01-28 15:36:57,540 INFO ipython print(f"Recommendations: {len(result.get('recommendations', []))}")
+2026-01-28 15:36:57,540 INFO ipython === session end ===
+2026-01-28 15:40:26,362 INFO ipython === bench console session ===
+2026-01-28 15:40:26,363 INFO ipython from vooroo_saas.api.deal import get_deal_data
+2026-01-28 15:40:26,364 INFO ipython result = get_deal_data("CRM-DEAL-2026-00006")
+2026-01-28 15:40:26,365 INFO ipython print("=== DEAL DATA OK ===")
+2026-01-28 15:40:26,365 INFO ipython print(f"KPIs: {result.get('kpis')}")
+2026-01-28 15:40:26,366 INFO ipython print(f"Engagement: {result.get('engagement_score')}")
+2026-01-28 15:40:26,367 INFO ipython print(f"Activity: {result.get('activity_stats')}")
+2026-01-28 15:40:26,367 INFO ipython print(f"Recommendations: {len(result.get('recommendations', []))}")
+2026-01-28 15:40:26,368 INFO ipython === session end ===
+2026-01-28 16:02:16,237 INFO ipython === bench console session ===
+2026-01-28 16:02:16,239 INFO ipython from vooroo_saas.api.deal import get_deal_notes, add_deal_note
+2026-01-28 16:02:16,239 INFO ipython # Test get_deal_notes
+2026-01-28 16:02:16,240 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00006")
+2026-01-28 16:02:16,240 INFO ipython print(f"Notes existantes: {len(notes)}")
+2026-01-28 16:02:16,241 INFO ipython # Test add_deal_note
+2026-01-28 16:02:16,241 INFO ipython new_note = add_deal_note("CRM-DEAL-2026-00006", "Ceci est une note de test créée via l'API")
+2026-01-28 16:02:16,242 INFO ipython print(f"Note créée: {new_note.get('name')}")
+2026-01-28 16:02:16,243 INFO ipython # Verify
+2026-01-28 16:02:16,243 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00006")
+2026-01-28 16:02:16,244 INFO ipython print(f"Notes après ajout: {len(notes)}")
+2026-01-28 16:02:16,245 INFO ipython === session end ===
+2026-01-28 16:03:03,384 INFO ipython === bench console session ===
+2026-01-28 16:03:03,386 INFO ipython from vooroo_saas.api.deal import get_deal_notes, add_deal_note, delete_deal_note
+2026-01-28 16:03:03,388 INFO ipython # Test add_deal_note
+2026-01-28 16:03:03,389 INFO ipython new_note = add_deal_note("CRM-DEAL-2026-00006", "Ceci est une note de test créée via l'API")
+2026-01-28 16:03:03,390 INFO ipython print(f"Note créée: {new_note.get('name')}")
+2026-01-28 16:03:03,391 INFO ipython print(f"Titre: {new_note.get('title')}")
+2026-01-28 16:03:03,392 INFO ipython # Get notes
+2026-01-28 16:03:03,393 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00006")
+2026-01-28 16:03:03,394 INFO ipython print(f"Notes: {len(notes)}")
+2026-01-28 16:03:03,395 INFO ipython # Delete test note
+2026-01-28 16:03:03,396 INFO ipython delete_deal_note(new_note.get('name'))
+2026-01-28 16:03:03,397 INFO ipython print("Note supprimée")
+2026-01-28 16:03:03,398 INFO ipython # Verify
+2026-01-28 16:03:03,399 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00006")
+2026-01-28 16:03:03,399 INFO ipython print(f"Notes après suppression: {len(notes)}")
+2026-01-28 16:03:03,400 INFO ipython === session end ===
+2026-01-28 16:40:33,208 INFO ipython === bench console session ===
+2026-01-28 16:40:33,210 INFO ipython deals = frappe.get_all("CRM Deal", limit=3)
+2026-01-28 16:40:33,210 INFO ipython print("Deals:", deals)
+2026-01-28 16:40:33,211 INFO ipython === session end ===
+2026-01-28 16:40:43,609 INFO ipython === bench console session ===
+2026-01-28 16:40:43,610 INFO ipython from vooroo_saas.api.deal import get_deal_notes, add_deal_note
+2026-01-28 16:40:43,611 INFO ipython # Add a note
+2026-01-28 16:40:43,612 INFO ipython result = add_deal_note("CRM-DEAL-2026-00054", "Test note from backend")
+2026-01-28 16:40:43,613 INFO ipython print("Added:", result)
+2026-01-28 16:40:43,614 INFO ipython # Get notes
+2026-01-28 16:40:43,614 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00054")
+2026-01-28 16:40:43,615 INFO ipython print("Notes count:", len(notes))
+2026-01-28 16:40:43,616 INFO ipython === session end ===
+2026-01-28 16:43:23,823 INFO ipython === bench console session ===
+2026-01-28 16:43:23,825 INFO ipython # Vérifions que la fonction est bien accessible via whitelist
+2026-01-28 16:43:23,827 INFO ipython import frappe
+2026-01-28 16:43:23,828 INFO ipython from frappe import is_whitelisted
+2026-01-28 16:43:23,830 INFO ipython === session end ===
+2026-01-28 16:43:59,550 INFO ipython === bench console session ===
+2026-01-28 16:43:59,551 INFO ipython import frappe
+2026-01-28 16:43:59,553 INFO ipython from vooroo_saas.api.deal import get_deal_notes
+2026-01-28 16:43:59,555 INFO ipython # Test
+2026-01-28 16:43:59,557 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00054")
+2026-01-28 16:43:59,558 INFO ipython print("SUCCESS - Notes count:", len(notes))
+2026-01-28 16:43:59,560 INFO ipython === session end ===
+2026-01-28 16:44:47,451 INFO ipython === bench console session ===
+2026-01-28 16:44:47,453 INFO ipython notes = frappe.get_all("FCRM Note", filters={"reference_doctype": "CRM Deal"}, limit=10)
+2026-01-28 16:44:47,455 INFO ipython print("All FCRM notes for deals:", len(notes))
+2026-01-28 16:44:47,458 INFO ipython === session end ===
+2026-01-28 16:45:01,413 INFO ipython === bench console session ===
+2026-01-28 16:45:01,414 INFO ipython notes = frappe.get_all("FCRM Note", filters={"reference_doctype": "CRM Deal", "reference_docname": "CRM-DEAL-2026-00054"}, limit=10)
+2026-01-28 16:45:01,415 INFO ipython print("Notes for CRM-DEAL-2026-00054:", len(notes))
+2026-01-28 16:45:01,416 INFO ipython for n in notes:
+    print(f"  {n['name']}")
+2026-01-28 16:45:01,417 INFO ipython # Check all deals that have notes
+2026-01-28 16:45:01,418 INFO ipython all_notes = frappe.get_all("FCRM Note", filters={"reference_doctype": "CRM Deal"}, fields=["name", "reference_docname", "content"])
+2026-01-28 16:45:01,419 INFO ipython print("\nAll deal notes:")
+2026-01-28 16:45:01,419 INFO ipython === session end ===
+2026-01-28 16:45:12,111 INFO ipython === bench console session ===
+2026-01-28 16:45:12,113 INFO ipython all_notes = frappe.get_all("FCRM Note", filters={"reference_doctype": "CRM Deal"}, fields=["*"])
+2026-01-28 16:45:12,114 INFO ipython print("Total notes:", len(all_notes))
+2026-01-28 16:45:12,115 INFO ipython === session end ===
+2026-01-28 16:45:20,530 INFO ipython === bench console session ===
+2026-01-28 16:45:20,531 INFO ipython meta = frappe.get_meta("FCRM Note")
+2026-01-28 16:45:20,532 INFO ipython print("Fields in FCRM Note:")
+2026-01-28 16:45:20,532 INFO ipython === session end ===
+2026-01-28 16:45:30,760 INFO ipython === bench console session ===
+2026-01-28 16:45:30,761 INFO ipython meta = frappe.get_meta("FCRM Note")
+2026-01-28 16:45:30,761 INFO ipython print("Fields in FCRM Note:")
+2026-01-28 16:45:30,762 INFO ipython for f in meta.fields:
+    print(f"  {f.fieldname}: {f.fieldtype}")
+    
+2026-01-28 16:45:30,763 INFO ipython # Also check raw data
+2026-01-28 16:45:30,764 INFO ipython notes = frappe.db.sql("SELECT * FROM `tabFCRM Note` LIMIT 5", as_dict=True)
+2026-01-28 16:45:30,765 INFO ipython === session end ===
+2026-01-28 16:45:41,351 INFO ipython === bench console session ===
+2026-01-28 16:45:41,353 INFO ipython notes = frappe.db.sql("SELECT name, title, content, reference_doctype, reference_docname FROM `tabFCRM Note` LIMIT 5", as_dict=True)
+2026-01-28 16:45:41,357 INFO ipython print("Notes count:", len(notes))
+2026-01-28 16:45:41,358 INFO ipython === session end ===
+2026-01-28 16:46:01,215 INFO ipython === bench console session ===
+2026-01-28 16:46:01,216 INFO ipython from vooroo_saas.api.deal import add_deal_note, get_deal_notes
+2026-01-28 16:46:01,217 INFO ipython # Add note to deal 54
+2026-01-28 16:46:01,218 INFO ipython result = add_deal_note("CRM-DEAL-2026-00054", "Note de test pour vérification")
+2026-01-28 16:46:01,219 INFO ipython print("Added note:", result)
+2026-01-28 16:46:01,220 INFO ipython # Get notes
+2026-01-28 16:46:01,222 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00054")
+2026-01-28 16:46:01,222 INFO ipython print("Notes for deal 54:", len(notes))
+2026-01-28 16:46:01,223 INFO ipython === session end ===
+2026-01-28 17:33:20,502 INFO ipython === bench console session ===
+2026-01-28 17:33:20,504 INFO ipython from vooroo_saas.api.prospect import get_activities, create_activity
+2026-01-28 17:33:20,504 INFO ipython # Test with CRM Lead
+2026-01-28 17:33:20,505 INFO ipython activities = get_activities("CRM-LEAD-2026-00023")
+2026-01-28 17:33:20,506 INFO ipython print(f"Activités CRM Lead: {len(activities)}")
+2026-01-28 17:33:20,506 INFO ipython # Test with CRM Deal
+2026-01-28 17:33:20,507 INFO ipython activities = get_activities("CRM-DEAL-2026-00054", reference_doctype="CRM Deal")
+2026-01-28 17:33:20,508 INFO ipython print(f"Activités CRM Deal: {len(activities)}")
+2026-01-28 17:33:20,508 INFO ipython # Create an activity for a deal
+2026-01-28 17:33:20,509 INFO ipython result = create_activity(
+    "CRM-DEAL-2026-00054", 
+    title="Test activité deal",
+    preset="tomorrow",
+    reference_doctype="CRM Deal"
+)
+2026-01-28 17:33:20,509 INFO ipython print(f"Activité créée: {result}")
+2026-01-28 17:33:20,510 INFO ipython === session end ===
+2026-01-28 17:34:42,444 INFO ipython === bench console session ===
+2026-01-28 17:34:42,445 INFO ipython from vooroo_saas.api.prospect import get_activities
+2026-01-28 17:34:42,445 INFO ipython # Test with CRM Deal after adding
+2026-01-28 17:34:42,446 INFO ipython activities = get_activities("CRM-DEAL-2026-00054", reference_doctype="CRM Deal")
+2026-01-28 17:34:42,446 INFO ipython print(f"Activités CRM Deal: {len(activities)}")
+2026-01-28 17:34:42,447 INFO ipython === session end ===
+2026-01-28 17:35:37,448 INFO ipython === bench console session ===
+2026-01-28 17:35:37,450 INFO ipython from vooroo_saas.api.deal import get_deal_history
+2026-01-28 17:35:37,450 INFO ipython # Test history for a deal
+2026-01-28 17:35:37,451 INFO ipython history = get_deal_history("CRM-DEAL-2026-00054")
+2026-01-28 17:35:37,452 INFO ipython print(f"Historique total: {history.get('stats', {}).get('total_events', 0)} événements")
+2026-01-28 17:35:37,453 INFO ipython print(f"Stats: {history.get('stats')}")
+2026-01-28 17:35:37,453 INFO ipython print("\nÉvénements récents:")
+2026-01-28 17:35:37,454 INFO ipython === session end ===
+2026-01-28 17:46:31,708 INFO ipython === bench console session ===
+2026-01-28 17:46:31,711 INFO ipython from vooroo_saas.api.deal import get_deal_notes, add_deal_note
+2026-01-28 17:46:31,712 INFO ipython # Add note
+2026-01-28 17:46:31,714 INFO ipython result = add_deal_note("CRM-DEAL-2026-00054", "Test note directe")
+2026-01-28 17:46:31,715 INFO ipython print("Note ajoutée:", result)
+2026-01-28 17:46:31,716 INFO ipython # Get notes
+2026-01-28 17:46:31,716 INFO ipython notes = get_deal_notes("CRM-DEAL-2026-00054")
+2026-01-28 17:46:31,717 INFO ipython print(f"\nNotes récupérées: {len(notes)}")
+2026-01-28 17:46:31,718 INFO ipython === session end ===
+2026-01-28 17:49:29,396 INFO ipython === bench console session ===
+2026-01-28 17:49:29,398 INFO ipython import json
+2026-01-28 17:49:29,399 INFO ipython from vooroo_saas.api.deal import get_deal_notes
+2026-01-28 17:49:29,400 INFO ipython # Get deals first
+2026-01-28 17:49:29,402 INFO ipython deals = frappe.get_all("CRM Deal", limit=3)
+2026-01-28 17:49:29,403 INFO ipython print("Deals:", deals)
+2026-01-28 17:49:29,404 INFO ipython === session end ===
+2026-01-28 23:34:16,829 INFO ipython === bench console session ===
+2026-01-28 23:34:16,831 INFO ipython import frappe
+2026-01-28 23:34:16,832 INFO ipython # Check linked documents for a CRM Lead
+2026-01-28 23:34:16,833 INFO ipython lead = frappe.get_all("CRM Lead", limit=1)
+2026-01-28 23:34:16,852 INFO ipython === session end ===
+2026-01-29 20:30:53,356 INFO ipython === bench console session ===
+2026-01-29 20:30:53,359 INFO ipython # Créer un WhatsApp Account pour les tests
+2026-01-29 20:30:53,360 INFO ipython import frappe
+2026-01-29 20:30:53,361 INFO ipython === session end ===
+2026-01-30 15:07:08,158 INFO ipython === bench console session ===
+2026-01-30 15:07:08,160 INFO ipython providers = frappe.get_all("Social Login Key", filters={"enable_social_login": 1}, fields=["name", "provider_name", "client_id"])
+2026-01-30 15:07:08,161 INFO ipython print("OAuth Providers configured:", providers)
+2026-01-30 15:07:08,162 INFO ipython === session end ===
+2026-01-31 23:37:52,669 INFO ipython === bench console session ===
+2026-01-31 23:37:52,670 INFO ipython print(frappe.db.exists('DocType', 'Vooroo Mail Settings'))
+2026-01-31 23:37:52,670 INFO ipython === session end ===
+2026-01-31 23:45:40,530 INFO ipython === bench console session ===
+2026-01-31 23:45:40,548 INFO ipython doc = frappe.get_doc("Vooroo Mail Settings")
+2026-01-31 23:45:40,549 INFO ipython print(f"Enabled: {doc.enabled}")
+2026-01-31 23:45:40,551 INFO ipython print(f"URL: {doc.frappe_mail_url}")
+2026-01-31 23:45:40,552 INFO ipython === session end ===
+2026-01-31 23:45:50,881 INFO ipython === bench console session ===
+2026-01-31 23:45:50,883 INFO ipython doc = frappe.get_doc("Vooroo Mail Settings")
+2026-01-31 23:45:50,884 INFO ipython doc.enabled = 1
+2026-01-31 23:45:50,886 INFO ipython doc.frappe_mail_url = "https://mail.lemomentum.tech"
+2026-01-31 23:45:50,887 INFO ipython doc.default_sender_email = "admin@lemomentum.tech"
+2026-01-31 23:45:50,887 INFO ipython doc.default_sender_name = "Vooroo CRM"
+2026-01-31 23:45:50,888 INFO ipython doc.save()
+2026-01-31 23:45:50,889 INFO ipython frappe.db.commit()
+2026-01-31 23:45:50,890 INFO ipython print("Settings saved!")
+2026-01-31 23:45:50,891 INFO ipython === session end ===
+2026-02-01 00:16:33,349 INFO ipython === bench console session ===
+2026-02-01 00:16:33,351 INFO ipython import requests
+2026-02-01 00:16:33,352 INFO ipython settings = frappe.get_doc("Vooroo Mail Settings")
+2026-02-01 00:16:33,353 INFO ipython url = settings.frappe_mail_url
+2026-02-01 00:16:33,354 INFO ipython api_key = settings.api_key
+2026-02-01 00:16:33,355 INFO ipython api_secret = settings.get_password("api_secret")
+2026-02-01 00:16:33,356 INFO ipython print(f"URL: {url}")
+2026-02-01 00:16:33,357 INFO ipython print(f"API Key: {api_key}")
+2026-02-01 00:16:33,359 INFO ipython print(f"API Secret exists: {bool(api_secret)}")
+2026-02-01 00:16:33,360 INFO ipython if api_key and api_secret:
+    headers = {"Authorization": f"token {api_key}:{api_secret}"}
+    r = requests.get(f"{url}/api/method/frappe.ping", headers=headers, timeout=15)
+    print(f"Status: {r.status_code}")
+    print(f"Response: {r.text[:200]}")
+exit()
+2026-02-01 00:16:33,361 INFO ipython === session end ===
+2026-02-01 09:44:41,371 INFO ipython === bench console session ===
+2026-02-01 09:44:41,374 INFO ipython # Vérifier les paramètres email actuels
+2026-02-01 09:44:41,376 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 09:44:41,378 INFO ipython print("=== Paramètres Email ===")
+2026-02-01 09:44:41,380 INFO ipython print(f"URL: {settings.frappe_mail_url}")
+2026-02-01 09:44:41,381 INFO ipython print(f"Sender Email: {settings.default_sender_email}")
+2026-02-01 09:44:41,382 INFO ipython print(f"Sender Name: {settings.default_sender_name}")
+2026-02-01 09:44:41,383 INFO ipython print(f"API Key: {settings.api_key}")
+2026-02-01 09:44:41,384 INFO ipython print(f"API Secret: {'***' if settings.api_secret else 'Non défini'}")
+2026-02-01 09:44:41,385 INFO ipython === session end ===
+2026-02-01 09:44:55,389 INFO ipython === bench console session ===
+2026-02-01 09:44:55,392 INFO ipython # Chercher ou créer un prospect avec l'email test
+2026-02-01 09:44:55,393 INFO ipython test_email = "lemomentumafrica@gmail.com"
+2026-02-01 09:44:55,394 INFO ipython # Chercher si un prospect existe déjà
+2026-02-01 09:44:55,395 INFO ipython existing = frappe.db.get_value("CRM Lead", {"email_id": test_email}, "name")
+2026-02-01 09:44:55,396 INFO ipython === session end ===
+2026-02-01 09:45:04,756 INFO ipython === bench console session ===
+2026-02-01 09:45:04,758 INFO ipython # Chercher ou créer un prospect avec l'email test
+2026-02-01 09:45:04,759 INFO ipython test_email = "lemomentumafrica@gmail.com"
+2026-02-01 09:45:04,760 INFO ipython # Chercher si un prospect existe déjà avec ce email
+2026-02-01 09:45:04,762 INFO ipython existing = frappe.db.get_value("CRM Lead", {"email": test_email}, "name")
+2026-02-01 09:45:04,763 INFO ipython === session end ===
+2026-02-01 10:11:54,259 INFO ipython === bench console session ===
+2026-02-01 10:11:54,260 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 10:11:54,261 INFO ipython print("=== Paramètres Email Actuels ===")
+2026-02-01 10:11:54,262 INFO ipython print(f"Enabled: {settings.enabled}")
+2026-02-01 10:11:54,262 INFO ipython print(f"URL: {settings.frappe_mail_url}")
+2026-02-01 10:11:54,264 INFO ipython print(f"Default Sender: {settings.default_sender_email}")
+2026-02-01 10:11:54,265 INFO ipython print(f"SMTP Fallback: {settings.use_smtp_fallback}")
+2026-02-01 10:11:54,265 INFO ipython print(f"SMTP Server: {settings.smtp_server}")
+2026-02-01 10:11:54,266 INFO ipython print(f"SMTP Port: {settings.smtp_port}")
+2026-02-01 10:11:54,267 INFO ipython print(f"SMTP User: {settings.smtp_user}")
+2026-02-01 10:11:54,267 INFO ipython === session end ===
+2026-02-01 10:12:05,080 INFO ipython === bench console session ===
+2026-02-01 10:12:05,083 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 10:12:05,084 INFO ipython settings.use_smtp_fallback = 1
+2026-02-01 10:12:05,085 INFO ipython settings.smtp_server = "stalwart.lemomentum.tech"
+2026-02-01 10:12:05,086 INFO ipython settings.smtp_port = 587
+2026-02-01 10:12:05,087 INFO ipython settings.smtp_user = "admin@lemomentum.tech"
+2026-02-01 10:12:05,088 INFO ipython settings.use_tls = 1
+2026-02-01 10:12:05,089 INFO ipython settings.save()
+2026-02-01 10:12:05,090 INFO ipython frappe.db.commit()
+2026-02-01 10:12:05,093 INFO ipython print("✅ Paramètres SMTP configurés (sans mot de passe)")
+2026-02-01 10:12:05,095 INFO ipython print(f"Server: {settings.smtp_server}")
+2026-02-01 10:12:05,096 INFO ipython print(f"Port: {settings.smtp_port}")
+2026-02-01 10:12:05,097 INFO ipython print(f"User: {settings.smtp_user}")
+2026-02-01 10:12:05,098 INFO ipython print(f"TLS: {settings.use_tls}")
+2026-02-01 10:12:05,099 INFO ipython === session end ===
+2026-02-01 10:14:17,221 INFO ipython === bench console session ===
+2026-02-01 10:14:17,223 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 10:14:17,224 INFO ipython settings.smtp_password = "admin123"
+2026-02-01 10:14:17,225 INFO ipython settings.save()
+2026-02-01 10:14:17,225 INFO ipython frappe.db.commit()
+2026-02-01 10:14:17,227 INFO ipython print("✅ Mot de passe SMTP configuré!")
+2026-02-01 10:14:17,228 INFO ipython print(f"Server: {settings.smtp_server}")
+2026-02-01 10:14:17,228 INFO ipython print(f"Port: {settings.smtp_port}")
+2026-02-01 10:14:17,229 INFO ipython print(f"User: {settings.smtp_user}")
+2026-02-01 10:14:17,230 INFO ipython print(f"TLS: {settings.use_tls}")
+2026-02-01 10:14:17,231 INFO ipython print(f"Fallback activé: {settings.use_smtp_fallback}")
+2026-02-01 10:14:17,233 INFO ipython === session end ===
+2026-02-01 10:14:26,618 INFO ipython === bench console session ===
+2026-02-01 10:14:26,619 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 10:14:26,620 INFO ipython # Test d'envoi d'email vers lemomentumafrica@gmail.com
+2026-02-01 10:14:26,621 INFO ipython result = send_email(
+    to_email="lemomentumafrica@gmail.com",
+    subject="Test Email depuis Vooroo CRM",
+    body="<h1>Bonjour!</h1><p>Ceci est un test d'envoi d'email depuis le CRM Vooroo.</p><p>Si vous recevez ce message, la configuration SMTP fonctionne correctement!</p><br><p>Cordialement,<br>L'équipe LeMomentum</p>",
+    from_email="admin@lemomentum.tech"
+)
+2026-02-01 10:14:26,623 INFO ipython print("Résultat:", result)
+2026-02-01 10:14:26,624 INFO ipython === session end ===
+2026-02-01 10:15:03,981 INFO ipython === bench console session ===
+2026-02-01 10:15:03,983 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 10:15:03,985 INFO ipython # Test d'envoi d'email vers lemomentumafrica@gmail.com
+2026-02-01 10:15:03,986 INFO ipython result = send_email(
+    to="lemomentumafrica@gmail.com",
+    subject="Test Email depuis Vooroo CRM",
+    html="<h1>Bonjour!</h1><p>Ceci est un test d'envoi d'email depuis le CRM Vooroo.</p><p>Si vous recevez ce message, la configuration SMTP fonctionne correctement!</p><br><p>Cordialement,<br>L'équipe LeMomentum</p>"
+)
+2026-02-01 10:15:03,987 INFO ipython print("Résultat:", result)
+2026-02-01 10:15:03,988 INFO ipython === session end ===
+2026-02-01 10:15:25,569 INFO ipython === bench console session ===
+2026-02-01 10:15:25,571 INFO ipython import smtplib
+2026-02-01 10:15:25,571 INFO ipython # Test direct de connexion SMTP
+2026-02-01 10:15:25,572 INFO ipython server = "stalwart.lemomentum.tech"
+2026-02-01 10:15:25,573 INFO ipython port = 587
+2026-02-01 10:15:25,573 INFO ipython user = "admin@lemomentum.tech"
+2026-02-01 10:15:25,574 INFO ipython password = "admin123"
+2026-02-01 10:15:25,575 INFO ipython print(f"Test connexion SMTP: {server}:{port}")
+2026-02-01 10:15:25,576 INFO ipython print(f"User: {user}")
+2026-02-01 10:15:25,577 INFO ipython try:
+    smtp = smtplib.SMTP(server, port, timeout=30)
+    print("✅ Connexion établie")
+    smtp.starttls()
+    print("✅ STARTTLS activé")
+    smtp.login(user, password)
+    print("✅ Login réussi!")
+    smtp.quit()
+except Exception as e:
+    print(f"❌ Erreur: {e}")
+2026-02-01 10:15:25,577 INFO ipython === session end ===
+2026-02-01 10:15:34,500 INFO ipython === bench console session ===
+2026-02-01 10:15:34,501 INFO ipython import smtplib
+2026-02-01 10:15:34,502 INFO ipython # Test avec le mot de passe Frappe Mail Web
+2026-02-01 10:15:34,503 INFO ipython server = "stalwart.lemomentum.tech"
+2026-02-01 10:15:34,503 INFO ipython port = 587
+2026-02-01 10:15:34,504 INFO ipython user = "admin@lemomentum.tech"
+2026-02-01 10:15:34,505 INFO ipython password = "LeMomentum2026!"
+2026-02-01 10:15:34,505 INFO ipython print(f"Test connexion SMTP: {server}:{port}")
+2026-02-01 10:15:34,506 INFO ipython print(f"User: {user}")
+2026-02-01 10:15:34,506 INFO ipython try:
+    smtp = smtplib.SMTP(server, port, timeout=30)
+    print("✅ Connexion établie")
+    smtp.starttls()
+    print("✅ STARTTLS activé")
+    smtp.login(user, password)
+    print("✅ Login réussi!")
+    smtp.quit()
+except Exception as e:
+    print(f"❌ Erreur: {e}")
+2026-02-01 10:15:34,507 INFO ipython === session end ===
+2026-02-01 10:15:44,506 INFO ipython === bench console session ===
+2026-02-01 10:15:44,507 INFO ipython # Mettre à jour le mot de passe SMTP
+2026-02-01 10:15:44,508 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 10:15:44,508 INFO ipython settings.smtp_password = "LeMomentum2026!"
+2026-02-01 10:15:44,509 INFO ipython settings.save()
+2026-02-01 10:15:44,509 INFO ipython frappe.db.commit()
+2026-02-01 10:15:44,510 INFO ipython print("✅ Mot de passe SMTP mis à jour!")
+2026-02-01 10:15:44,511 INFO ipython === session end ===
+2026-02-01 10:15:55,659 INFO ipython === bench console session ===
+2026-02-01 10:15:55,660 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 10:15:55,661 INFO ipython # Test d'envoi d'email vers lemomentumafrica@gmail.com
+2026-02-01 10:15:55,662 INFO ipython result = send_email(
+    to="lemomentumafrica@gmail.com",
+    subject="Test Email depuis Vooroo CRM",
+    html="<h1>Bonjour!</h1><p>Ceci est un test d'envoi d'email depuis le CRM Vooroo.</p><p>Si vous recevez ce message, la configuration SMTP fonctionne correctement!</p><br><p>Cordialement,<br>L'équipe LeMomentum</p>"
+)
+2026-02-01 10:15:55,663 INFO ipython print("✅ Résultat:", result)
+2026-02-01 10:15:55,664 INFO ipython === session end ===
+2026-02-01 12:14:30,407 INFO ipython === bench console session ===
+2026-02-01 12:14:30,409 INFO ipython # Simuler l'envoi d'email pour voir l'erreur exacte
+2026-02-01 12:14:30,410 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 12:14:30,411 INFO ipython import traceback
+2026-02-01 12:14:30,412 INFO ipython try:
+    result = send_email(
+        to="lemomentumafrica@gmail.com",
+        subject="BRIEF TEST FACTURATION",
+        html="<p>Hello</p><p>C'est le brief de Facturation TEST</p><p>Message envoyé depuis Vooroo CRM</p>",
+        cc="kouguem@adaa.tech,thierrymemel@gmail.com"
+    )
+    print("Résultat:", result)
+except Exception as e:
+    print("ERREUR:")
+    print(str(e))
+    traceback.print_exc()
+2026-02-01 12:14:30,413 INFO ipython === session end ===
+2026-02-01 12:14:59,088 INFO ipython === bench console session ===
+2026-02-01 12:14:59,089 INFO ipython import base64
+2026-02-01 12:14:59,090 INFO ipython import traceback
+2026-02-01 12:14:59,091 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 12:14:59,091 INFO ipython # Lire le fichier PDF et le convertir en base64
+2026-02-01 12:14:59,092 INFO ipython pdf_path = "/workspace/development/frappe-bench/apps/vooroo_saas/specs/3. Brief Espace PME CRM - Menu Facturation.pptm.pdf"
+2026-02-01 12:14:59,093 INFO ipython try:
+    with open(pdf_path, 'rb') as f:
+        content = base64.b64encode(f.read()).decode('utf-8')
+    print(f"PDF encodé: {len(content)} caractères")
+    
+    # Créer la pièce jointe
+    attachments = [
+        {
+            "name": "Brief Facturation.pdf",
+            "content": content,
+            "type": "application/pdf"
+        }
+    ]
+    
+    import json
+    attachments_json = json.dumps(attachments)
+    print(f"Attachments JSON: {len(attachments_json)} caractères")
+    
+    result = send_email(
+        to="lemomentumafrica@gmail.com",
+        subject="BRIEF TEST FACTURATION avec PJ",
+        html="<p>Hello</p><p>C'est le brief de Facturation TEST</p><p>Message envoyé depuis Vooroo CRM</p>",
+        cc="kouguem@adaa.tech,thierrymemel@gmail.com",
+        attachments=attachments_json
+    )
+    print("Résultat:", result)
+except Exception as e:
+    print("ERREUR:")
+    print(str(e))
+    traceback.print_exc()
+2026-02-01 12:14:59,095 INFO ipython === session end ===
+2026-02-01 12:15:10,014 INFO ipython === bench console session ===
+2026-02-01 12:15:10,018 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 12:15:10,020 INFO ipython print("=== Paramètres SMTP ===")
+2026-02-01 12:15:10,022 INFO ipython print(f"Enabled: {settings.enabled}")
+2026-02-01 12:15:10,023 INFO ipython print(f"SMTP Fallback: {settings.use_smtp_fallback}")
+2026-02-01 12:15:10,024 INFO ipython print(f"SMTP Server: {settings.smtp_server}")
+2026-02-01 12:15:10,026 INFO ipython print(f"SMTP Port: {settings.smtp_port}")
+2026-02-01 12:15:10,027 INFO ipython print(f"SMTP User: {settings.smtp_user}")
+2026-02-01 12:15:10,028 INFO ipython try:
+    pwd = settings.get_password('smtp_password')
+    print(f"SMTP Password: {pwd[:3]}...{pwd[-3:] if pwd else 'None'}")
+except Exception as e:
+    print(f"SMTP Password Error: {e}")
+exit()
+2026-02-01 12:15:10,029 INFO ipython === session end ===
+2026-02-01 12:15:36,597 INFO ipython === bench console session ===
+2026-02-01 12:15:36,599 INFO ipython import smtplib
+2026-02-01 12:15:36,604 INFO ipython # Test direct avec le mot de passe récupéré
+2026-02-01 12:15:36,607 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 12:15:36,608 INFO ipython password = settings.get_password('smtp_password')
+2026-02-01 12:15:36,610 INFO ipython print(f"Testing SMTP: {settings.smtp_server}:{settings.smtp_port}")
+2026-02-01 12:15:36,612 INFO ipython print(f"User: {settings.smtp_user}")
+2026-02-01 12:15:36,613 INFO ipython print(f"Password: {password}")
+2026-02-01 12:15:36,615 INFO ipython try:
+    smtp = smtplib.SMTP(settings.smtp_server, int(settings.smtp_port), timeout=30)
+    print("✅ Connexion établie")
+    smtp.starttls()
+    print("✅ STARTTLS activé")
+    smtp.login(settings.smtp_user, password)
+    print("✅ Login réussi!")
+    smtp.quit()
+except Exception as e:
+    print(f"❌ Erreur: {e}")
+2026-02-01 12:15:36,617 INFO ipython === session end ===
+2026-02-01 12:16:04,638 INFO ipython === bench console session ===
+2026-02-01 12:16:04,640 INFO ipython import smtplib
+2026-02-01 12:16:04,641 INFO ipython passwords_to_test = [
+    "LeMomentum2026!",  # Frappe Mail Web
+    "admin123",         # IMAP/SMTP selon le tableau
+    "tech@@2024@@@@@@"  # Stalwart Admin
+]
+2026-02-01 12:16:04,644 INFO ipython server = "stalwart.lemomentum.tech"
+2026-02-01 12:16:04,646 INFO ipython port = 587
+2026-02-01 12:16:04,647 INFO ipython user = "admin@lemomentum.tech"
+2026-02-01 12:16:04,648 INFO ipython for password in passwords_to_test:
+    print(f"\nTest avec: {password}")
+    try:
+        smtp = smtplib.SMTP(server, port, timeout=30)
+        smtp.starttls()
+        smtp.login(user, password)
+        print(f"✅ Login réussi avec: {password}")
+        smtp.quit()
+        break
+    except Exception as e:
+        print(f"❌ Échec: {str(e)[:50]}")
+2026-02-01 12:16:04,650 INFO ipython === session end ===
+2026-02-01 12:16:18,358 INFO ipython === bench console session ===
+2026-02-01 12:16:18,361 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
+2026-02-01 12:16:18,363 INFO ipython settings.smtp_password = "admin123"
+2026-02-01 12:16:18,364 INFO ipython settings.save()
+2026-02-01 12:16:18,365 INFO ipython frappe.db.commit()
+2026-02-01 12:16:18,367 INFO ipython print("✅ Mot de passe SMTP mis à jour à: admin123")
+2026-02-01 12:16:18,368 INFO ipython === session end ===
+2026-02-01 12:16:43,779 INFO ipython === bench console session ===
+2026-02-01 12:16:43,784 INFO ipython import base64
+2026-02-01 12:16:43,788 INFO ipython import json
+2026-02-01 12:16:43,790 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 12:16:43,792 INFO ipython # Lire le fichier PDF
+2026-02-01 12:16:43,795 INFO ipython pdf_path = "/workspace/development/frappe-bench/apps/vooroo_saas/specs/3. Brief Espace PME CRM - Menu Facturation.pptm.pdf"
+2026-02-01 12:16:43,798 INFO ipython with open(pdf_path, 'rb') as f:
+    content = base64.b64encode(f.read()).decode('utf-8')
+2026-02-01 12:16:43,800 INFO ipython print(f"PDF size: {len(content)} chars")
+2026-02-01 12:16:43,803 INFO ipython attachments = json.dumps([{
+    "name": "Brief_Facturation.pdf",
+    "content": content,
+    "type": "application/pdf"
+}])
+2026-02-01 12:16:43,806 INFO ipython result = send_email(
+    to="lemomentumafrica@gmail.com",
+    subject="BRIEF TEST FACTURATION",
+    html="<h2>Hello</h2><p>C'est le brief de Facturation TEST</p><p><strong>Message envoyé depuis Vooroo CRM</strong></p>",
+    cc="kouguem@adaa.tech,thierrymemel@gmail.com",
+    attachments=attachments
+)
+2026-02-01 12:16:43,808 INFO ipython print("✅ Résultat:", result)
+2026-02-01 12:16:43,810 INFO ipython === session end ===
+2026-02-01 12:41:07,561 INFO ipython === bench console session ===
+2026-02-01 12:41:07,563 INFO ipython # Test: Envoyer un email et vérifier la création de Communication
+2026-02-01 12:41:07,564 INFO ipython import frappe
+2026-02-01 12:41:07,565 INFO ipython # Vérifier si des Communications existent pour des prospects
+2026-02-01 12:41:07,566 INFO ipython comms = frappe.get_all("Communication", 
+    filters={
+        "reference_doctype": ["in", ["CRM Lead", "CRM Deal"]],
+        "communication_medium": "Email"
+    },
+    fields=["name", "subject", "recipients", "reference_doctype", "reference_name", "creation"],
+    limit=5,
+    order_by="creation desc"
+)
+2026-02-01 12:41:07,566 INFO ipython print("=== Communications Email récentes ===")
+2026-02-01 12:41:07,567 INFO ipython for c in comms:
+    print(f"- {c.name}: {c.subject} -> {c.recipients} ({c.reference_doctype}:{c.reference_name})")
+2026-02-01 12:41:07,568 INFO ipython === session end ===
+2026-02-01 12:41:23,925 INFO ipython === bench console session ===
+2026-02-01 12:41:23,925 INFO ipython import frappe
+2026-02-01 12:41:23,926 INFO ipython from vooroo_saas.api.email import send_email
+2026-02-01 12:41:23,927 INFO ipython # Trouver un prospect avec email
+2026-02-01 12:41:23,928 INFO ipython lead = frappe.get_all("CRM Lead", 
+    filters={"email": ["is", "set"]}, 
+    fields=["name", "email", "first_name"],
+    limit=1
+)
+2026-02-01 12:41:23,928 INFO ipython if lead:
+    lead = lead[0]
+    print(f"Prospect trouvé: {lead.name} - {lead.email}")
+    
+2026-02-01 12:41:23,929 INFO ipython     # Envoyer un email de test
+2026-02-01 12:41:23,930 INFO ipython     result = send_email(
+        to=lead.email,
+        subject="Test tracking activité",
+        html="<p>Ceci est un test de tracking des emails.</p>",
+        reference_doctype="CRM Lead",
+        reference_name=lead.name
+    )
+2026-02-01 12:41:23,930 INFO ipython     print(f"Résultat: {result}")
+2026-02-01 12:41:23,932 INFO ipython     # Vérifier la Communication créée
+2026-02-01 12:41:23,933 INFO ipython     comm = frappe.get_all("Communication",
+        filters={
+            "reference_doctype": "CRM Lead",
+            "reference_name": lead.name,
+            "communication_medium": "Email"
+        },
+        fields=["name", "subject", "recipients", "creation"],
+        limit=1,
+        order_by="creation desc"
+    )
+2026-02-01 12:41:23,935 INFO ipython     if comm:
+        print(f"✅ Communication créée: {comm[0].name}")
+    else:
+        print("❌ Communication non créée")
+else:
+    print("Aucun prospect avec email trouvé")
+2026-02-01 12:41:23,937 INFO ipython === session end ===
+2026-02-01 12:41:35,658 INFO ipython === bench console session ===
+2026-02-01 12:41:35,659 INFO ipython import frappe
+2026-02-01 12:41:35,660 INFO ipython # Vérifier la Communication créée
+2026-02-01 12:41:35,663 INFO ipython comm = frappe.get_all("Communication",
+    filters={
+        "reference_doctype": "CRM Lead",
+        "reference_name": "CRM-LEAD-2026-00067",
+        "communication_medium": "Email"
+    },
+    fields=["name", "subject", "recipients", "creation", "sent_or_received"],
+    limit=1,
+    order_by="creation desc"
+)
+2026-02-01 12:41:35,664 INFO ipython if comm:
+    print(f"✅ Communication trouvée: {comm[0]}")
+else:
+    print("❌ Communication non créée")
+2026-02-01 12:41:35,665 INFO ipython # Vérifier toutes les Communications récentes
+2026-02-01 12:41:35,666 INFO ipython all_comms = frappe.get_all("Communication",
+    filters={"communication_medium": "Email"},
+    fields=["name", "subject", "reference_doctype", "reference_name"],
+    limit=5,
+    order_by="creation desc"
+)
+2026-02-01 12:41:35,668 INFO ipython print(f"\nToutes les communications récentes: {len(all_comms)}")
+2026-02-01 12:41:35,669 INFO ipython === session end ===
+2026-02-01 21:09:20,906 INFO ipython === bench console session ===
+2026-02-01 21:09:20,910 INFO ipython import frappe
+2026-02-01 21:09:20,911 INFO ipython # Vérifier si Email Account existe pour la réception
+2026-02-01 21:09:20,913 INFO ipython email_accounts = frappe.get_all("Email Account", 
+    fields=["name", "email_id", "enable_incoming", "enable_outgoing", "imap_host", "smtp_server"],
+    filters={"enabled": 1}
+)
+2026-02-01 21:09:20,916 INFO ipython print("=== Email Accounts configurés ===")
+2026-02-01 21:09:20,918 INFO ipython for ea in email_accounts:
+    print(f"  - {ea.name}: {ea.email_id}")
+    print(f"    IMAP: {ea.imap_host} (incoming: {ea.enable_incoming})")
+    print(f"    SMTP: {ea.smtp_server} (outgoing: {ea.enable_outgoing})")
+2026-02-01 21:09:20,919 INFO ipython if not email_accounts:
+    print("Aucun Email Account configuré!")
+2026-02-01 21:09:20,920 INFO ipython # Vérifier les Communications reçues
+2026-02-01 21:09:20,920 INFO ipython received = frappe.get_all("Communication",
+    filters={"sent_or_received": "Received", "communication_medium": "Email"},
+    fields=["name", "subject", "sender", "creation"],
+    limit=5
+)
+2026-02-01 21:09:20,921 INFO ipython print(f"\n=== Emails reçus récents: {len(received)} ===")
+2026-02-01 21:09:20,922 INFO ipython === session end ===
+2026-02-01 21:09:33,240 INFO ipython === bench console session ===
+2026-02-01 21:09:33,243 INFO ipython import frappe
+2026-02-01 21:09:33,244 INFO ipython # Voir les champs disponibles dans Email Account
+2026-02-01 21:09:33,245 INFO ipython meta = frappe.get_meta("Email Account")
+2026-02-01 21:09:33,246 INFO ipython fields = [f.fieldname for f in meta.fields if f.fieldtype not in ["Section Break", "Column Break", "Tab Break"]]
+2026-02-01 21:09:33,247 INFO ipython print("Champs Email Account:", fields[:20])
+2026-02-01 21:09:33,248 INFO ipython # Vérifier les Email Accounts
+2026-02-01 21:09:33,249 INFO ipython email_accounts = frappe.get_all("Email Account", 
+    fields=["name", "email_id", "enable_incoming", "enable_outgoing"],
+    filters={"enabled": 1}
+)
+2026-02-01 21:09:33,250 INFO ipython print(f"\n=== Email Accounts ({len(email_accounts)}) ===")
+2026-02-01 21:09:33,251 INFO ipython === session end ===
+2026-02-01 21:09:45,062 INFO ipython === bench console session ===
+2026-02-01 21:09:45,063 INFO ipython import frappe
+2026-02-01 21:09:45,065 INFO ipython # Tous les Email Accounts
+2026-02-01 21:09:45,066 INFO ipython email_accounts = frappe.db.sql("SELECT name, email_id, enable_incoming, enable_outgoing FROM `tabEmail Account`", as_dict=True)
+2026-02-01 21:09:45,067 INFO ipython print(f"=== Email Accounts ({len(email_accounts)}) ===")
+2026-02-01 21:09:45,068 INFO ipython for ea in email_accounts:
+    print(f"  - {ea.name}: {ea.email_id} (in:{ea.enable_incoming}, out:{ea.enable_outgoing})")
+2026-02-01 21:09:45,069 INFO ipython # Voir les colonnes de la table
+2026-02-01 21:09:45,070 INFO ipython cols = frappe.db.sql("SHOW COLUMNS FROM `tabEmail Account`", as_dict=True)
+2026-02-01 21:09:45,071 INFO ipython print("\nColonnes importantes:")
+2026-02-01 21:09:45,072 INFO ipython === session end ===
+2026-02-01 21:12:38,280 INFO ipython === bench console session ===
+2026-02-01 21:12:38,281 INFO ipython import frappe
+2026-02-01 21:12:38,282 INFO ipython from vooroo_saas.api.email import setup_email_account
+2026-02-01 21:12:38,282 INFO ipython # Configurer Email Account pour stalwart.lemomentum.tech
+2026-02-01 21:12:38,283 INFO ipython result = setup_email_account(
+    email_id="admin@lemomentum.tech",
+    password="admin123",
+    imap_server="stalwart.lemomentum.tech",
+    smtp_server="stalwart.lemomentum.tech",
+    imap_port=993,
+    smtp_port=587,
+    use_ssl=True,
+    use_tls=True
+)
+2026-02-01 21:12:38,284 INFO ipython print("Résultat:", result)
+2026-02-01 21:12:38,284 INFO ipython # Vérifier la création
+2026-02-01 21:12:38,285 INFO ipython accounts = frappe.db.sql("SELECT name, email_id, enable_incoming, enable_outgoing FROM `tabEmail Account`", as_dict=True)
+2026-02-01 21:12:38,287 INFO ipython print(f"\nEmail Accounts créés: {len(accounts)}")
+2026-02-01 21:12:38,288 INFO ipython === session end ===
+2026-02-01 21:13:00,553 INFO ipython === bench console session ===
+2026-02-01 21:13:00,555 INFO ipython import frappe
+2026-02-01 21:13:00,556 INFO ipython # Voir les champs IMAP dans Email Account
+2026-02-01 21:13:00,556 INFO ipython meta = frappe.get_meta("Email Account")
+2026-02-01 21:13:00,558 INFO ipython imap_fields = [f.fieldname for f in meta.fields if 'imap' in f.fieldname.lower() or 'folder' in f.fieldname.lower()]
+2026-02-01 21:13:00,559 INFO ipython print("Champs IMAP/Folder:", imap_fields)
+2026-02-01 21:13:00,560 INFO ipython # Voir tous les champs
+2026-02-01 21:13:00,560 INFO ipython all_fields = [(f.fieldname, f.fieldtype) for f in meta.fields if f.fieldtype not in ["Section Break", "Column Break", "Tab Break"]]
+2026-02-01 21:13:00,561 INFO ipython === session end ===
+2026-02-01 21:13:20,283 INFO ipython === bench console session ===
+2026-02-01 21:13:20,301 INFO ipython import frappe
+2026-02-01 21:13:20,302 INFO ipython from vooroo_saas.api.email import setup_email_account
+2026-02-01 21:13:20,304 INFO ipython # Configurer Email Account pour stalwart.lemomentum.tech
+2026-02-01 21:13:20,305 INFO ipython result = setup_email_account(
+    email_id="admin@lemomentum.tech",
+    password="admin123",
+    imap_server="stalwart.lemomentum.tech",
+    smtp_server="stalwart.lemomentum.tech",
+    imap_port=993,
+    smtp_port=587,
+    use_ssl=True,
+    use_tls=True
+)
+2026-02-01 21:13:20,306 INFO ipython print("Résultat:", result)
+2026-02-01 21:13:20,307 INFO ipython # Vérifier la création
+2026-02-01 21:13:20,308 INFO ipython accounts = frappe.db.sql("SELECT name, email_id, enable_incoming, enable_outgoing FROM `tabEmail Account`", as_dict=True)
+2026-02-01 21:13:20,333 INFO ipython print(f"\nEmail Accounts créés: {len(accounts)}")
+2026-02-01 21:13:20,334 INFO ipython === session end ===
+2026-02-01 21:13:31,245 INFO ipython === bench console session ===
+2026-02-01 21:13:31,246 INFO ipython import frappe
+2026-02-01 21:13:31,247 INFO ipython # Créer Email Account manuellement sans API
+2026-02-01 21:13:31,248 INFO ipython === session end ===
+2026-02-01 21:13:40,036 INFO ipython === bench console session ===
+2026-02-01 21:13:40,037 INFO ipython import frappe
+2026-02-01 21:13:40,039 INFO ipython # Vérifier les Email Accounts
+2026-02-01 21:13:40,040 INFO ipython accounts = frappe.db.sql("SELECT * FROM `tabEmail Account`", as_dict=True)
+2026-02-01 21:13:40,041 INFO ipython print(f"Email Accounts: {len(accounts)}")
+2026-02-01 21:13:40,042 INFO ipython === session end ===
+2026-02-01 21:14:01,784 INFO ipython === bench console session ===
+2026-02-01 21:14:01,787 INFO ipython import frappe
+2026-02-01 21:14:01,788 INFO ipython # D'abord, créer le doc de base
+2026-02-01 21:14:01,788 INFO ipython doc = frappe.new_doc("Email Account")
+2026-02-01 21:14:01,789 INFO ipython doc.email_account_name = "Vooroo CRM"
+2026-02-01 21:14:01,790 INFO ipython doc.email_id = "admin@lemomentum.tech"
+2026-02-01 21:14:01,791 INFO ipython doc.email_server = "stalwart.lemomentum.tech"
+2026-02-01 21:14:01,793 INFO ipython doc.smtp_server = "stalwart.lemomentum.tech"
+2026-02-01 21:14:01,794 INFO ipython doc.smtp_port = 587
+2026-02-01 21:14:01,795 INFO ipython doc.use_imap = 1
+2026-02-01 21:14:01,796 INFO ipython doc.use_ssl = 1
+2026-02-01 21:14:01,797 INFO ipython doc.use_tls = 1
+2026-02-01 21:14:01,798 INFO ipython doc.enable_incoming = 1
+2026-02-01 21:14:01,799 INFO ipython doc.enable_outgoing = 1
+2026-02-01 21:14:01,800 INFO ipython doc.imap_folder = "INBOX"
+2026-02-01 21:14:01,801 INFO ipython doc.append_to = "CRM Lead"
+2026-02-01 21:14:01,802 INFO ipython # Insert sans validation
+2026-02-01 21:14:01,803 INFO ipython doc.flags.ignore_permissions = True
+2026-02-01 21:14:01,804 INFO ipython doc.flags.ignore_mandatory = True
+2026-02-01 21:14:01,805 INFO ipython doc.insert()
+2026-02-01 21:14:01,806 INFO ipython print(f"✅ Créé: {doc.name}")
+2026-02-01 21:14:01,807 INFO ipython # Maintenant mettre le password
+2026-02-01 21:14:01,808 INFO ipython frappe.db.set_value("Email Account", doc.name, "password", "admin123")
+2026-02-01 21:14:01,809 INFO ipython frappe.db.commit()

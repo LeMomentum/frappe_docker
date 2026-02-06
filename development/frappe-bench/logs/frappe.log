@@ -1,0 +1,459 @@
+2026-01-09 18:07:58,542 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'gghhh', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-09 18:07:59,336 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'g', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-09 18:08:01,826 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'hhhj', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-09 18:08:06,064 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'hhhj', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-09 18:08:06,841 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'hhhj', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-09 18:08:09,167 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'h', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-09 22:27:05,621 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'ddd', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-10 08:46:45,207 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'jj', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-10 15:35:04,676 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_type': 'Particulier', 'first_name': 'Test', 'last_name': 'API', 'email': 'test.api@example.com', 'mobile_no': '+221771234567', 'status': 'New', 'custom_residence_country': 'Senegal', 'custom_residence_city': 'Dakar', 'cmd': 'vooroo_saas.api.prospect.create_prospect'}
+2026-01-12 00:24:09,589 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:24:09,591 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:24:47,386 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:24:47,413 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:25:02,428 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:25:02,445 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:25:03,892 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:25:44,814 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:25:51,415 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:25:51,418 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:31:37,872 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:31:37,874 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:31:46,947 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:31:46,949 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:31:52,439 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:31:53,051 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:31:53,342 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:31:53,615 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:31:57,194 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': '2026-01-12', 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:32:02,221 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:04,614 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:05,195 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:05,543 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:05,964 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:06,169 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:06,405 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:10,306 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:32:10,312 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:32:12,690 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:32:14,401 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:32:14,404 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:32:17,094 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:32:17,799 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:32:17,814 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'filters': {'user': None, 'action': None, 'reference_doctype': None, 'from_date': None, 'to_date': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:32:18,460 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:32:32,949 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:32:32,951 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:32:39,059 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:32:39,061 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:49:38,305 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:49:46,718 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:49:46,729 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:49:58,998 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 00:50:42,256 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:50:42,259 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:50:43,557 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:50:43,565 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 00:50:44,970 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:50:47,363 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:50:48,188 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 00:50:49,969 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 00:52:26,523 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 01:01:00,049 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 01:16:50,024 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 01:17:20,118 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 01:17:20,141 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:17:46,990 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 01:17:50,382 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 01:17:50,392 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:17:53,508 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:17:53,509 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 01:17:55,676 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:19:00,713 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 01:19:05,869 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_admin_dashboard_stats'}
+2026-01-12 01:20:35,863 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:20:35,865 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.admin.get_activity_log_actions'}
+2026-01-12 01:20:39,154 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 01:20:40,758 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 01:20:41,560 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'cmd': 'vooroo_saas.api.admin.get_access_logs'}
+2026-01-12 01:20:44,119 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:20:47,965 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-12 01:20:48,483 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 30, 'filters': {'user': None, 'action': None, 'reference_doctype': None}, 'cmd': 'vooroo_saas.api.admin.get_activity_logs'}
+2026-01-16 10:56:40,426 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'd', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-16 10:56:40,583 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'dff', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-16 11:53:49,449 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'dd', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-16 11:53:52,234 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'M', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-16 22:00:03,786 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': 'hhhh', 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-20 21:46:53,737 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'first_name': 'Test', 'cmd': 'vooroo_saas.api.prospect.create_prospect'}
+2026-01-21 17:18:45,638 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-DEAL-2026-00016', 'status': 'Lost', 'cmd': 'vooroo_saas.api.deal.update_deal_status'}
+2026-01-21 17:18:45,645 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-DEAL-2026-00016', 'status': 'Lost', 'cmd': 'vooroo_saas.api.deal.update_deal_status'}
+2026-01-21 17:18:45,651 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-DEAL-2026-00016', 'status': 'Won', 'cmd': 'vooroo_saas.api.deal.update_deal_status'}
+2026-01-21 17:18:45,655 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-DEAL-2026-00016', 'status': 'Won', 'cmd': 'vooroo_saas.api.deal.update_deal_status'}
+2026-01-24 19:19:19,304 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'cmd': 'vooroo_saas.api.deal.get_deals'}
+2026-01-24 19:19:25,742 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': None, 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-24 19:19:32,734 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'cmd': 'vooroo_saas.api.deal.get_deals'}
+2026-01-24 19:19:40,649 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': None, 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-24 19:20:00,857 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': None, 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-24 19:20:02,854 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'cmd': 'vooroo_saas.api.deal.get_deals'}
+2026-01-24 19:21:11,792 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'search': None, 'prospect_type': None, 'lead_label': None, 'status': None, 'acquisition_channel': None, 'lead_owner': None, 'order_by': 'modified', 'order_dir': 'desc', 'cmd': 'vooroo_saas.api.prospect.get_prospects'}
+2026-01-24 19:23:04,867 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'cmd': 'vooroo_saas.api.deal.get_deals'}
+2026-01-24 19:23:47,038 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 50, 'cmd': 'vooroo_saas.api.deal.get_deals'}
+2026-01-26 15:24:41,737 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00035', 'activity_type': 'Réunion', 'activity_date': '2026-01-27T15:30:00.000Z', 'description': "Reunion Importante demain\nles points à abordé sont :\n- formation\n- creation de l'appli", 'cmd': 'vooroo_saas.api.activity.add_activity'}
+2026-01-26 15:25:14,867 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00035', 'activity_type': 'Réunion', 'activity_date': '2026-01-26T15:24:55.787Z', 'description': 'OK', 'cmd': 'vooroo_saas.api.activity.add_activity'}
+2026-01-26 15:30:54,519 ERROR frappe Error while inserting deferred Error Log record: Error Log lmf25au7fm: 'Title' ((1292, "Incorrect datetime value: '2026-01-27 15:30:00+00:00' for column `_54cc49b9a1aab38b`.`tabCRM Deal`.`custom_next_activity_date` at row 1")) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-01-26 15:30:54,523 ERROR frappe Error while inserting deferred Error Log record: Error Log lmh0r49b89: 'Title' ((1292, "Incorrect datetime value: '2026-01-26 15:24:55.787000+00:00' for column `_54cc49b9a1aab38b`.`tabCRM Deal`.`custom_next_activity_date` at row 1")) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-01-26 15:33:38,843 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00035', 'activity_type': 'Réunion', 'activity_date': '2026-01-26T15:24:55.787Z', 'description': 'OK', 'cmd': 'vooroo_saas.api.activity.add_activity'}
+2026-01-27 13:49:45,803 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00005', 'deal_name': 'CRM-DEAL-2026-00043', 'cmd': 'vooroo_saas.api.prospect.mark_as_converted'}
+2026-01-27 13:49:55,994 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00005', 'deal_name': 'CRM-DEAL-2026-00044', 'cmd': 'vooroo_saas.api.prospect.mark_as_converted'}
+2026-01-27 22:06:38,194 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00017', 'cmd': 'vooroo_saas.api.prospect.update_lead_label'}
+2026-01-27 22:06:41,411 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00017', 'cmd': 'vooroo_saas.api.prospect.update_lead_label'}
+2026-01-27 22:06:43,823 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00017', 'cmd': 'vooroo_saas.api.prospect.update_lead_label'}
+2026-01-27 22:09:47,211 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00017', 'cmd': 'vooroo_saas.api.prospect.update_lead_label'}
+2026-01-27 22:11:13,662 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00017', 'cmd': 'vooroo_saas.api.prospect.update_lead_label'}
+2026-01-28 00:08:05,133 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00033', 'title': 'Email: Envoie email', 'description': 'Ok OK', 'due_date': '2026-01-29T07:20:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:08:09,004 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00033', 'title': 'Email: Envoie email', 'description': 'Ok OK', 'due_date': '2026-01-29T07:20:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:08:09,677 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00033', 'title': 'Email: Envoie email', 'description': 'Ok OK', 'due_date': '2026-01-29T07:20:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:08:10,317 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00033', 'title': 'Email: Envoie email', 'description': 'Ok OK', 'due_date': '2026-01-29T07:20:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:10:31,190 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00033', 'title': 'Email: Envoie email', 'description': 'Ok OK', 'due_date': '2026-01-29T07:20:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:10:31,925 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00033', 'title': 'Email: Envoie email', 'description': 'Ok OK', 'due_date': '2026-01-29T07:20:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:11:06,272 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': 'CRM-LEAD-2026-00017', 'title': 'Appel: Envoie email', 'description': 'Ok', 'due_date': '2026-01-29T00:10:00.000Z', 'priority': 'Medium', 'cmd': 'vooroo_saas.api.prospect.create_activity'}
+2026-01-28 00:37:06,303 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-28 00:37:11,145 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-28 00:37:17,967 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': 'today', 'deal': None, 'contact': None, 'assigned_to': None}, 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-28 00:41:19,898 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': 'today', 'deal': None, 'contact': None, 'assigned_to': None}, 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-28 01:19:46,094 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-28 16:03:39,577 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:04:02,790 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:04:05,498 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:04:20,086 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:40:38,784 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:44:32,439 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:44:48,297 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:48:32,757 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:51:02,519 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 16:51:41,251 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:02:35,944 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:02:45,169 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:03:42,785 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:33:55,861 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:38:42,029 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:40:29,906 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:42:30,453 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:42:37,523 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:42:49,999 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-28 17:46:32,481 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'deal_name': 'CRM-DEAL-2026-00053', 'limit': 30, 'cmd': 'vooroo_saas.api.deal.get_deal_notes'}
+2026-01-30 14:05:39,603 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'frappe.integrations.oauth2_logins.login_via_google'}
+2026-01-30 14:35:13,466 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'reference_doctype': 'CRM Lead', 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-30 14:42:33,447 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'redirect_to': '/onboarding', 'cmd': 'frappe.integrations.oauth2_logins.login_via_google'}
+2026-01-30 14:45:37,954 ERROR frappe Error while inserting deferred Error Log record: Error Log a5jp6n4e3q: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter':...' at line 1")) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-01-30 19:37:08,489 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'reference_doctype': 'CRM Lead', 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-30 19:37:18,290 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'reference_doctype': 'CRM Lead', 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-01-30 19:45:36,913 ERROR frappe Error while inserting deferred Error Log record: Error Log pu97h5sgvq: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter':...' at line 1")) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-01-30 19:45:36,924 ERROR frappe Error while inserting deferred Error Log record: Error Log pu990qa6ka: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter':...' at line 1")) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-02-02 17:35:21,083 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'communication_name': 'os1oap7sr2', 'message': '<p>C&#39;est&nbsp;une&nbsp;reponse&nbsp;test&nbsp;depuis&nbsp;VOOROO&nbsp;CRM</p>', 'cmd': 'vooroo_saas.api.email.reply_to_email'}
