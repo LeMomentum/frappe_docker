@@ -1,0 +1,11 @@
+services:
+  backend:
+    volumes:
+      # Logs
+      - ../logs:/home/frappe/frappe-bench/logs
+
+  frontend:
+    volumes:
+      - sites:/home/frappe/frappe-bench/sites
+      # Fix: absolute_redirect off to prevent :8080 port in redirects
+      - ./resources/nginx/frappe.conf.template:/templates/nginx/frappe.conf.template:ro

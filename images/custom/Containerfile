@@ -7,9 +7,7 @@ COPY resources/nginx-entrypoint.sh /usr/local/bin/nginx-entrypoint.sh
 
 ARG WKHTMLTOPDF_VERSION=0.12.6.1-3
 ARG WKHTMLTOPDF_DISTRO=bookworm
-ARG NODE_VERSION=20.19.2
-ENV NVM_DIR=/home/frappe/.nvm
-ENV PATH=${NVM_DIR}/versions/node/v${NODE_VERSION}/bin/:${PATH}
+ARG NODE_MAJOR=20
 
 RUN useradd -ms /bin/bash frappe \
     && apt-get update \
@@ -39,18 +37,15 @@ RUN useradd -ms /bin/bash frappe \
     jq \
     # For MIME type detection
     media-types \
-    # NodeJS
-    && mkdir -p ${NVM_DIR} \
-    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash \
-    && . ${NVM_DIR}/nvm.sh \
-    && nvm install ${NODE_VERSION} \
-    && nvm use v${NODE_VERSION} \
+    # dépendances système
+    ca-certificates \
+    gnupg \
+    && mkdir -p /etc/apt/keyrings \
+    && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
+    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list \
+    && apt-get update \
+    && apt-get install -y nodejs \
     && npm install -g yarn \
-    && nvm alias default v${NODE_VERSION} \
-    && rm -rf ${NVM_DIR}/.cache \
-    && echo 'export NVM_DIR="/home/frappe/.nvm"' >>/home/frappe/.bashrc \
-    && echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >>/home/frappe/.bashrc \
-    && echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >>/home/frappe/.bashrc \
     # Install wkhtmltopdf with patched qt
     && if [ "$(uname -m)" = "aarch64" ]; then export ARCH=arm64; fi \
     && if [ "$(uname -m)" = "x86_64" ]; then export ARCH=amd64; fi \
@@ -121,7 +116,7 @@ RUN export APP_INSTALL_ARGS="" && \
   if [ -n "${APPS_JSON_BASE64}" ]; then \
     export APP_INSTALL_ARGS="--apps_path=/opt/frappe/apps.json"; \
   fi && \
-  bench init ${APP_INSTALL_ARGS}\
+  bench init ${APP_INSTALL_ARGS} --ignore-exist \
     --frappe-branch=${FRAPPE_BRANCH} \
     --frappe-path=${FRAPPE_PATH} \
     --no-procfile \
