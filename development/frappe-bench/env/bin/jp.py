@@ -1,4 +1,4 @@
-#!/workspace/development/frappe-bench/env/bin/python
+#!/workspace/development/frappe-bench/env/bin/python3
 
 import sys
 import json

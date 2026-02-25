@@ -84694,3 +84694,648 @@ No module named 'mail'
 2026-02-02 20:36:41,054 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.monitor.flush)
 2026-02-02 20:36:41,055 Result is kept for 600 seconds
 2026-02-02 20:50:17,242 Unsubscribing from channel rq:pubsub:be16826aa82c4e48bb3a9eda8d7f5f1c
+2026-02-08 07:41:46,699 Worker rq:worker:810bca4775e44a4e9384cfb4e87e091c started with PID 76073, version 1.15.1
+2026-02-08 07:41:46,709 Subscribing to channel rq:pubsub:810bca4775e44a4e9384cfb4e87e091c
+2026-02-08 07:41:46,743 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 07:41:46,767 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-08 07:41:46,860 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-08 07:41:46,917 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-08 07:41:56,937 Worker 810bca4775e44a4e9384cfb4e87e091c [PID 76073]: warm shut down requested
+2026-02-08 07:41:57,011 Unsubscribing from channel rq:pubsub:810bca4775e44a4e9384cfb4e87e091c
+2026-02-08 07:42:42,560 Worker rq:worker:d8c2beca9c6e44a5a64c7b512592d57a started with PID 76854, version 1.15.1
+2026-02-08 07:42:42,562 Subscribing to channel rq:pubsub:d8c2beca9c6e44a5a64c7b512592d57a
+2026-02-08 07:42:42,577 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 07:42:44,813 Worker d8c2beca9c6e44a5a64c7b512592d57a [PID 76854]: warm shut down requested
+2026-02-08 07:42:44,851 Unsubscribing from channel rq:pubsub:d8c2beca9c6e44a5a64c7b512592d57a
+2026-02-08 07:43:59,240 Worker rq:worker:ba7388387c7a4005a0cdbec214a69a2f started with PID 77582, version 1.15.1
+2026-02-08 07:43:59,241 Subscribing to channel rq:pubsub:ba7388387c7a4005a0cdbec214a69a2f
+2026-02-08 07:43:59,248 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 07:44:06,314 Worker ba7388387c7a4005a0cdbec214a69a2f [PID 77582]: warm shut down requested
+2026-02-08 07:44:06,340 Unsubscribing from channel rq:pubsub:ba7388387c7a4005a0cdbec214a69a2f
+2026-02-08 07:44:57,992 Worker rq:worker:6c8fb6463b3c43afbf2aa47ad675ad52 started with PID 78239, version 1.15.1
+2026-02-08 07:44:57,997 Subscribing to channel rq:pubsub:6c8fb6463b3c43afbf2aa47ad675ad52
+2026-02-08 07:44:58,010 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 07:45:00,754 Worker 6c8fb6463b3c43afbf2aa47ad675ad52 [PID 78239]: warm shut down requested
+2026-02-08 07:45:00,762 Unsubscribing from channel rq:pubsub:6c8fb6463b3c43afbf2aa47ad675ad52
+2026-02-08 07:51:35,534 Worker rq:worker:37aa6a1a1a104baba1d897381d37049c started with PID 81993, version 1.15.1
+2026-02-08 07:51:35,542 Subscribing to channel rq:pubsub:37aa6a1a1a104baba1d897381d37049c
+2026-02-08 07:51:35,744 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 07:52:36,767 Worker 37aa6a1a1a104baba1d897381d37049c [PID 81993]: warm shut down requested
+2026-02-08 07:52:37,020 Unsubscribing from channel rq:pubsub:37aa6a1a1a104baba1d897381d37049c
+2026-02-08 07:54:22,934 Worker rq:worker:8e30abc8a2794ba3bac57396a46c1c88 started with PID 83474, version 1.15.1
+2026-02-08 07:54:22,935 Subscribing to channel rq:pubsub:8e30abc8a2794ba3bac57396a46c1c88
+2026-02-08 07:54:22,950 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 08:02:21,556 Worker 8e30abc8a2794ba3bac57396a46c1c88 [PID 83474]: warm shut down requested
+2026-02-08 08:02:21,805 Unsubscribing from channel rq:pubsub:8e30abc8a2794ba3bac57396a46c1c88
+2026-02-08 08:07:31,205 Worker rq:worker:77cea177554741fb9dc05661a5f8883c started with PID 86139, version 1.15.1
+2026-02-08 08:07:31,208 Subscribing to channel rq:pubsub:77cea177554741fb9dc05661a5f8883c
+2026-02-08 08:07:31,220 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 08:07:31,229 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-08 08:07:31,255 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-08 08:07:31,264 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-08 10:23:46,208 Worker rq:worker:ffc57549d55e4f138ca9b5edbe567b02 started with PID 47876, version 1.15.1
+2026-02-08 10:23:46,210 Subscribing to channel rq:pubsub:ffc57549d55e4f138ca9b5edbe567b02
+2026-02-08 10:23:46,273 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 10:23:46,299 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-08 10:23:46,368 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-08 10:23:46,442 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-08 10:23:46,744 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::a43391ad-d268-469f-b9f8-d0e35ed3516f)
+2026-02-08 10:24:18,577 workspace-development-frappe-bench:default: Job OK (development.localhost::a43391ad-d268-469f-b9f8-d0e35ed3516f)
+2026-02-08 10:24:18,578 Result is kept for 600 seconds
+2026-02-08 10:24:18,602 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::80483899-8bc6-4e3a-a020-6b0cf4ef8a88)
+2026-02-08 10:24:21,941 workspace-development-frappe-bench:default: Job OK (development.localhost::80483899-8bc6-4e3a-a020-6b0cf4ef8a88)
+2026-02-08 10:24:21,948 Result is kept for 600 seconds
+2026-02-08 10:24:22,003 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::629e478c-a231-4535-b029-f97915a68b3b)
+2026-02-08 10:26:37,929 workspace-development-frappe-bench:default: Job OK (development.localhost::629e478c-a231-4535-b029-f97915a68b3b)
+2026-02-08 10:26:37,968 Result is kept for 600 seconds
+2026-02-08 10:26:38,141 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::672e83cb-870b-4a1a-8922-237e97b02041)
+2026-02-08 10:31:08,158 workspace-development-frappe-bench:default: Job OK (development.localhost::672e83cb-870b-4a1a-8922-237e97b02041)
+2026-02-08 10:31:08,159 Result is kept for 600 seconds
+2026-02-08 10:31:08,229 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::a356579c-257e-49c1-baea-faf836775a71)
+2026-02-08 10:32:05,044 Worker rq:worker:078e05eca3914135b0752936a5b7c012 started with PID 1484, version 1.15.1
+2026-02-08 10:32:05,052 Subscribing to channel rq:pubsub:078e05eca3914135b0752936a5b7c012
+2026-02-08 10:32:05,060 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-08 10:32:05,076 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-08 10:32:05,083 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-08 10:32:05,088 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 09:58:17,511 Worker rq:worker:682fef3c0fed4412ac22be195cd81530 started with PID 3596, version 1.15.1
+2026-02-09 09:58:17,517 Subscribing to channel rq:pubsub:682fef3c0fed4412ac22be195cd81530
+2026-02-09 09:58:17,591 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-09 09:58:17,635 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 09:58:17,813 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 09:58:17,854 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 10:13:20,509 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 10:13:20,767 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 10:13:20,779 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 10:40:21,079 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 10:40:21,094 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 10:40:21,107 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 10:54:28,635 Worker 682fef3c0fed4412ac22be195cd81530 [PID 3596]: warm shut down requested
+2026-02-09 10:54:29,133 Unsubscribing from channel rq:pubsub:682fef3c0fed4412ac22be195cd81530
+2026-02-09 10:58:59,845 Worker rq:worker:9ea8aa37ff6441aeb4e0e8bc2ab961ce started with PID 8416, version 1.15.1
+2026-02-09 10:58:59,952 Subscribing to channel rq:pubsub:9ea8aa37ff6441aeb4e0e8bc2ab961ce
+2026-02-09 10:59:00,061 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-09 10:59:00,124 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 10:59:00,387 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 10:59:00,449 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 11:08:19,914 Worker rq:worker:4430b20d15d1462cb56438002113e22e started with PID 1663, version 1.15.1
+2026-02-09 11:08:19,916 Subscribing to channel rq:pubsub:4430b20d15d1462cb56438002113e22e
+2026-02-09 11:08:19,930 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-09 11:08:19,944 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 11:08:19,957 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 11:08:19,975 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 11:12:06,244 Worker 4430b20d15d1462cb56438002113e22e [PID 1663]: warm shut down requested
+2026-02-09 11:12:06,451 Unsubscribing from channel rq:pubsub:4430b20d15d1462cb56438002113e22e
+2026-02-09 15:06:46,885 Worker rq:worker:bd1f4bf72d644a089cbb5762b93798c3 started with PID 188, version 1.15.1
+2026-02-09 15:06:46,891 Subscribing to channel rq:pubsub:bd1f4bf72d644a089cbb5762b93798c3
+2026-02-09 15:06:46,906 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-09 15:06:46,919 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 15:06:46,932 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 15:06:46,937 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 15:14:20,209 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::e44e1a51-bf8b-40c5-808d-0d5363b7d327)
+2026-02-09 15:14:23,405 workspace-development-frappe-bench:default: Job OK (development.localhost::e44e1a51-bf8b-40c5-808d-0d5363b7d327)
+2026-02-09 15:14:23,408 Result is kept for 600 seconds
+2026-02-09 15:14:49,042 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: Administrator>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='development.localhost', user='Administrator') (development.localhost::91c0cc05-f983-4881-a746-36ccb3883935)
+2026-02-09 15:14:50,043 workspace-development-frappe-bench:default: Job OK (development.localhost::91c0cc05-f983-4881-a746-36ccb3883935)
+2026-02-09 15:14:50,043 Result is kept for 600 seconds
+2026-02-09 15:35:05,558 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 15:35:05,652 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 15:35:05,673 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 15:56:31,546 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'CRM Lead', 'name': 'CRM-LEAD-2026-00043'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::cdade8ff-7c95-4959-8cce-ded59d2cd6bd)
+2026-02-09 15:56:33,085 workspace-development-frappe-bench:default: Job OK (development.localhost::cdade8ff-7c95-4959-8cce-ded59d2cd6bd)
+2026-02-09 15:56:33,087 Result is kept for 600 seconds
+2026-02-09 16:03:18,133 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 16:03:18,148 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 16:03:18,157 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 16:30:18,382 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 16:30:18,397 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 16:30:18,412 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 16:57:18,750 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 16:57:18,762 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 16:57:18,778 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 17:24:19,025 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 17:24:19,036 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 17:24:19,042 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 17:51:19,408 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 17:51:19,421 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 17:51:19,439 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 18:18:19,631 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 18:18:19,642 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 18:18:19,652 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 18:45:19,886 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 18:45:19,897 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 18:45:19,911 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 19:12:20,138 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 19:12:20,161 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 19:12:20,170 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 19:39:20,364 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 19:39:20,370 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 19:39:20,375 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 20:06:20,672 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 20:06:20,711 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 20:06:20,724 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 20:33:20,969 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 20:33:20,983 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 20:33:20,997 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 21:00:21,279 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 21:00:21,298 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 21:00:21,314 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 21:27:21,598 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 21:27:21,623 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 21:27:21,634 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 21:54:21,879 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 21:54:21,923 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 21:54:21,948 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 22:21:22,273 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 22:21:22,371 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 22:21:22,388 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 22:46:05,493 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'CRM Lead', 'name': 'CRM-LEAD-2026-00058'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::982ce609-47ef-4e64-b2eb-49bcb3b7842c)
+2026-02-09 22:46:08,684 workspace-development-frappe-bench:default: Job OK (development.localhost::982ce609-47ef-4e64-b2eb-49bcb3b7842c)
+2026-02-09 22:46:08,693 Result is kept for 600 seconds
+2026-02-09 22:46:08,748 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 22:46:08,753 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 22:46:08,757 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 23:13:08,961 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 23:13:08,984 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 23:13:09,044 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-09 23:40:09,374 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-09 23:40:09,440 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-09 23:40:09,449 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 00:07:12,530 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 00:07:12,577 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 00:07:12,592 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 00:34:12,727 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 00:34:12,759 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 00:34:12,772 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 01:01:13,085 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 01:01:13,112 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 01:01:13,124 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 07:43:19,453 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 07:43:19,624 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 07:43:19,712 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 08:10:20,090 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 08:10:20,144 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 08:10:20,157 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 08:37:20,445 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 08:37:20,472 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 08:37:20,488 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 09:04:20,652 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 09:04:20,671 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 09:04:20,678 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 09:31:20,889 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 09:31:20,918 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 09:31:20,924 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 09:58:21,125 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 09:58:21,143 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 09:58:21,156 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 10:25:21,448 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 10:25:21,497 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 10:25:21,510 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 10:52:21,824 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 10:52:21,852 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 10:52:21,859 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 11:19:22,008 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 11:19:22,016 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 11:19:22,019 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 11:46:22,409 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 11:46:22,690 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 11:46:22,712 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 12:13:22,871 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 12:13:22,887 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 12:13:22,902 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 12:40:23,166 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 12:40:23,189 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 12:40:23,202 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 13:07:23,431 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 13:07:23,460 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 13:07:23,473 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 13:34:23,682 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 13:34:23,701 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 13:34:23,726 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 14:01:24,021 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 14:01:24,069 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 14:01:24,083 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 14:28:24,272 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 14:28:24,343 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 14:28:24,352 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 14:55:24,619 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 14:55:24,633 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 14:55:24,644 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 15:22:24,880 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 15:22:24,902 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 15:22:24,909 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 15:49:25,234 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 15:49:25,238 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 15:49:25,242 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 16:16:25,486 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 16:16:25,500 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 16:16:25,512 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 16:43:25,762 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 16:43:25,791 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 16:43:25,830 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 17:10:26,059 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 17:10:26,069 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 17:10:26,075 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 17:37:26,276 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 17:37:26,293 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 17:37:26,307 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 18:04:26,462 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 18:04:26,465 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 18:04:26,482 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 18:31:26,725 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 18:31:26,735 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 18:31:26,747 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 18:58:26,976 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 18:58:26,992 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 18:58:27,005 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 19:25:27,251 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 19:25:27,265 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 19:25:27,277 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 19:52:27,513 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 19:52:27,524 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 19:52:27,534 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 20:19:27,788 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 20:19:27,799 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 20:19:27,809 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 20:46:28,145 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 20:46:28,154 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 20:46:28,158 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 21:13:28,376 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 21:13:28,387 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 21:13:28,398 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 21:40:28,609 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 21:40:28,620 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 21:40:28,630 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 22:07:29,097 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 22:07:29,175 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 22:07:29,180 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 22:34:30,182 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 22:34:30,292 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 22:34:30,295 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 22:59:41,685 Worker rq:worker:606f2331415f42d68b8e0e1badcc9302 started with PID 5649, version 1.15.1
+2026-02-10 22:59:41,688 Subscribing to channel rq:pubsub:606f2331415f42d68b8e0e1badcc9302
+2026-02-10 22:59:41,699 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-10 22:59:41,707 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 22:59:41,722 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 22:59:41,731 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 23:07:36,142 Worker rq:worker:a117363d6ebf4a53a5f8201d63f09650 started with PID 56, version 1.15.1
+2026-02-10 23:07:36,144 Subscribing to channel rq:pubsub:a117363d6ebf4a53a5f8201d63f09650
+2026-02-10 23:07:36,155 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-10 23:07:36,164 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 23:07:36,178 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 23:07:36,189 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 23:22:07,756 Worker rq:worker:04c6b95ad5cd46c4b7af2c92ff9fde58 started with PID 485, version 1.15.1
+2026-02-10 23:22:07,757 Subscribing to channel rq:pubsub:04c6b95ad5cd46c4b7af2c92ff9fde58
+2026-02-10 23:22:07,777 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-10 23:22:08,250 Worker 04c6b95ad5cd46c4b7af2c92ff9fde58 [PID 485]: warm shut down requested
+2026-02-10 23:22:08,261 Unsubscribing from channel rq:pubsub:04c6b95ad5cd46c4b7af2c92ff9fde58
+2026-02-10 23:22:43,944 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.queue.retry_sending_emails'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.email.queue.retry_sending_emails)
+2026-02-10 23:22:45,857 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.email.queue.retry_sending_emails)
+2026-02-10 23:22:45,858 Result is kept for 600 seconds
+2026-02-10 23:22:45,873 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe_whatsapp.utils.trigger_whatsapp_notifications_all'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe_whatsapp.utils.trigger_whatsapp_notifications_all)
+2026-02-10 23:22:46,850 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe_whatsapp.utils.trigger_whatsapp_notifications_all)
+2026-02-10 23:22:46,852 Result is kept for 600 seconds
+2026-02-10 23:22:46,876 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.integrations.doctype.google_calendar.google_calendar.s..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.integrations.doctype.google_calendar.google_calendar.sync)
+2026-02-10 23:22:48,220 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.integrations.doctype.google_calendar.google_calendar.sync)
+2026-02-10 23:22:48,221 Result is kept for 600 seconds
+2026-02-10 23:22:48,237 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.monitor.flush'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.monitor.flush)
+2026-02-10 23:22:49,486 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.monitor.flush)
+2026-02-10 23:22:49,486 Result is kept for 600 seconds
+2026-02-10 23:22:49,499 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.queue.flush'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.email.queue.flush)
+2026-02-10 23:22:50,905 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.email.queue.flush)
+2026-02-10 23:22:50,906 Result is kept for 600 seconds
+2026-02-10 23:25:44,658 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'crm.lead_syncing.background_sync.sync_leads_from_sources_5_mi..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::crm.lead_syncing.background_sync.sync_leads_from_sources_5_minutes)
+2026-02-10 23:25:46,064 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::crm.lead_syncing.background_sync.sync_leads_from_sources_5_minutes)
+2026-02-10 23:25:46,065 Result is kept for 600 seconds
+2026-02-10 23:26:45,032 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.integrations.doctype.google_calendar.google_calendar.s..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.integrations.doctype.google_calendar.google_calendar.sync)
+2026-02-10 23:26:47,071 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.integrations.doctype.google_calendar.google_calendar.sync)
+2026-02-10 23:26:47,072 Result is kept for 600 seconds
+2026-02-10 23:26:47,098 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.monitor.flush'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.monitor.flush)
+2026-02-10 23:26:48,756 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.monitor.flush)
+2026-02-10 23:26:48,757 Result is kept for 600 seconds
+2026-02-10 23:26:48,765 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe_whatsapp.utils.trigger_whatsapp_notifications_all'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe_whatsapp.utils.trigger_whatsapp_notifications_all)
+2026-02-10 23:26:49,772 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe_whatsapp.utils.trigger_whatsapp_notifications_all)
+2026-02-10 23:26:49,773 Result is kept for 600 seconds
+2026-02-10 23:26:49,783 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.queue.retry_sending_emails'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.email.queue.retry_sending_emails)
+2026-02-10 23:26:50,837 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.email.queue.retry_sending_emails)
+2026-02-10 23:26:50,839 Result is kept for 600 seconds
+2026-02-10 23:26:50,851 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.email.queue.flush'}, method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='development.localhost', user='Administrator') (development.localhost::scheduled_job::frappe.email.queue.flush)
+2026-02-10 23:26:51,975 workspace-development-frappe-bench:default: Job OK (development.localhost::scheduled_job::frappe.email.queue.flush)
+2026-02-10 23:26:51,976 Result is kept for 600 seconds
+2026-02-10 23:33:37,017 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-10 23:33:37,050 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-10 23:33:37,061 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-10 23:59:30,684 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7feb93f40f70>, site='development.localhost', user='Administrator') (development.localhost::b4ffbfd4-be2c-4455-b7f9-bac55c34c71d)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-11 00:00:00,143 workspace-development-frappe-bench:long: Job OK (development.localhost::b4ffbfd4-be2c-4455-b7f9-bac55c34c71d)
+2026-02-11 00:00:00,143 Result is kept for 600 seconds
+2026-02-11 00:00:00,159 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 00:00:00,163 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 00:00:00,166 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 00:27:00,418 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 00:27:00,434 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 00:27:00,442 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 00:54:00,738 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 00:54:00,754 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 00:54:00,772 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 01:21:01,051 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 01:21:01,068 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 01:21:01,079 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 01:48:01,327 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 01:48:01,341 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 01:48:01,348 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 17:43:21,592 Worker rq:worker:19d2ac21fb8343749ae419f510e2e334 started with PID 12593, version 1.15.1
+2026-02-11 17:43:21,594 Subscribing to channel rq:pubsub:19d2ac21fb8343749ae419f510e2e334
+2026-02-11 17:43:21,618 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-11 17:43:21,624 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 17:43:21,670 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 17:43:21,684 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 18:05:18,027 Worker 19d2ac21fb8343749ae419f510e2e334 [PID 12593]: warm shut down requested
+2026-02-11 18:05:18,425 Unsubscribing from channel rq:pubsub:19d2ac21fb8343749ae419f510e2e334
+2026-02-11 18:35:35,867 Worker rq:worker:b2a7bf10776a49cdaa4ea926ad7c7fa2 started with PID 1681, version 1.15.1
+2026-02-11 18:35:35,868 Subscribing to channel rq:pubsub:b2a7bf10776a49cdaa4ea926ad7c7fa2
+2026-02-11 18:35:35,890 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-11 18:35:35,900 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 18:35:35,916 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 18:35:35,945 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 19:02:44,950 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-11 19:02:45,070 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-11 19:02:45,074 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-11 19:25:28,319 Worker b2a7bf10776a49cdaa4ea926ad7c7fa2 [PID 1681]: warm shut down requested
+2026-02-11 19:25:28,485 Unsubscribing from channel rq:pubsub:b2a7bf10776a49cdaa4ea926ad7c7fa2
+2026-02-12 11:37:32,052 Worker rq:worker:9ad50e4b137245f48c95b267fe394022 started with PID 24877, version 1.15.1
+2026-02-12 11:37:32,053 Subscribing to channel rq:pubsub:9ad50e4b137245f48c95b267fe394022
+2026-02-12 11:37:32,079 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-12 11:37:32,094 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-12 11:37:32,112 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-12 11:37:32,138 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-12 11:37:32,175 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00020'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::660e7ff1-e92f-4b99-a15d-9378215dbf02)
+2026-02-12 11:37:34,347 workspace-development-frappe-bench:default: Job OK (development.localhost::660e7ff1-e92f-4b99-a15d-9378215dbf02)
+2026-02-12 11:37:34,349 Result is kept for 600 seconds
+2026-02-12 11:37:34,384 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00022'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::c12686c0-1753-47df-9034-8e687272bc18)
+2026-02-12 11:37:34,950 workspace-development-frappe-bench:default: Job OK (development.localhost::c12686c0-1753-47df-9034-8e687272bc18)
+2026-02-12 11:37:34,951 Result is kept for 600 seconds
+2026-02-12 11:37:34,962 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00021'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::f368a4af-ccf9-4c94-80d3-d43dc7c62f39)
+2026-02-12 11:37:36,172 workspace-development-frappe-bench:default: Job OK (development.localhost::f368a4af-ccf9-4c94-80d3-d43dc7c62f39)
+2026-02-12 11:37:36,177 Result is kept for 600 seconds
+2026-02-12 11:37:36,207 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00023'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::c67f6b0d-5813-4faa-962e-a0245a2871e4)
+2026-02-12 11:37:36,827 workspace-development-frappe-bench:default: Job OK (development.localhost::c67f6b0d-5813-4faa-962e-a0245a2871e4)
+2026-02-12 11:37:36,830 Result is kept for 600 seconds
+2026-02-12 11:37:36,841 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Invoice', 'name': 'FAC-2026-00024'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::42cdc37f-f377-42d7-b5cf-a83a61fc284e)
+2026-02-12 11:37:37,400 workspace-development-frappe-bench:default: Job OK (development.localhost::42cdc37f-f377-42d7-b5cf-a83a61fc284e)
+2026-02-12 11:37:37,401 Result is kept for 600 seconds
+2026-02-12 11:37:37,413 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7f7251f91090>, site='development.localhost', user='Administrator') (development.localhost::09fc9bd6-d041-44be-8c09-749f29841df9)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:38:29,212 workspace-development-frappe-bench:long: Job OK (development.localhost::09fc9bd6-d041-44be-8c09-749f29841df9)
+2026-02-12 11:38:29,214 Result is kept for 600 seconds
+2026-02-12 11:38:29,281 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7f3fb0a79090>, site='development.localhost', user='Administrator') (development.localhost::6eafabf6-5dd3-463e-954c-a6812049a218)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:39:15,768 workspace-development-frappe-bench:long: Job OK (development.localhost::6eafabf6-5dd3-463e-954c-a6812049a218)
+2026-02-12 11:39:15,773 Result is kept for 600 seconds
+2026-02-12 11:39:15,826 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7f5c416ed090>, site='development.localhost', user='Administrator') (development.localhost::fccc312c-a9fb-4973-84f8-e27954e8ffbd)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:39:40,462 workspace-development-frappe-bench:long: Job OK (development.localhost::fccc312c-a9fb-4973-84f8-e27954e8ffbd)
+2026-02-12 11:39:40,463 Result is kept for 600 seconds
+2026-02-12 11:39:40,477 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7f44bbc8d090>, site='development.localhost', user='Administrator') (development.localhost::1b8bf9db-e624-4c3c-a46f-01386694ccb8)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:40:01,503 workspace-development-frappe-bench:long: Job OK (development.localhost::1b8bf9db-e624-4c3c-a46f-01386694ccb8)
+2026-02-12 11:40:01,504 Result is kept for 600 seconds
+2026-02-12 11:40:01,518 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7fbea21fd090>, site='development.localhost', user='Administrator') (development.localhost::4df11d5f-e780-4333-9d2f-2a3314227f6f)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:40:23,691 workspace-development-frappe-bench:long: Job OK (development.localhost::4df11d5f-e780-4333-9d2f-2a3314227f6f)
+2026-02-12 11:40:23,692 Result is kept for 600 seconds
+2026-02-12 11:40:23,708 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7f05cbb79090>, site='development.localhost', user='Administrator') (development.localhost::828bb526-54d0-4a37-ae10-7d497d9f7535)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:40:44,676 workspace-development-frappe-bench:long: Job OK (development.localhost::828bb526-54d0-4a37-ae10-7d497d9f7535)
+2026-02-12 11:40:44,676 Result is kept for 600 seconds
+2026-02-12 11:40:44,691 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x7f0cedc89090>, site='development.localhost', user='Administrator') (development.localhost::df783520-bcdc-46e8-a653-c4cdc6db799d)
+Retrieving Routes                   : [=                                       ] 2%
+2026-02-12 11:41:06,104 workspace-development-frappe-bench:long: Job OK (development.localhost::df783520-bcdc-46e8-a653-c4cdc6db799d)
+2026-02-12 11:41:06,105 Result is kept for 600 seconds
+2026-02-12 12:01:21,694 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-12 12:01:21,848 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-12 12:01:21,858 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-12 12:28:22,089 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-12 12:28:22,105 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-12 12:28:22,116 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-12 12:55:22,366 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-12 12:55:22,379 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-12 12:55:22,392 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-12 13:22:22,665 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-12 13:22:22,680 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-12 13:22:22,683 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-12 13:28:18,158 Worker 9ad50e4b137245f48c95b267fe394022 [PID 24877]: warm shut down requested
+2026-02-12 13:28:20,701 Unsubscribing from channel rq:pubsub:9ad50e4b137245f48c95b267fe394022
+2026-02-12 13:38:08,484 Worker rq:worker:5b3bb63b13d24fa0be9fef8c0887bcf4 started with PID 35558, version 1.15.1
+2026-02-12 13:38:08,488 Subscribing to channel rq:pubsub:5b3bb63b13d24fa0be9fef8c0887bcf4
+2026-02-12 13:38:08,493 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-12 13:38:08,502 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-12 13:38:08,525 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-12 13:38:08,536 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-12 13:51:33,504 Worker 5b3bb63b13d24fa0be9fef8c0887bcf4 [PID 35558]: warm shut down requested
+2026-02-12 13:51:33,911 Unsubscribing from channel rq:pubsub:5b3bb63b13d24fa0be9fef8c0887bcf4
+2026-02-13 02:23:56,820 Worker rq:worker:747655209d664d17b086bd99468b040a started with PID 41757, version 1.15.1
+2026-02-13 02:23:56,821 Subscribing to channel rq:pubsub:747655209d664d17b086bd99468b040a
+2026-02-13 02:23:56,823 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-13 02:23:56,824 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-13 02:23:56,826 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-13 02:23:56,827 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-13 02:26:09,767 Worker 747655209d664d17b086bd99468b040a [PID 41757]: warm shut down requested
+2026-02-13 02:26:09,867 Unsubscribing from channel rq:pubsub:747655209d664d17b086bd99468b040a
+2026-02-13 02:27:55,681 Worker rq:worker:2eec95f60b2f410e802ed131045c5340 started with PID 43747, version 1.15.1
+2026-02-13 02:27:55,681 Subscribing to channel rq:pubsub:2eec95f60b2f410e802ed131045c5340
+2026-02-13 02:27:55,684 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-13 02:38:41,780 Worker 2eec95f60b2f410e802ed131045c5340 [PID 43747]: warm shut down requested
+2026-02-13 02:38:41,889 Unsubscribing from channel rq:pubsub:2eec95f60b2f410e802ed131045c5340
+2026-02-13 10:52:43,231 Worker rq:worker:b9fd672bcf3d4080a85095347315d081 started with PID 2442, version 1.15.1
+2026-02-13 10:52:43,233 Subscribing to channel rq:pubsub:b9fd672bcf3d4080a85095347315d081
+2026-02-13 10:52:43,243 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-13 10:52:43,245 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-13 10:52:43,263 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-13 10:52:43,265 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-13 11:00:34,205 Worker b9fd672bcf3d4080a85095347315d081 [PID 2442]: warm shut down requested
+2026-02-13 11:00:34,289 Unsubscribing from channel rq:pubsub:b9fd672bcf3d4080a85095347315d081
+2026-02-13 12:04:19,131 Worker rq:worker:34ea7fdd0be848768f1aaf610b07e061 started with PID 6953, version 1.15.1
+2026-02-13 12:04:19,132 Subscribing to channel rq:pubsub:34ea7fdd0be848768f1aaf610b07e061
+2026-02-13 12:04:19,136 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-13 12:04:19,139 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-13 12:04:19,147 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-13 12:04:19,162 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-13 12:18:20,138 Worker 34ea7fdd0be848768f1aaf610b07e061 [PID 6953]: warm shut down requested
+2026-02-13 12:18:20,162 Unsubscribing from channel rq:pubsub:34ea7fdd0be848768f1aaf610b07e061
+2026-02-16 01:55:13,830 Worker rq:worker:b3de19c144014f81b2b99187648fd209 started with PID 3571, version 1.15.1
+2026-02-16 01:55:13,834 Subscribing to channel rq:pubsub:b3de19c144014f81b2b99187648fd209
+2026-02-16 01:55:13,842 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-16 01:55:13,846 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-16 01:55:13,855 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-16 01:55:13,864 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-16 02:00:09,003 Worker b3de19c144014f81b2b99187648fd209 [PID 3571]: warm shut down requested
+2026-02-16 02:00:09,605 Unsubscribing from channel rq:pubsub:b3de19c144014f81b2b99187648fd209
+2026-02-16 03:04:33,757 Worker rq:worker:5b32329ee391417fa8f712f5b143c68d started with PID 15114, version 1.15.1
+2026-02-16 03:04:33,758 Subscribing to channel rq:pubsub:5b32329ee391417fa8f712f5b143c68d
+2026-02-16 03:04:33,766 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-16 03:04:33,772 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-16 03:04:33,781 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-16 03:04:33,788 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-16 03:04:37,611 Worker 5b32329ee391417fa8f712f5b143c68d [PID 15114]: warm shut down requested
+2026-02-16 03:04:37,630 Unsubscribing from channel rq:pubsub:5b32329ee391417fa8f712f5b143c68d
+2026-02-16 03:05:07,457 Worker rq:worker:deb31c62d17a4d71ac68a20d72eaae0d started with PID 15645, version 1.15.1
+2026-02-16 03:05:07,458 Subscribing to channel rq:pubsub:deb31c62d17a4d71ac68a20d72eaae0d
+2026-02-16 03:05:07,466 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-16 03:05:09,940 Worker deb31c62d17a4d71ac68a20d72eaae0d [PID 15645]: warm shut down requested
+2026-02-16 03:05:09,982 Unsubscribing from channel rq:pubsub:deb31c62d17a4d71ac68a20d72eaae0d
+2026-02-16 19:47:28,009 Worker rq:worker:f77af98e6e7e4737be4eafe70d3f22cc started with PID 37529, version 1.15.1
+2026-02-16 19:47:28,012 Subscribing to channel rq:pubsub:f77af98e6e7e4737be4eafe70d3f22cc
+2026-02-16 19:47:28,022 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-16 19:47:28,025 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-16 19:47:28,034 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-16 19:47:28,050 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-16 19:47:33,470 Worker f77af98e6e7e4737be4eafe70d3f22cc [PID 37529]: warm shut down requested
+2026-02-16 19:47:33,504 Unsubscribing from channel rq:pubsub:f77af98e6e7e4737be4eafe70d3f22cc
+2026-02-17 10:36:37,890 Worker rq:worker:d7ab84621cec4621bc7295e6233fb16f started with PID 2973, version 1.15.1
+2026-02-17 10:36:37,897 Subscribing to channel rq:pubsub:d7ab84621cec4621bc7295e6233fb16f
+2026-02-17 10:36:37,942 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-17 10:36:37,952 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 10:36:37,988 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 10:36:38,014 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 11:03:38,486 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 11:03:38,552 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 11:03:38,557 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 11:32:05,532 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 11:32:05,589 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 11:32:05,596 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 11:57:48,309 Worker rq:worker:e7cfcbfef4234201b786d8dfa9fd7929 started with PID 3910, version 1.15.1
+2026-02-17 11:57:48,318 Subscribing to channel rq:pubsub:e7cfcbfef4234201b786d8dfa9fd7929
+2026-02-17 11:57:48,324 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-17 11:57:48,329 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 11:57:48,350 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 11:57:48,362 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 12:24:48,837 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 12:24:48,917 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 12:24:48,926 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 12:51:49,667 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 12:51:49,725 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 12:51:49,732 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 13:18:50,157 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 13:18:50,270 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 13:18:50,278 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 13:45:50,520 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 13:45:50,576 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 13:45:50,584 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 14:08:16,002 workspace-development-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.build_index_for_all_routes', kwargs={}, method=<function build_index_for_all_routes at 0x72559885a0c0>, site='development.localhost', user='Administrator') (development.localhost::61833fb9-6719-49ba-9f72-262a00ed57a9)
+Retrieving Routes                   : [=                                       ] 2%Retrieving Routes                   : [==                                      ] 5%Retrieving Routes                   : [===                                     ] 8%Retrieving Routes                   : [====                                    ] 11%Retrieving Routes                   : [=====                                   ] 13%Retrieving Routes                   : [======                                  ] 16%Retrieving Routes                   : [=======                                 ] 19%Retrieving Routes                   : [========                                ] 22%Retrieving Routes                   : [==========                              ] 25%Retrieving Routes                   : [===========                             ] 27%Retrieving Routes                   : [============                            ] 30%Retrieving Routes                   : [=============                           ] 33%Retrieving Routes                   : [==============                          ] 36%Retrieving Routes                   : [===============                         ] 38%Retrieving Routes                   : [================                        ] 41%Retrieving Routes                   : [=================                       ] 44%Retrieving Routes                   : [==================                      ] 47%Retrieving Routes                   : [====================                    ] 50%Retrieving Routes                   : [=====================                   ] 52%Retrieving Routes                   : [======================                  ] 55%Retrieving Routes                   : [=======================                 ] 58%Retrieving Routes                   : [========================                ] 61%Retrieving Routes                   : [=========================               ] 63%Retrieving Routes                   : [==========================              ] 66%Retrieving Routes                   : [===========================             ] 69%Retrieving Routes                   : [============================            ] 72%Retrieving Routes                   : [==============================          ] 75%Retrieving Routes                   : [===============================         ] 77%Retrieving Routes                   : [================================        ] 80%Retrieving Routes                   : [=================================       ] 83%Retrieving Routes                   : [==================================      ] 86%Retrieving Routes                   : [===================================     ] 88%Retrieving Routes                   : [====================================    ] 91%Retrieving Routes                   : [=====================================   ] 94%Retrieving Routes                   : [======================================  ] 97%Retrieving Routes                   : [========================================] 100%
+Building Index                      : [=                                       ] 2%Building Index                      : [==                                      ] 5%Building Index                      : [===                                     ] 8%Building Index                      : [====                                    ] 11%Building Index                      : [=====                                   ] 13%Building Index                      : [======                                  ] 16%Building Index                      : [=======                                 ] 19%Building Index                      : [========                                ] 22%Building Index                      : [==========                              ] 25%Building Index                      : [===========                             ] 27%Building Index                      : [============                            ] 30%Building Index                      : [=============                           ] 33%Building Index                      : [==============                          ] 36%Building Index                      : [===============                         ] 38%Building Index                      : [================                        ] 41%Building Index                      : [=================                       ] 44%Building Index                      : [==================                      ] 47%Building Index                      : [====================                    ] 50%Building Index                      : [=====================                   ] 52%Building Index                      : [======================                  ] 55%Building Index                      : [=======================                 ] 58%Building Index                      : [========================                ] 61%Building Index                      : [=========================               ] 63%Building Index                      : [==========================              ] 66%Building Index                      : [===========================             ] 69%Building Index                      : [============================            ] 72%Building Index                      : [==============================          ] 75%Building Index                      : [===============================         ] 77%Building Index                      : [================================        ] 80%Building Index                      : [=================================       ] 83%Building Index                      : [==================================      ] 86%Building Index                      : [===================================     ] 88%Building Index                      : [====================================    ] 91%Building Index                      : [=====================================   ] 94%Building Index                      : [======================================  ] 97%Building Index                      : [========================================] 100%2026-02-17 14:09:05,621 workspace-development-frappe-bench:long: Job OK (development.localhost::61833fb9-6719-49ba-9f72-262a00ed57a9)
+2026-02-17 14:09:05,621 Result is kept for 600 seconds
+2026-02-17 14:15:50,744 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 14:15:50,756 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 14:15:50,764 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 14:28:47,291 Worker e7cfcbfef4234201b786d8dfa9fd7929 [PID 3910]: warm shut down requested
+2026-02-17 14:28:47,439 Unsubscribing from channel rq:pubsub:e7cfcbfef4234201b786d8dfa9fd7929
+2026-02-17 14:29:07,179 Worker rq:worker:f32386a2771f415fb828629f6ac35c23 started with PID 50444, version 1.15.1
+2026-02-17 14:29:07,189 Subscribing to channel rq:pubsub:f32386a2771f415fb828629f6ac35c23
+2026-02-17 14:29:07,243 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-17 14:42:37,641 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 14:42:37,761 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 14:42:37,774 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 15:09:38,397 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 15:09:38,548 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 15:09:38,554 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 16:50:26,998 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 16:50:27,007 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 16:50:27,018 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 17:45:04,153 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 17:45:04,181 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 17:45:04,193 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 17:52:58,601 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'CRM Lead', 'name': 'CRM-LEAD-2026-00006'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::cfced329-5b5f-449a-be64-46b49864fdfb)
+2026-02-17 17:53:00,105 workspace-development-frappe-bench:default: Job OK (development.localhost::cfced329-5b5f-449a-be64-46b49864fdfb)
+2026-02-17 17:53:00,105 Result is kept for 600 seconds
+2026-02-17 18:13:15,338 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 18:13:15,343 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 18:13:15,350 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 18:40:16,172 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 18:40:16,307 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 18:40:16,312 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 19:02:22,298 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 19:02:22,391 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 19:02:22,400 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 19:29:22,698 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 19:29:22,703 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 19:29:22,709 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 19:43:50,645 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00029'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::cdeaed02-1592-4dc7-857c-788c3e323677)
+2026-02-17 19:43:56,122 workspace-development-frappe-bench:default: Job OK (development.localhost::cdeaed02-1592-4dc7-857c-788c3e323677)
+2026-02-17 19:43:56,123 Result is kept for 600 seconds
+2026-02-17 19:57:26,463 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 19:57:26,540 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 19:57:26,550 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 21:22:57,596 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 21:22:57,604 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 21:22:57,613 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 21:40:58,533 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00031'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::f721b64f-9d71-4cdf-9d92-b8708cdae6ed)
+2026-02-17 21:41:00,779 workspace-development-frappe-bench:default: Job OK (development.localhost::f721b64f-9d71-4cdf-9d92-b8708cdae6ed)
+2026-02-17 21:41:00,780 Result is kept for 600 seconds
+2026-02-17 21:41:29,643 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00028'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::c2454435-a436-4f6f-b0d5-ab23cfac9879)
+2026-02-17 21:41:30,520 workspace-development-frappe-bench:default: Job OK (development.localhost::c2454435-a436-4f6f-b0d5-ab23cfac9879)
+2026-02-17 21:41:30,521 Result is kept for 600 seconds
+2026-02-17 21:41:35,472 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00030'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::2d8a40ae-f4f1-4e18-bbcd-0cefc6c3e9d1)
+2026-02-17 21:41:36,380 workspace-development-frappe-bench:default: Job OK (development.localhost::2d8a40ae-f4f1-4e18-bbcd-0cefc6c3e9d1)
+2026-02-17 21:41:36,381 Result is kept for 600 seconds
+2026-02-17 21:48:21,445 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 21:48:21,451 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 21:48:21,457 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 22:15:21,855 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 22:15:21,905 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 22:15:21,911 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 22:42:22,147 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 22:42:22,152 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 22:42:22,157 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 23:00:30,471 workspace-development-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.delete_doc.delete_dynamic_links', kwargs={'doctype': 'Vooroo Activity', 'name': 'ACT-00033'}, method='frappe.model.delete_doc.delete_dynamic_links', site='development.localhost', user='Administrator') (development.localhost::f551de69-1c47-4528-85ed-40f78ba7877e)
+2026-02-17 23:00:32,671 workspace-development-frappe-bench:default: Job OK (development.localhost::f551de69-1c47-4528-85ed-40f78ba7877e)
+2026-02-17 23:00:32,672 Result is kept for 600 seconds
+2026-02-17 23:07:17,737 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 23:07:17,747 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 23:07:17,752 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-17 23:34:18,123 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-17 23:34:18,172 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-17 23:34:18,178 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-18 00:01:18,655 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-18 00:01:18,756 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-18 00:01:18,762 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-18 00:28:19,167 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-18 00:28:19,218 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-18 00:28:19,227 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-18 00:28:55,831 Worker f32386a2771f415fb828629f6ac35c23 [PID 50444]: warm shut down requested
+2026-02-19 12:57:47,361 Worker rq:worker:2000a22602d644e89c8ad8756766ae83 started with PID 3716, version 1.15.1
+2026-02-19 12:57:47,365 Subscribing to channel rq:pubsub:2000a22602d644e89c8ad8756766ae83
+2026-02-19 12:57:47,404 *** Listening on workspace-development-frappe-bench:short, workspace-development-frappe-bench:default, workspace-development-frappe-bench:long...
+2026-02-19 12:57:47,425 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 12:57:47,457 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 12:57:47,471 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 13:24:48,223 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 13:24:48,298 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 13:24:48,306 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 13:51:48,429 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 13:51:48,439 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 13:51:48,448 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 14:18:48,762 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 14:18:48,767 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 14:18:48,775 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 14:45:49,036 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 14:45:49,046 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 14:45:49,054 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 15:14:36,831 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 15:14:36,871 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 15:14:36,878 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 15:41:38,907 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 15:41:42,543 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 15:41:46,316 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 15:58:37,433 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 16:00:32,056 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 16:00:32,323 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 16:14:57,428 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 16:16:13,282 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 16:20:38,006 Cleaning registries for queue: workspace-development-frappe-bench:long
+2026-02-19 16:34:14,702 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 16:34:26,872 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 16:50:30,336 Cleaning registries for queue: workspace-development-frappe-bench:short
+2026-02-19 16:53:25,648 Cleaning registries for queue: workspace-development-frappe-bench:default
+2026-02-19 16:55:02,133 Cleaning registries for queue: workspace-development-frappe-bench:long

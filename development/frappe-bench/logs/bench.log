@@ -1211,3 +1211,615 @@ LIMIT 10;
 2026-02-02 18:14:23,794 INFO /home/frappe/.pyenv/versions/3.14.2/bin/bench --site development.localhost mariadb -e UPDATE tabCommunication SET reference_doctype='CRM Lead', reference_name='CRM-LEAD-2026-00067' WHERE name IN ('6kt20lep53', '0lpsq75jj7'); SELECT ROW_COUNT() as updated;
 2026-02-02 18:41:27,714 INFO /home/frappe/.pyenv/versions/3.14.2/bin/bench --site development.localhost mariadb -e SELECT name, lead_name, email FROM `tabCRM Lead` WHERE name='CRM-LEAD-2026-00067';
 2026-02-03 23:59:52,584 INFO /home/frappe/.pyenv/versions/3.14.2/bin/bench --site development.localhost backup --with-files
+2026-02-06 22:42:26,080 INFO /home/frappe/.local/bin/bench --site development.localhost restore /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-database.sql.gz --with-public-files /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-files.tar --with-private-files /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-private-files.tar
+2026-02-06 22:42:26,091 WARNING Command not being executed in bench directory
+2026-02-06 22:42:37,795 INFO /home/frappe/.local/bin/bench --site development.localhost restore /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-database.sql.gz --with-public-files /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-files.tar --with-private-files /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-private-files.tar
+2026-02-06 22:42:37,799 WARNING Command not being executed in bench directory
+2026-02-06 22:42:43,065 INFO /home/frappe/.local/bin/bench --help
+2026-02-06 22:42:43,069 WARNING Command not being executed in bench directory
+2026-02-06 22:42:54,482 INFO /home/frappe/.local/bin/bench version
+2026-02-06 22:42:54,484 WARNING Command not being executed in bench directory
+2026-02-06 22:43:20,459 INFO /home/frappe/.local/bin/bench --site development.localhost restore /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-database.sql.gz --with-public-files /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-files.tar --with-private-files /workspace/development/frappe-bench/sites/development.localhost/private/backups/20260203_235953-development_localhost-private-files.tar
+2026-02-06 22:44:38,135 INFO /home/frappe/.local/bin/bench get-app --branch version-15 https://github.com/frappe/frappe.git
+2026-02-06 22:44:38,151 LOG Getting frappe
+2026-02-06 22:44:38,152 DEBUG cd ./apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-02-06 22:45:17,345 LOG Installing frappe
+2026-02-06 22:45:17,354 DEBUG cd /workspace/development/frappe-bench && uv pip install --quiet --upgrade -e /workspace/development/frappe-bench/apps/frappe  --python /workspace/development/frappe-bench/env/bin/python
+2026-02-06 22:46:14,895 DEBUG cd /workspace/development/frappe-bench && uv pip install --quiet --upgrade coverage~=6.5.0 Faker~=18.10.1 pyngrok~=7.5.0 unittest-xml-reporting~=3.2.0 watchdog~=3.0.0 hypothesis~=6.77.0 responses==0.23.1 freezegun~=1.2.2  --python /workspace/development/frappe-bench/env/bin/python
+2026-02-06 22:46:26,436 DEBUG cd /workspace/development/frappe-bench/apps/frappe && yarn install --check-files
+2026-02-06 22:50:27,935 DEBUG bench build --app frappe
+2026-02-06 22:50:28,893 INFO /home/frappe/.local/bin/bench build --app frappe
+2026-02-06 23:01:07,878 INFO /home/frappe/.local/bin/bench --site development.localhost restore sites/development.localhost/private/backups/20260203_235953-development_localhost-database.sql.gz
+2026-02-06 23:06:42,807 INFO /home/frappe/.local/bin/bench set-config -g root_password 123
+2026-02-06 23:06:50,481 INFO /home/frappe/.local/bin/bench --site development.localhost restore sites/development.localhost/private/backups/20260203_235953-development_localhost-database.sql.gz
+2026-02-06 23:08:15,489 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-06 23:10:55,949 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:26:27,896 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:29:37,250 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:34:51,981 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:41:20,198 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:52:44,847 INFO /home/frappe/.local/bin/bench --site development.localhost restore sites/development.localhost/private/backups/20260206_233317-development_localhost-database.sql.gz --db-root-password 123 --with-public-files sites/development.localhost/private/backups/20260206_233317-development_localhost-files.tar --with-private-files sites/development.localhost/private/backups/20260206_233317-development_localhost-private-files.tar
+2026-02-06 23:53:37,947 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-06 23:55:04,275 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-06 23:55:36,967 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:56:37,839 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:57:31,093 INFO /home/frappe/.local/bin/bench build
+2026-02-06 23:58:19,443 INFO /home/frappe/.local/bin/bench build
+2026-02-07 00:01:41,497 INFO /home/frappe/.local/bin/bench build
+2026-02-07 00:04:02,102 INFO /home/frappe/.local/bin/bench build
+2026-02-07 00:05:49,562 INFO /home/frappe/.local/bin/bench build --app frappe
+2026-02-07 00:06:32,333 INFO /home/frappe/.local/bin/bench build --app crm
+2026-02-07 00:09:14,376 INFO /home/frappe/.local/bin/bench --site development.localhost restore --db-root-password 123 apps/vooroo_saas/backups/20260206_233317-development_localhost-database.sql.gz --with-public-files apps/vooroo_saas/backups/20260206_233317-development_localhost-files.tar --with-private-files apps/vooroo_saas/backups/20260206_233317-development_localhost-private-files.tar
+2026-02-07 00:09:53,755 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-07 00:11:19,915 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-07 00:28:32,872 INFO /home/frappe/.local/bin/bench build --app frappe
+2026-02-07 00:30:23,319 INFO /home/frappe/.local/bin/bench start
+2026-02-07 00:30:24,375 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 00:30:24,403 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 00:30:24,554 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 00:30:24,582 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 00:33:31,821 INFO /home/frappe/.local/bin/bench start
+2026-02-07 00:33:32,884 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 00:33:32,911 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 00:33:32,961 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 00:33:33,079 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 00:40:57,815 INFO /home/frappe/.local/bin/bench --site development.localhost set-admin-password admin
+2026-02-07 00:41:08,163 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-07 00:42:26,464 INFO /home/frappe/.local/bin/bench start
+2026-02-07 00:42:27,410 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 00:42:27,517 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 00:42:27,528 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 00:42:27,607 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 00:45:12,914 INFO /home/frappe/.local/bin/bench start
+2026-02-07 00:45:14,505 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 00:45:14,507 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 00:45:14,525 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 00:45:14,534 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 00:48:59,787 INFO /home/frappe/.local/bin/bench start
+2026-02-07 00:49:02,281 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 00:49:02,314 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 00:49:02,313 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 00:49:02,333 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 17:27:42,301 INFO /home/frappe/.local/bin/bench start
+2026-02-07 17:27:44,677 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 17:27:44,685 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 17:27:44,710 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 17:27:44,723 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 18:36:05,300 INFO /home/frappe/.local/bin/bench --site development.localhost list-apps
+2026-02-07 18:37:16,775 INFO /home/frappe/.local/bin/bench --site development.localhost list-apps
+2026-02-07 18:37:24,202 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT COUNT(*) FROM tabCommunication WHERE communication_medium='Email'
+2026-02-07 18:37:29,974 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT * FROM tabSingles WHERE doctype='Vooroo Mail Settings' LIMIT 10
+2026-02-07 18:38:25,346 INFO /home/frappe/.local/bin/bench --site development.localhost --force restore /workspace/development/frappe-bench/apps/vooroo_saas/backups/20260206_233317-development_localhost-database.sql.gz
+2026-02-07 18:39:17,177 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-07 18:40:57,789 INFO /home/frappe/.local/bin/bench --site development.localhost list-apps
+2026-02-07 18:41:05,999 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT COUNT(*) as email_count FROM tabCommunication WHERE communication_medium='Email';
+2026-02-07 18:41:12,387 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT field, value FROM tabSingles WHERE doctype='Vooroo Mail Settings' LIMIT 20;
+2026-02-07 19:44:51,654 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT field, value FROM tabSingles WHERE doctype='Vooroo Mail Settings';
+2026-02-07 19:44:58,320 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, subject, sender, recipients, sent_or_received, reference_doctype, reference_name, communication_date FROM tabCommunication WHERE communication_medium='Email' ORDER BY communication_date DESC;
+2026-02-07 19:45:04,053 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, email_id, enable_incoming, enable_outgoing, smtp_server, imap_host FROM `tabEmail Account`;
+2026-02-07 19:45:11,911 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, email_id, enable_incoming, enable_outgoing, smtp_server FROM `tabEmail Account`;
+2026-02-07 19:45:19,553 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.email.test_smtp_connection
+2026-02-07 19:45:37,694 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, email_id, enable_incoming, enable_outgoing, smtp_server, smtp_port, use_tls, use_ssl_for_outgoing FROM `tabEmail Account` WHERE email_id LIKE '%lemomentum%';
+2026-02-07 19:46:32,819 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-07 19:46:46,778 INFO /home/frappe/.local/bin/bench build --apps vooroo_saas
+2026-02-07 19:47:56,417 INFO /home/frappe/.local/bin/bench start
+2026-02-07 19:47:57,845 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 19:47:58,254 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 19:47:58,399 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 19:47:58,400 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 20:35:53,596 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.get_all('Communication', filters={'communication_type': 'Communication', 'communication_medium': 'Email'}, fields=['name','subject','sender','recipients','reference_doctype','reference_name','creation'], limit_page_length=10)
+2026-02-07 20:36:00,759 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, subject, sender, reference_doctype, reference_name, creation FROM tabCommunication WHERE communication_medium='Email' ORDER BY creation DESC LIMIT 10;
+2026-02-07 20:36:07,572 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT field, value FROM tabSingles WHERE doctype='Vooroo Mail Settings';
+2026-02-07 20:36:29,651 INFO /home/frappe/.local/bin/bench start
+2026-02-07 20:36:30,583 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 20:36:30,695 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 20:36:30,714 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 20:36:30,780 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 20:42:04,409 INFO /home/frappe/.local/bin/bench start
+2026-02-07 20:42:05,631 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 20:42:05,689 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 20:42:05,793 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 20:42:05,908 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 21:31:33,982 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-07 21:31:42,543 INFO /home/frappe/.local/bin/bench start
+2026-02-07 21:31:43,296 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 21:31:43,297 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 21:31:43,458 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 21:31:43,592 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 21:45:48,010 INFO /home/frappe/.local/bin/bench start
+2026-02-07 21:45:48,766 INFO /home/frappe/.local/bin/bench watch
+2026-02-07 21:45:48,802 INFO /home/frappe/.local/bin/bench schedule
+2026-02-07 21:45:48,844 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-07 21:45:49,090 INFO /home/frappe/.local/bin/bench worker
+2026-02-07 22:00:44,925 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-08 07:38:41,141 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 07:39:03,135 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 07:39:10,730 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.get_meta('User').get_fieldnames_with_value
+2026-02-08 07:40:22,299 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:40:24,667 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 07:40:24,674 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:40:24,674 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:40:24,683 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:41:28,377 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:41:31,965 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:41:32,313 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:41:32,329 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 07:41:32,387 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:42:36,931 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:42:38,654 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:42:38,750 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 07:42:38,888 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:42:39,143 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:43:55,089 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:43:56,314 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:43:56,495 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:43:56,501 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:43:56,676 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 07:44:52,731 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:44:53,913 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:44:54,188 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:44:54,345 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 07:44:54,954 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:51:24,712 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:51:27,707 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:51:27,734 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:51:27,752 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 07:51:27,783 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:54:16,216 INFO /home/frappe/.local/bin/bench start
+2026-02-08 07:54:17,665 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 07:54:17,678 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 07:54:17,691 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 07:54:17,956 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 08:07:25,883 INFO /home/frappe/.local/bin/bench start
+2026-02-08 08:07:28,249 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 08:07:28,254 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 08:07:28,254 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 08:07:28,296 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 09:02:51,877 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-08 09:11:26,150 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-08 09:12:54,155 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:14:25,236 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:14:37,113 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:14:46,762 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-08 09:36:02,719 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:36:26,800 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:36:54,000 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:37:06,309 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:37:39,757 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:38:35,209 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:38:49,849 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:41:43,789 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 09:41:56,366 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.user.get_user_profile
+2026-02-08 09:42:22,926 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module /tmp/test_apis.py
+2026-02-08 09:42:24,148 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-08 10:23:37,264 INFO /home/frappe/.local/bin/bench start
+2026-02-08 10:23:39,141 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 10:23:39,164 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 10:23:39,178 INFO /home/frappe/.local/bin/bench schedule
+2026-02-08 10:23:39,187 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 10:31:54,688 INFO /home/frappe/.local/bin/bench start
+2026-02-08 10:31:57,505 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-08 10:31:57,510 INFO /home/frappe/.local/bin/bench watch
+2026-02-08 10:31:57,522 INFO /home/frappe/.local/bin/bench worker
+2026-02-08 10:31:57,530 INFO /home/frappe/.local/bin/bench schedule
+2026-02-09 09:58:04,586 INFO /home/frappe/.local/bin/bench start
+2026-02-09 09:58:06,829 INFO /home/frappe/.local/bin/bench watch
+2026-02-09 09:58:07,094 INFO /home/frappe/.local/bin/bench worker
+2026-02-09 09:58:07,107 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-09 09:58:07,143 INFO /home/frappe/.local/bin/bench schedule
+2026-02-09 10:58:44,624 INFO /home/frappe/.local/bin/bench start
+2026-02-09 10:58:49,027 INFO /home/frappe/.local/bin/bench worker
+2026-02-09 10:58:49,099 INFO /home/frappe/.local/bin/bench schedule
+2026-02-09 10:58:49,142 INFO /home/frappe/.local/bin/bench watch
+2026-02-09 10:58:49,284 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-09 11:08:13,037 INFO /home/frappe/.local/bin/bench start
+2026-02-09 11:08:14,938 INFO /home/frappe/.local/bin/bench watch
+2026-02-09 11:08:14,936 INFO /home/frappe/.local/bin/bench worker
+2026-02-09 11:08:14,962 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-09 11:08:15,043 INFO /home/frappe/.local/bin/bench schedule
+2026-02-09 15:03:33,733 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-09 15:06:41,787 INFO /home/frappe/.local/bin/bench start
+2026-02-09 15:06:42,999 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-09 15:06:43,008 INFO /home/frappe/.local/bin/bench worker
+2026-02-09 15:06:43,066 INFO /home/frappe/.local/bin/bench watch
+2026-02-09 15:06:43,244 INFO /home/frappe/.local/bin/bench schedule
+2026-02-09 15:43:03,583 INFO /home/frappe/.local/bin/bench version
+2026-02-09 23:19:14,140 INFO /home/frappe/.local/bin/bench --site development.localhost show-config
+2026-02-09 23:19:30,655 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-09 23:19:44,622 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.client.get_value --args {"doctype":"Vooroo Mail Settings","fieldname":["enabled","frappe_mail_url","api_key","default_sender_email","default_sender_name","use_smtp_fallback","smtp_server","smtp_port","smtp_user","enable_imap","imap_server","imap_port","imap_user","imap_use_ssl"]}
+2026-02-09 23:19:56,589 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT enabled, frappe_mail_url, api_key, default_sender_email, default_sender_name, use_smtp_fallback, smtp_server, smtp_port, smtp_user, enable_imap, imap_server, imap_port, imap_user, imap_use_ssl FROM `tabVooroo Mail Settings` LIMIT 1\G
+2026-02-09 23:20:05,826 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SHOW TABLES LIKE '%mail%';
+2026-02-09 23:20:07,817 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SHOW TABLES LIKE '%Mail%';
+2026-02-10 22:59:34,457 INFO /home/frappe/.local/bin/bench start
+2026-02-10 22:59:35,976 INFO /home/frappe/.local/bin/bench worker
+2026-02-10 22:59:35,978 INFO /home/frappe/.local/bin/bench schedule
+2026-02-10 22:59:35,979 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-10 22:59:36,002 INFO /home/frappe/.local/bin/bench watch
+2026-02-10 23:07:32,103 INFO /home/frappe/.local/bin/bench start
+2026-02-10 23:07:33,093 INFO /home/frappe/.local/bin/bench watch
+2026-02-10 23:07:33,105 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-10 23:07:33,181 INFO /home/frappe/.local/bin/bench worker
+2026-02-10 23:07:33,238 INFO /home/frappe/.local/bin/bench schedule
+2026-02-10 23:11:10,185 INFO /home/frappe/.local/bin/bench drop-site development.localhost --force --no-backup
+2026-02-10 23:11:16,265 INFO /home/frappe/.local/bin/bench new-site development.localhost --mariadb-root-password 123 --admin-password admin --set-default
+2026-02-10 23:13:34,985 INFO /home/frappe/.local/bin/bench new-site development.localhost --mariadb-root-password 123 --admin-password admin --set-default
+2026-02-10 23:13:43,427 INFO /home/frappe/.local/bin/bench drop-site development.localhost --force --no-backup
+2026-02-10 23:13:54,576 INFO /home/frappe/.local/bin/bench new-site development.localhost --mariadb-root-password 123 --admin-password admin --set-default
+2026-02-10 23:16:31,771 INFO /home/frappe/.local/bin/bench drop-site development.localhost --force --no-backup
+2026-02-10 23:16:42,204 INFO /home/frappe/.local/bin/bench new-site development.localhost --mariadb-root-password 123 --admin-password admin --set-default
+2026-02-10 23:18:34,595 INFO /home/frappe/.local/bin/bench drop-site development.localhost --force --no-backup
+2026-02-10 23:18:44,585 INFO /home/frappe/.local/bin/bench new-site development.localhost --mariadb-root-password 123 --admin-password admin --set-default
+2026-02-10 23:20:36,355 INFO /home/frappe/.local/bin/bench --site development.localhost install-app crm
+2026-02-10 23:21:03,317 INFO /home/frappe/.local/bin/bench --site development.localhost install-app vooroo_saas
+2026-02-10 23:21:35,506 INFO /home/frappe/.local/bin/bench --site development.localhost install-app frappe_whatsapp
+2026-02-10 23:21:54,556 INFO /home/frappe/.local/bin/bench --site development.localhost enable-scheduler
+2026-02-10 23:22:02,425 INFO /home/frappe/.local/bin/bench start
+2026-02-10 23:22:03,930 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-10 23:22:04,350 INFO /home/frappe/.local/bin/bench watch
+2026-02-10 23:22:04,423 INFO /home/frappe/.local/bin/bench schedule
+2026-02-10 23:22:04,425 INFO /home/frappe/.local/bin/bench worker
+2026-02-10 23:56:55,893 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-10 23:57:10,797 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.get_all("WhatsApp Account")
+2026-02-10 23:57:12,016 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --help
+2026-02-10 23:57:40,141 INFO /home/frappe/.local/bin/bench --site development.localhost list-apps
+2026-02-10 23:57:51,062 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT name FROM `tabWhatsApp Account` LIMIT 5;
+
+2026-02-10 23:57:52,246 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT name, template_name, status FROM `tabWhatsApp Templates` LIMIT 10;
+
+2026-02-10 23:57:53,196 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT COUNT(*) as cnt FROM `tabWhatsApp Message`;
+
+2026-02-10 23:57:54,207 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT * FROM `tabVooroo Whatsapp Config` LIMIT 5;
+
+2026-02-10 23:57:55,151 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT name, fieldname, label FROM `tabCustom Field` WHERE fieldname LIKE '%whatsapp%';
+
+2026-02-10 23:58:35,616 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-10 23:59:57,091 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SHOW TABLES LIKE '%whatsapp%';
+2026-02-11 00:00:04,979 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SHOW TABLES LIKE '%Whats%'; SHOW TABLES LIKE '%tabWhats%'; SHOW TABLES LIKE '%tab%Whats%';
+2026-02-11 00:00:15,450 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT name, enabled FROM `tabWhatsApp Account`;
+
+2026-02-11 00:00:16,589 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT name, template_name, status FROM `tabWhatsApp Templates`;
+
+2026-02-11 00:00:17,730 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT * FROM `tabVooroo WhatsApp Config`;
+
+2026-02-11 00:00:18,757 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT COUNT(*) FROM `tabWhatsApp Message`;
+
+2026-02-11 00:00:19,731 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e 
+SELECT name, fieldname, dt, label FROM `tabCustom Field` WHERE fieldname LIKE '%whatsapp%';
+
+2026-02-11 00:00:26,918 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name FROM `tabWhatsApp Account`;
+2026-02-11 00:53:08,100 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT fieldname FROM `tabDocField` WHERE parent='CRM Deal' AND fieldname LIKE '%whatsapp%';
+2026-02-11 00:53:10,220 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT fieldname, dt FROM `tabCustom Field` WHERE dt='CRM Deal' AND fieldname LIKE '%whatsapp%';
+2026-02-11 00:53:11,428 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT fieldname FROM `tabDocField` WHERE parent='CRM Deal' AND fieldname LIKE '%phone%' OR (parent='CRM Deal' AND fieldname LIKE '%mobile%');
+2026-02-11 01:07:34,540 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-11 17:43:15,259 INFO /home/frappe/.local/bin/bench start
+2026-02-11 17:43:16,869 INFO /home/frappe/.local/bin/bench watch
+2026-02-11 17:43:16,879 INFO /home/frappe/.local/bin/bench worker
+2026-02-11 17:43:16,893 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-11 17:43:16,895 INFO /home/frappe/.local/bin/bench schedule
+2026-02-11 18:35:24,634 INFO /home/frappe/.local/bin/bench start
+2026-02-11 18:35:27,073 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-11 18:35:27,301 INFO /home/frappe/.local/bin/bench worker
+2026-02-11 18:35:27,310 INFO /home/frappe/.local/bin/bench watch
+2026-02-11 18:35:27,681 INFO /home/frappe/.local/bin/bench schedule
+2026-02-12 09:52:32,291 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 09:53:17,533 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 09:53:46,917 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 09:55:03,080 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 09:56:43,829 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-12 09:57:05,126 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 09:57:45,134 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-12 09:57:56,722 INFO /home/frappe/.local/bin/bench --site development.localhost execute import json, frappe; f=open(frappe.get_app_path("vooroo_saas","vooroo_saas","doctype","vooroo_project","vooroo_project.json")); data=json.load(f); f.close(); doc=frappe.get_doc(data); doc.flags.ignore_permissions=True; doc.insert(); frappe.db.commit(); print("Created Vooroo Project")
+2026-02-12 09:58:08,374 INFO /home/frappe/.local/bin/bench --site development.localhost run-script /tmp/create_doctypes.py
+2026-02-12 09:59:06,387 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 10:02:27,811 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 10:03:24,368 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-12 10:15:51,294 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 11:06:17,456 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-12 11:06:50,580 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.dashboard.get_dashboard_data
+2026-02-12 11:06:57,400 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.quotation.get_invoicing_settings
+2026-02-12 11:07:04,079 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.dashboard.get_sales_report
+2026-02-12 11:07:05,150 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.dashboard.get_pipeline_report
+2026-02-12 11:12:04,879 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:12:11,642 INFO /home/frappe/.local/bin/bench --site development.localhost set-config allow_tests true
+2026-02-12 11:12:12,689 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:12:45,958 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:13:10,041 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:22:22,450 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:22:53,211 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:23:05,842 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:23:33,200 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:23:37,323 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:23:41,883 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:23:44,040 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:23:48,386 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_project
+2026-02-12 11:23:52,226 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:23:54,889 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:24:04,583 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:24:26,293 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.contact.get_contact_stats
+2026-02-12 11:24:27,355 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.contact.get_contacts --kwargs {"page":1,"page_size":2}
+2026-02-12 11:24:36,011 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.contact.get_contacts --kwargs {"page":1,"page_size":1}
+2026-02-12 11:24:43,621 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.contact.get_contacts --kwargs {"page":1,"page_size":1}
+2026-02-12 11:24:50,882 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.contact.get_contacts
+2026-02-12 11:24:57,416 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.contact.get_contacts
+2026-02-12 11:25:06,852 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:27:13,937 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:28:03,890 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_project
+2026-02-12 11:28:32,019 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:29:18,828 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:30:04,367 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:30:08,364 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:30:13,910 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:30:17,636 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:30:23,651 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_project
+2026-02-12 11:30:27,265 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:30:29,770 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:30:38,877 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:30:46,614 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:31:09,160 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:31:40,269 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:32:00,386 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:32:15,132 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:32:19,191 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:32:23,830 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:32:25,980 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:32:31,305 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_project
+2026-02-12 11:32:35,113 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:32:38,271 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:32:47,427 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:33:11,617 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:33:34,030 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:33:38,172 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:33:42,911 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:33:47,132 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:33:52,417 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_project
+2026-02-12 11:33:55,977 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:33:59,089 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:34:08,361 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:34:43,348 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_api
+2026-02-12 11:34:47,567 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_prospect
+2026-02-12 11:34:52,102 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:34:56,546 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_contact
+2026-02-12 11:35:01,937 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_project
+2026-02-12 11:35:05,682 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_quotation
+2026-02-12 11:35:08,735 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-12 11:35:17,343 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:35:30,483 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-12 11:35:38,722 INFO /home/frappe/.local/bin/bench --site development.localhost execute 
+fields = frappe.get_meta('CRM Deal').fields
+for f in fields:
+    if 'close' in f.fieldname or 'date' in f.fieldname or 'closing' in f.fieldname:
+        print(f.fieldname, f.fieldtype)
+
+2026-02-12 11:36:09,015 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:36:19,881 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:36:46,263 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_deal
+2026-02-12 11:37:28,916 INFO /home/frappe/.local/bin/bench start
+2026-02-12 11:37:29,769 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-12 11:37:29,847 INFO /home/frappe/.local/bin/bench schedule
+2026-02-12 11:37:29,862 INFO /home/frappe/.local/bin/bench worker
+2026-02-12 11:37:29,906 INFO /home/frappe/.local/bin/bench watch
+2026-02-12 13:38:04,379 INFO /home/frappe/.local/bin/bench start
+2026-02-12 13:38:05,819 INFO /home/frappe/.local/bin/bench worker
+2026-02-12 13:38:05,881 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-12 13:38:05,987 INFO /home/frappe/.local/bin/bench watch
+2026-02-12 13:38:06,020 INFO /home/frappe/.local/bin/bench schedule
+2026-02-13 01:59:15,686 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas
+2026-02-13 02:15:16,204 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas
+2026-02-13 02:16:04,839 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas
+2026-02-13 02:17:10,848 INFO /home/frappe/.local/bin/bench new-site development.localhost --force --db-root-password 123 --admin-password admin --install-app crm --install-app vooroo_saas
+2026-02-13 02:18:46,774 INFO /home/frappe/.local/bin/bench new-site development.localhost --force --db-root-password 123 --admin-password admin
+2026-02-13 02:20:08,343 INFO /home/frappe/.local/bin/bench --site development.localhost install-app crm
+2026-02-13 02:20:25,436 INFO /home/frappe/.local/bin/bench --site development.localhost install-app frappe_whatsapp
+2026-02-13 02:20:36,319 INFO /home/frappe/.local/bin/bench --site development.localhost install-app vooroo_saas
+2026-02-13 02:21:02,325 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas
+2026-02-13 02:21:53,643 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas
+2026-02-13 02:22:29,055 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas
+2026-02-13 02:23:09,438 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-13 02:23:18,869 INFO /home/frappe/.local/bin/bench start
+2026-02-13 02:23:54,563 INFO /home/frappe/.local/bin/bench start
+2026-02-13 02:23:55,380 INFO /home/frappe/.local/bin/bench watch
+2026-02-13 02:23:55,615 INFO /home/frappe/.local/bin/bench worker
+2026-02-13 02:23:55,710 INFO /home/frappe/.local/bin/bench schedule
+2026-02-13 02:23:56,107 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-13 02:27:53,565 INFO /home/frappe/.local/bin/bench start
+2026-02-13 02:27:54,400 INFO /home/frappe/.local/bin/bench worker
+2026-02-13 02:27:54,455 INFO /home/frappe/.local/bin/bench schedule
+2026-02-13 02:27:54,470 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-13 02:27:54,501 INFO /home/frappe/.local/bin/bench watch
+2026-02-13 10:52:36,971 INFO /home/frappe/.local/bin/bench start
+2026-02-13 10:52:38,687 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-13 10:52:38,688 INFO /home/frappe/.local/bin/bench watch
+2026-02-13 10:52:38,690 INFO /home/frappe/.local/bin/bench worker
+2026-02-13 10:52:38,693 INFO /home/frappe/.local/bin/bench schedule
+2026-02-13 12:04:15,377 INFO /home/frappe/.local/bin/bench start
+2026-02-13 12:04:16,551 INFO /home/frappe/.local/bin/bench schedule
+2026-02-13 12:04:16,766 INFO /home/frappe/.local/bin/bench watch
+2026-02-13 12:04:16,809 INFO /home/frappe/.local/bin/bench worker
+2026-02-13 12:04:16,853 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-14 01:17:18,801 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-14 22:39:00,553 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-14 22:39:32,829 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-14 22:39:50,194 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_modules
+2026-02-14 23:00:37,563 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_notification_account
+2026-02-14 23:01:02,791 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_modules
+2026-02-14 23:14:35,189 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-14 23:45:15,450 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-14 23:45:36,812 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_modules
+2026-02-14 23:53:47,182 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-14 23:54:09,822 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_modules
+2026-02-15 00:24:06,423 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-15 00:24:50,752 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-15 00:25:44,069 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_modules
+2026-02-15 00:25:44,087 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-15 01:36:53,002 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e select name, creation, method, error from  order by creation desc limit 8;
+2026-02-15 01:37:22,955 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e select name, creation, method from `tabError Log` order by creation desc limit 12;
+2026-02-15 01:39:24,493 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_user_account
+2026-02-15 01:39:48,926 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --module vooroo_saas.tests.test_modules
+2026-02-16 01:29:26,286 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-16 01:31:07,957 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-16 01:33:08,827 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 01:54:49,788 INFO /home/frappe/.local/bin/bench start
+2026-02-16 01:54:59,907 INFO /home/frappe/.local/bin/bench schedule
+2026-02-16 01:54:59,920 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-16 01:54:59,928 INFO /home/frappe/.local/bin/bench worker
+2026-02-16 01:55:00,496 INFO /home/frappe/.local/bin/bench watch
+2026-02-16 02:23:16,662 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-16 03:04:24,869 INFO /home/frappe/.local/bin/bench start
+2026-02-16 03:04:27,600 INFO /home/frappe/.local/bin/bench watch
+2026-02-16 03:04:28,150 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-16 03:04:28,423 INFO /home/frappe/.local/bin/bench schedule
+2026-02-16 03:04:28,763 INFO /home/frappe/.local/bin/bench worker
+2026-02-16 03:04:58,945 INFO /home/frappe/.local/bin/bench start
+2026-02-16 03:05:01,836 INFO /home/frappe/.local/bin/bench schedule
+2026-02-16 03:05:02,586 INFO /home/frappe/.local/bin/bench watch
+2026-02-16 03:05:02,761 INFO /home/frappe/.local/bin/bench worker
+2026-02-16 03:05:03,012 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-16 17:13:21,339 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-16 19:47:17,282 INFO /home/frappe/.local/bin/bench start
+2026-02-16 19:47:19,752 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-16 19:47:21,227 INFO /home/frappe/.local/bin/bench schedule
+2026-02-16 19:47:21,422 INFO /home/frappe/.local/bin/bench watch
+2026-02-16 19:47:22,636 INFO /home/frappe/.local/bin/bench worker
+2026-02-16 22:00:41,834 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 22:30:27,010 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -N -e SELECT name, creation, method FROM `tabError Log` ORDER BY creation DESC LIMIT 12;
+2026-02-16 22:30:43,253 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -N -e SELECT name, method, error FROM `tabError Log` WHERE name='qv9q1naeje';
+2026-02-16 22:34:40,439 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-16 22:37:01,064 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-16 22:37:10,121 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -N -e SELECT COUNT(*) FROM `tabError Log` WHERE method LIKE 'Failed to call has_permission hook (vooroo_saas.api.permission.has_app_permission)%';
+2026-02-16 22:37:14,401 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -N -e SELECT COUNT(*) FROM `tabError Log` WHERE method LIKE 'Failed to call has_permission hook (vooroo_saas.api.permission.has_app_permission)%';
+2026-02-16 22:41:04,640 INFO /home/frappe/.local/bin/bench --site development.localhost run-tests --app vooroo_saas --module vooroo_saas.tests.test_modules
+2026-02-16 22:42:19,493 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -N -e SELECT COUNT(*) FROM `tabError Log` WHERE method LIKE 'Failed to call has_permission hook (vooroo_saas.api.permission.has_app_permission)%'; SELECT name, creation, method FROM `tabError Log` WHERE method LIKE 'Failed to call has_permission hook (vooroo_saas.api.permission.has_app_permission)%' ORDER BY creation DESC LIMIT 3;
+2026-02-16 23:06:22,984 INFO /home/frappe/.local/bin/bench --site development.localhost frappe.client.get_list --doctype Custom Field --filters {"dt": "Contact"} --fields ["name", "fieldname", "label"]
+2026-02-16 23:11:53,271 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-16 23:14:03,626 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:14:26,828 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:14:59,535 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:15:25,505 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:19:21,875 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:40:12,418 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:40:29,149 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.get_all('User', filters={'enabled': 1, 'user_type': 'System User'}, fields=['name', 'full_name', 'email'], limit=3)
+2026-02-16 23:40:47,748 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, full_name, email FROM tabUser WHERE enabled=1 AND user_type='System User' LIMIT 3;
+2026-02-16 23:43:41,655 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT principal_contact, principal_email FROM `tabSingles` WHERE doctype='Vooroo CRM Settings' AND field IN ('principal_contact', 'principal_email');
+2026-02-16 23:43:53,246 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT field, value FROM tabSingles WHERE doctype='Vooroo CRM Settings' AND field LIKE 'principal%';
+2026-02-16 23:52:22,160 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-16 23:54:10,117 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:54:34,988 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:55:35,210 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:55:52,596 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-16 23:57:42,678 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-17 00:21:07,205 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 00:21:38,095 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.settings.get_crm_settings
+2026-02-17 00:22:02,408 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 00:22:27,087 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 00:25:09,171 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-17 02:07:17,695 INFO /home/frappe/.local/bin/bench --site development.localhost execute 
+import frappe, json
+settings = frappe.get_single('Vooroo CRM Settings')
+stages = settings.prospect_pipeline_stages
+print('Raw stages:', stages)
+if stages:
+    parsed = json.loads(stages) if isinstance(stages, str) else stages
+    print('Parsed stages:', json.dumps(parsed, indent=2))
+
+2026-02-17 02:07:27,629 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.get_single('Vooroo CRM Settings').prospect_pipeline_stages
+2026-02-17 02:07:36,434 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 02:08:42,686 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 10:36:28,472 INFO /home/frappe/.local/bin/bench start
+2026-02-17 10:36:31,068 INFO /home/frappe/.local/bin/bench watch
+2026-02-17 10:36:31,236 INFO /home/frappe/.local/bin/bench worker
+2026-02-17 10:36:32,722 INFO /home/frappe/.local/bin/bench schedule
+2026-02-17 10:36:33,751 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-17 10:59:42,742 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 11:00:22,605 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 11:00:51,236 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 11:10:46,537 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 11:14:05,477 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 11:14:22,188 INFO /home/frappe/.local/bin/bench --site development.localhost execute 
+for name in ['Qualification', 'Demo/Making', 'Proposal/Quotation', 'Negotiation', 'Ready to Close', 'Won', 'Lost']:
+    count = frappe.db.count('CRM Deal', {'status': name})
+    print(f'{name}: {count}')
+
+2026-02-17 11:57:27,857 INFO /home/frappe/.local/bin/bench start
+2026-02-17 11:57:37,533 INFO /home/frappe/.local/bin/bench watch
+2026-02-17 11:57:37,684 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-17 11:57:37,684 INFO /home/frappe/.local/bin/bench worker
+2026-02-17 11:57:37,705 INFO /home/frappe/.local/bin/bench schedule
+2026-02-17 14:07:21,872 INFO /home/frappe/.local/bin/bench --site development.localhost migrate
+2026-02-17 14:26:24,687 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:26:53,290 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:27:12,124 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:27:31,931 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:29:00,446 INFO /home/frappe/.local/bin/bench start
+2026-02-17 14:29:03,670 INFO /home/frappe/.local/bin/bench schedule
+2026-02-17 14:29:03,773 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-17 14:29:03,804 INFO /home/frappe/.local/bin/bench worker
+2026-02-17 14:29:04,130 INFO /home/frappe/.local/bin/bench watch
+2026-02-17 14:30:03,138 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:30:24,036 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:30:40,327 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, lead_name, status FROM `tabCRM Deal` ORDER BY modified DESC LIMIT 10;
+2026-02-17 14:30:52,766 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute UPDATE `tabCRM Deal` SET status = 'Gagnés' WHERE name = 'CRM-DEAL-2026-00005'; UPDATE `tabCRM Deal` SET status = 'TEST DEALS' WHERE name = 'CRM-DEAL-2026-00006';
+2026-02-17 14:31:02,054 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, lead_name, status FROM `tabCRM Deal` ORDER BY modified DESC LIMIT 5;
+2026-02-17 14:32:51,666 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:33:07,107 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, position FROM `tabCRM Deal Status` WHERE name IN ('Gagnés', 'Perdus', 'Won', 'Lost') ORDER BY position;
+2026-02-17 14:35:29,645 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:36:00,802 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:36:13,595 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:36:29,096 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:36:56,224 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT * FROM `tabFCRM Settings` LIMIT 1\G
+2026-02-17 14:37:05,084 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SHOW TABLES LIKE '%FCRM%';
+2026-02-17 14:37:29,955 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:37:43,996 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:38:00,116 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, lead_name, status FROM `tabCRM Deal` ORDER BY creation DESC LIMIT 5;
+2026-02-17 14:38:28,349 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 14:38:44,047 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.db.get_single_value('Vooroo CRM Settings', 'deal_pipeline_stages')
+2026-02-17 14:38:55,743 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT deal_pipeline_stages FROM `tabVooroo CRM Settings`\G
+2026-02-17 14:39:05,692 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SHOW TABLES LIKE '%Vooroo%';
+2026-02-17 14:39:17,126 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT field, value FROM `tabSingles` WHERE doctype='Vooroo CRM Settings' AND field='deal_pipeline_stages';
+2026-02-17 14:51:39,942 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, lead_name, status FROM `tabCRM Deal` ORDER BY creation DESC LIMIT 10;
+2026-02-17 18:21:10,987 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, title, type, deal, contact, status FROM `tabVooroo Activity` ORDER BY creation DESC LIMIT 10;
+2026-02-17 18:22:44,884 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute DESCRIBE `tabVooroo Activity`;
+2026-02-17 19:43:53,328 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SELECT name, title, due_date, due_time FROM `tabVooroo Activity` ORDER BY creation DESC LIMIT 5;
+2026-02-17 19:47:10,864 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb --execute SHOW COLUMNS FROM `tabCRM Deal` LIKE 'custom_next%';
+2026-02-17 19:50:42,087 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-17 22:11:20,325 INFO /home/frappe/.local/bin/bench clear-cache
+2026-02-17 22:49:20,166 INFO /home/frappe/.local/bin/bench build --app vooroo_saas
+2026-02-17 22:56:50,838 INFO /home/frappe/.local/bin/bench clear-cache
+2026-02-17 23:07:20,588 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.call('vooroo_saas.api.settings.get_custom_fields', module='prospect_deal')
+2026-02-17 23:07:34,177 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.settings.get_custom_fields --kwargs {'module':'prospect_deal'}
+2026-02-17 23:13:17,775 INFO /home/frappe/.local/bin/bench --site development.localhost execute vooroo_saas.api.settings.get_default_fields --kwargs {'module':'prospect_deal'}
+2026-02-17 23:17:16,259 INFO /home/frappe/.local/bin/bench clear-cache
+2026-02-17 23:32:23,589 INFO /home/frappe/.local/bin/bench --site development.localhost execute frappe.get_all('Custom Field', filters={'dt': 'CRM Lead'}, fields=['name', 'fieldname', 'label'], limit=5)
+2026-02-17 23:32:39,530 INFO /home/frappe/.local/bin/bench --site development.localhost mariadb -e SELECT name, fieldname, label, fieldtype FROM `tabCustom Field` WHERE dt='CRM Lead' LIMIT 10
+2026-02-17 23:52:32,654 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-18 00:10:53,788 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-18 00:11:26,323 INFO /home/frappe/.local/bin/bench --site development.localhost execute print(frappe.get_doc('Vooroo CRM Settings').get_custom_fields('prospect')[:3] if hasattr(frappe.get_doc('Vooroo CRM Settings'), 'get_custom_fields') else 'Method not found')
+2026-02-18 00:11:40,858 INFO /home/frappe/.local/bin/bench --site development.localhost execute 
+import vooroo_saas.api.settings as settings
+result = settings.get_custom_fields(module='prospect')
+print('Custom fields for prospect:', len(result.get('fields', [])))
+for f in result.get('fields', [])[:5]:
+    print(f'  - {f.get("fieldname")}: {f.get("label")} ({f.get("fieldtype")})')
+
+2026-02-18 00:11:51,260 INFO /home/frappe/.local/bin/bench --site development.localhost execute import vooroo_saas.api.settings as settings; result = settings.get_custom_fields(module='prospect'); print('Custom fields:', len(result.get('fields', [])))
+2026-02-18 00:12:02,906 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-18 00:12:37,632 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-19 12:57:39,428 INFO /home/frappe/.local/bin/bench start
+2026-02-19 12:57:42,924 INFO /home/frappe/.local/bin/bench serve --port 8000
+2026-02-19 12:57:43,450 INFO /home/frappe/.local/bin/bench schedule
+2026-02-19 12:57:43,610 INFO /home/frappe/.local/bin/bench worker
+2026-02-19 12:57:43,736 INFO /home/frappe/.local/bin/bench watch
+2026-02-19 13:26:05,144 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-19 13:26:23,544 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-19 13:26:40,038 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-19 13:26:56,443 INFO /home/frappe/.local/bin/bench --site development.localhost console
+2026-02-19 13:27:10,824 INFO /home/frappe/.local/bin/bench --site development.localhost clear-cache
+2026-02-19 14:45:46,393 INFO /home/frappe/.local/bin/bench --site development.localhost console

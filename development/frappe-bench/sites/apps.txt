@@ -1,4 +1,4 @@
 frappe
-frappe_whatsapp
 crm
 vooroo_saas
+frappe_whatsapp

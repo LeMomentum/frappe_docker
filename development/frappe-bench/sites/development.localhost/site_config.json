@@ -1,8 +1,7 @@
 {
- "db_host": "mariadb",
+ "allow_tests": true,
  "db_name": "_54cc49b9a1aab38b",
- "db_password": "QnUUBqM2U0jZ3FsP",
+ "db_password": "rwwi6iasp57fI6k3",
  "db_type": "mariadb",
- "developer_mode": 1,
- "encryption_key": "PCZx9SY-Ew1W4P7yPAaGw5lz74H4qNzAhRyQHYmlirY="
+ "encryption_key": "XeuSgr4LKyOVh6Sw_HqTwzWb3nQKEoRE4wbYNURfkdU="
 }

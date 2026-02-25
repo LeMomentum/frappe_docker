@@ -1,877 +1,490 @@
-2026-01-28 00:46:02,785 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-28 00:46:03,057 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-28 00:46:03,303 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-28 00:46:03,523 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-28 00:46:03,758 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
-2026-01-28 00:46:04,037 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-28 00:46:04,320 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-28 00:46:04,564 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-28 00:46:04,808 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-28 00:46:05,082 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-28 00:46:05,312 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-28 00:46:05,532 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-28 00:46:05,799 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-28 00:46:06,073 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-28 00:46:06,271 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-28 00:46:06,469 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-28 00:46:06,660 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-28 00:46:06,860 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-28 00:46:07,078 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-28 00:46:07,312 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-28 00:46:07,531 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-01-28 00:46:07,768 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-28 00:46:08,015 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-28 00:46:08,264 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
-2026-01-28 00:46:08,479 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-28 00:46:08,677 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-28 00:46:08,902 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-28 00:46:09,121 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-28 00:46:09,332 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
-2026-01-28 00:46:09,557 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
-2026-01-28 00:46:09,804 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0
-2026-01-29 14:42:38,893 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Recipient` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`mobile_number` varchar(140),
-`recipient_name` varchar(140),
-`recipient_data` longtext default '{}',
-parent varchar(140),
-parentfield varchar(140),
-parenttype varchar(140),
-index parent(parent))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,077 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Profiles` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`profile_name` varchar(140),
-`number` varchar(140) unique,
-`contact` varchar(140),
-`title` varchar(140),
-`whatsapp_account` varchar(140),
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,230 WARNING database DDL Query made to DB:
-create table `tabBulk WhatsApp Message` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`title` varchar(140),
-`from_number` varchar(140),
-`recipient_type` varchar(140) default 'Individual',
-`recipient_list` varchar(140),
-`recipient_count` int(11) not null default 0,
-`use_template` int(1) not null default 1,
-`template` varchar(140),
-`variable_type` varchar(140) default 'Common',
-`attach` text,
-`whatsapp_account` varchar(140),
-`template_variables` longtext,
-`status` varchar(140) default 'Draft',
-`scheduled_time` datetime(6),
-`amended_from` varchar(140),
-`sent_count` int(11) not null default 0,
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,434 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Account` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`account_name` varchar(140) unique,
-`status` varchar(140) default 'Inactive',
-`token` text,
-`url` varchar(140),
-`version` varchar(140),
-`webhook_verify_token` varchar(140) unique,
-`phone_id` varchar(140) unique,
-`app_id` varchar(140),
-`business_id` varchar(140),
-`is_default_incoming` int(1) not null default 0,
-`is_default_outgoing` int(1) not null default 0,
-`allow_auto_read_receipt` int(1) not null default 1,
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,542 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Notification Log` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`template` varchar(140),
-`meta_data` json,
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,641 WARNING database DDL Query made to DB:
-create sequence if not exists whatsapp_message_fields_id_seq nocache nocycle
-2026-01-29 14:42:39,650 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Message Fields` (
-			name bigint primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`field_name` varchar(140),
-parent varchar(140),
-parentfield varchar(140),
-parenttype varchar(140),
-index parent(parent))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,779 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Recipient List` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`list_name` varchar(140) unique,
-`description` text,
-`import_from_doctype` int(1) not null default 0,
-`doctype_to_import` varchar(140),
-`mobile_field` varchar(140),
-`name_field` varchar(140),
-`import_filters` longtext,
-`data_fields` longtext,
-`import_limit` int(11) not null default 0,
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:39,941 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Notification` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`notification_name` varchar(140) unique,
-`notification_type` varchar(140),
-`reference_doctype` varchar(140),
-`field_name` varchar(140),
-`event_frequency` varchar(140),
-`doctype_event` varchar(140),
-`days_in_advance` int(11) not null default 0,
-`date_changed` varchar(140),
-`disabled` int(1) not null default 0,
-`template` varchar(140),
-`code` longtext,
-`attach_document_print` int(1) not null default 0,
-`custom_attachment` int(1) not null default 0,
-`attach` text,
-`attach_from_field` varchar(140),
-`file_name` varchar(140),
-`condition` longtext,
-`button_fields` varchar(140),
-`set_property_after_alert` varchar(140),
-`property_value` varchar(140),
-`header_type` varchar(140),
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:40,138 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Templates` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`template_name` varchar(140) unique,
-`actual_name` varchar(140),
-`status` varchar(140) default 'Pending',
-`id` varchar(140),
-`template` longtext,
-`sample_values` text,
-`for_doctype` varchar(140),
-`field_names` text,
-`category` varchar(140),
-`language` varchar(140),
-`language_code` varchar(140),
-`whatsapp_account` varchar(140),
-`header_type` varchar(140),
-`header` varchar(140),
-`sample` text,
-`footer` varchar(140),
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:40,362 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Flow Field` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`screen` varchar(140),
-`field_name` varchar(140),
-`field_type` varchar(140),
-`label` varchar(140),
-`required` int(1) not null default 0,
-`enabled` int(1) not null default 1,
-`init_value` varchar(140),
-`min_chars` int(11) not null default 0,
-`max_chars` int(11) not null default 0,
-`helper_text` varchar(140),
-`error_message` varchar(140),
-`options` longtext,
-parent varchar(140),
-parentfield varchar(140),
-parenttype varchar(140),
-index parent(parent))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:40,481 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Button` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`button_type` varchar(140),
-`button_label` varchar(140),
-`phone_number` varchar(140),
-`website_url` varchar(140),
-`example_url` varchar(140),
-`url_type` varchar(140),
-parent varchar(140),
-parentfield varchar(140),
-parenttype varchar(140),
-index parent(parent))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:40,598 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Flow Screen` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`screen_id` varchar(140),
-`screen_title` varchar(140),
-`terminal` int(1) not null default 0,
-`refresh_on_back` int(1) not null default 0,
-`layout_type` varchar(140) default 'SingleColumnLayout',
-`success_message` varchar(140),
-parent varchar(140),
-parentfield varchar(140),
-parenttype varchar(140),
-index parent(parent))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:40,805 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Flow` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`flow_name` varchar(140) unique,
-`whatsapp_account` varchar(140),
-`status` varchar(140) default 'Draft',
-`flow_id` varchar(140),
-`category` varchar(140) default 'OTHER',
-`description` text,
-`flow_cta` varchar(140) default 'Open Form',
-`data_api_version` varchar(140) default '6.0',
-`flow_json` longtext,
-`endpoint_uri` varchar(140),
-`preview_url` varchar(140),
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:41,334 WARNING database DDL Query made to DB:
-create table `tabWhatsApp Message` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`label` varchar(140),
-`type` varchar(140),
-`status` varchar(140),
-`to` varchar(140),
-`from` varchar(140),
-`profile_name` varchar(140),
-`use_template` int(1) not null default 0,
-`template` varchar(140),
-`template_parameters` text,
-`template_header_parameters` text,
-`message` longtext,
-`message_type` varchar(140),
-`message_id` varchar(140),
-`conversation_id` varchar(140),
-`content_type` varchar(140),
-`attach` text,
-`buttons` json default '{}',
-`body_param` json,
-`whatsapp_account` varchar(140),
-`flow` varchar(140),
-`flow_cta` varchar(140),
-`flow_screen` varchar(140),
-`flow_token` varchar(140),
-`flow_response` json,
-`is_reply` int(1) not null default 0,
-`reply_to_message_id` varchar(140),
-`reference_doctype` varchar(140),
-`bulk_message_reference` varchar(140),
-`reference_name` varchar(140),
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-`_seen` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:42:41,437 WARNING database DDL Query made to DB:
-ALTER TABLE `tabWhatsApp Message`
-				ADD INDEX IF NOT EXISTS `reference_doctype_reference_name_index`(reference_doctype, reference_name)
-2026-01-29 14:57:15,349 WARNING database DDL Query made to DB:
-alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-01-29 14:57:18,088 WARNING database DDL Query made to DB:
-create table `tabVooroo WhatsApp Config` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`user` varchar(140) unique,
-`is_admin_account` int(1) not null default 0,
-`status` varchar(140) default 'Active',
-`whatsapp_account` varchar(140),
-`phone_number` varchar(140),
-`can_send_messages` int(1) not null default 1,
-`can_view_all_conversations` int(1) not null default 0,
-`can_send_templates` int(1) not null default 1,
-`can_manage_templates` int(1) not null default 0,
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-29 14:57:22,063 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-29 14:57:22,395 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-29 14:57:22,576 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:22,825 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-29 14:57:23,005 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:23,179 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:23,417 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-29 14:57:23,596 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-29 14:57:23,816 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:24,050 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-29 14:57:24,242 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:24,482 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-29 14:57:24,713 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:24,908 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-29 14:57:25,130 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
-2026-01-29 14:57:25,313 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:25,485 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-29 14:57:25,690 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-01-29 14:57:25,934 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-29 14:57:26,113 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-29 14:57:26,352 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-01-29 14:57:26,562 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:26,797 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:27,054 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:27,265 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:27,520 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:27,739 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:27,989 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-01-29 14:57:28,198 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-29 14:57:28,454 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:28,690 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-29 14:57:28,882 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-29 14:57:29,145 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:29,371 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
-2026-01-29 14:57:29,591 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-29 14:57:29,812 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-29 14:57:30,014 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
-2026-01-29 14:57:30,248 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0
-2026-01-29 14:57:30,585 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
-2026-01-29 14:57:31,125 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-29 14:57:31,368 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
-2026-01-30 12:17:51,726 WARNING database DDL Query made to DB:
-alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-01-30 12:17:54,676 WARNING database DDL Query made to DB:
-create table `tabPersonal Signup Domain` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`principal` varchar(140),
-parent varchar(140),
-parentfield varchar(140),
-parenttype varchar(140),
-index parent(parent))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-30 12:18:07,591 WARNING database DDL Query made to DB:
-alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-01-30 12:19:11,440 WARNING database DDL Query made to DB:
-alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-01-30 12:19:35,257 WARNING database DDL Query made to DB:
-DROP TABLE IF EXISTS `tabPersonal Signup Domain`
-2026-01-31 17:08:49,011 WARNING database DDL Query made to DB:
-alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-01-31 17:08:52,974 WARNING database DDL Query made to DB:
-create table `tabVooroo Email Template` (
-			name varchar(140) primary key,
-			creation datetime(6),
-			modified datetime(6),
-			modified_by varchar(140),
-			owner varchar(140),
-			docstatus int(1) not null default '0',
-			idx int(8) not null default '0',
-			`enabled` int(1) not null default 1,
-`template_name` varchar(140) unique,
-`template_type` varchar(140),
-`description` text,
-`subject` varchar(140),
-`content` longtext,
-`available_variables` longtext default '{\n  \"prospect\": [\"first_name\", \"last_name\", \"email\", \"phone\", \"company_name\"],\n  \"deal\": [\"deal_name\", \"amount\", \"stage\", \"expected_close_date\"],\n  \"invoice\": [\"invoice_number\", \"total\", \"due_date\"],\n  \"quotation\": [\"quotation_number\", \"total\", \"valid_until\"],\n  \"common\": [\"company_name\", \"current_user\", \"current_date\"]\n}',
-`_user_tags` text,
-`_comments` text,
-`_assign` text,
-`_liked_by` text,
-index modified(modified))
-			ENGINE=InnoDB
-			ROW_FORMAT=DYNAMIC
-			CHARACTER SET=utf8mb4
-			COLLATE=utf8mb4_unicode_ci
-2026-01-31 17:08:56,740 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:08:57,143 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:08:57,392 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-31 17:08:57,656 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:08:57,922 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:08:58,147 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:08:58,415 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:08:58,661 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-31 17:08:58,844 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:08:59,058 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:08:59,332 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-31 17:08:59,541 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:08:59,773 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:09:00,037 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:09:00,245 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-31 17:09:00,470 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:09:00,744 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:09:00,980 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:09:01,264 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-31 17:09:01,481 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:09:01,748 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:09:02,020 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-01-31 17:09:02,285 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:09:02,510 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-31 17:09:02,763 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:09:03,053 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-31 17:09:03,253 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-31 17:09:03,512 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:09:03,789 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-01-31 17:09:04,481 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-31 17:09:04,790 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:09:05,097 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-01-31 17:09:05,459 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-01-31 17:09:05,813 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
-2026-01-31 17:09:06,184 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-01-31 17:09:06,461 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-01-31 17:09:06,741 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-01-31 17:09:06,983 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
-2026-01-31 17:09:07,177 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-01-31 17:09:07,354 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
-2026-01-31 17:09:07,590 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
-2026-02-01 09:49:51,115 WARNING database DDL Query made to DB:
-alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-02-01 09:49:56,938 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:49:57,297 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 09:49:57,568 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:49:57,785 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 09:49:57,996 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:49:58,235 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:49:58,481 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:49:58,717 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 09:49:58,970 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:49:59,232 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:49:59,442 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:49:59,671 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:49:59,894 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 09:50:00,119 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:50:00,349 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:50:00,587 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:50:00,869 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:50:01,200 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 09:50:01,417 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 09:50:01,648 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:01,854 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:02,063 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 09:50:02,308 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 09:50:02,535 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 09:50:02,745 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:50:02,967 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:03,204 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 09:50:03,436 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:03,674 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:50:03,931 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:04,200 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 09:50:04,425 WARNING database DDL Query made to DB:
+2026-02-16 01:30:07,879 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 01:30:08,513 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:50:04,654 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:50:04,859 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 09:50:05,051 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:05,251 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
-2026-02-01 09:50:05,449 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 09:50:05,652 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 09:50:05,850 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
-2026-02-01 09:50:06,050 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 09:50:06,240 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
-2026-02-01 22:09:39,646 WARNING database DDL Query made to DB:
+2026-02-16 01:30:09,135 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:30:09,910 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:30:10,525 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:30:11,435 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
+2026-02-16 01:30:12,340 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:30:12,869 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:30:13,475 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 01:30:13,935 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 01:30:14,427 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 01:30:14,917 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:30:15,444 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
+2026-02-16 01:31:14,418 WARNING database DDL Query made to DB:
 alter table `tabDocType` add column if not exists migration_hash varchar(140)
-2026-02-01 22:09:51,137 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:09:51,852 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:09:52,338 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:09:52,820 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:09:53,470 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:09:53,975 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 22:09:54,432 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:09:54,884 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:09:55,348 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:09:55,806 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 22:09:56,259 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:09:56,798 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:09:57,267 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:09:57,721 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 22:09:58,209 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:09:58,705 WARNING database DDL Query made to DB:
+2026-02-16 01:31:24,862 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 01:31:26,170 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:27,031 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 01:31:27,944 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 01:31:28,970 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:29,831 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:31:30,754 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:31,643 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:32,557 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:31:33,380 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:31:34,301 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:35,297 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 01:31:36,305 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:37,221 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:31:38,223 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 01:31:39,139 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:31:40,051 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:41,037 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:31:42,002 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:31:43,017 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:31:43,895 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:31:44,879 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:45,816 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:46,716 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 01:31:47,623 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:48,512 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:49,534 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:50,381 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:51,028 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:09:59,194 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:09:59,660 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:10:00,114 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:10:00,589 WARNING database DDL Query made to DB:
+2026-02-16 01:31:51,727 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 01:31:52,447 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 01:31:53,168 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:10:01,043 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 22:10:01,486 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:10:01,768 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 22:10:01,982 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:10:02,191 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:10:02,392 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:10:02,636 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:10:02,872 WARNING database DDL Query made to DB:
+2026-02-16 01:31:53,837 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 01:31:54,592 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
+2026-02-16 01:31:55,250 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:55,876 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:56,514 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 01:31:57,171 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 01:31:57,823 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 01:31:58,503 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 01:31:59,338 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:11:57,246 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-02-16 23:12:12,468 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:12:13,914 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:12:15,293 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:16,688 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:12:17,847 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:10:03,145 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 22:10:03,461 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
-2026-02-01 22:10:04,008 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:10:04,449 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:10:04,903 WARNING database DDL Query made to DB:
+2026-02-16 23:12:19,348 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:20,406 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:21,284 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:12:22,174 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:12:23,089 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:12:24,252 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:25,322 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:26,339 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:27,480 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:28,492 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:12:29,512 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:12:30,413 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:12:31,386 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:12:32,004 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:32,834 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:33,656 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:12:35,471 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:12:36,552 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:12:37,430 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:12:38,232 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:39,308 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:12:40,540 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:41,387 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:12:42,075 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:12:42,938 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:12:44,041 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:12:45,183 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:12:46,249 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:12:47,122 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:12:47,902 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:12:49,027 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:12:49,779 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:50,566 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:12:51,331 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:12:52,170 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
+2026-02-16 23:12:52,884 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:12:53,612 WARNING database DDL Query made to DB:
+ALTER TABLE `tabContact` ADD COLUMN `custom_contact_number` varchar(140) unique
+2026-02-16 23:12:53,625 WARNING database DDL Query made to DB:
+ALTER TABLE `tabContact` ADD UNIQUE INDEX IF NOT EXISTS custom_contact_number (`custom_contact_number`)
+2026-02-16 23:12:53,761 WARNING database DDL Query made to DB:
+ALTER TABLE `tabContact` ADD INDEX `custom_contact_number_index`(`custom_contact_number`)
+2026-02-16 23:12:55,042 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` ADD COLUMN `custom_prospect_number` varchar(140) unique
+2026-02-16 23:12:55,112 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, ADD UNIQUE INDEX IF NOT EXISTS custom_prospect_number (`custom_prospect_number`)
+2026-02-16 23:12:55,209 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` ADD INDEX `custom_prospect_number_index`(`custom_prospect_number`)
+2026-02-16 23:12:56,162 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` ADD COLUMN `custom_deal_number` varchar(140) unique
+2026-02-16 23:12:56,267 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, ADD UNIQUE INDEX IF NOT EXISTS custom_deal_number (`custom_deal_number`)
+2026-02-16 23:12:56,373 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` ADD INDEX `custom_deal_number_index`(`custom_deal_number`)
+2026-02-16 23:52:28,278 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-02-16 23:52:37,996 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVooroo Activity` ADD COLUMN `activity_number` varchar(140) unique
+2026-02-16 23:52:37,999 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVooroo Activity` ADD UNIQUE INDEX IF NOT EXISTS activity_number (`activity_number`)
+2026-02-16 23:52:39,394 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVooroo Project` ADD COLUMN `project_number` varchar(140) unique
+2026-02-16 23:52:39,397 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVooroo Project` ADD UNIQUE INDEX IF NOT EXISTS project_number (`project_number`)
+2026-02-16 23:52:46,324 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:52:47,353 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:52:48,404 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:52:49,382 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:52:50,223 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:52:51,114 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:52:51,871 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:52:52,714 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:52:53,356 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:52:54,148 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:52:54,723 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:52:55,458 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:52:56,101 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:52:56,775 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:52:57,590 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:52:58,339 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:52:59,189 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:52:59,596 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:53:00,410 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:01,122 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:53:01,730 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:02,388 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:03,375 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:53:04,739 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:53:05,702 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:53:06,745 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:07,841 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:53:09,069 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:53:10,049 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:53:11,537 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:53:12,795 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:53:13,948 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:15,791 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:53:16,775 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:53:17,817 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:53:18,760 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:53:19,777 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:53:20,951 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:53:22,098 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:22,950 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:53:23,780 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:53:25,459 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:53:26,262 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:57:46,886 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-02-16 23:57:57,765 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:57:58,662 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:57:59,381 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:57:59,959 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:58:00,656 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:58:01,239 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:01,806 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:02,388 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:02,932 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:03,577 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:04,189 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:58:04,881 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:05,473 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:58:06,137 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:58:06,699 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:07,288 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:07,908 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:08,545 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:09,131 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:58:09,871 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:58:10,525 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:11,266 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:11,842 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:12,590 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:13,208 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:58:13,891 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:14,593 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:15,291 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:15,925 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:16,594 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:17,228 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:17,854 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:18,466 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2026-02-16 23:58:19,100 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0
+2026-02-16 23:58:19,701 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:20,338 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-16 23:58:20,895 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-16 23:58:21,585 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-16 23:58:22,189 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
+2026-02-16 23:58:22,769 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-16 23:58:23,334 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-16 23:58:24,547 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-16 23:58:25,095 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-17 14:07:28,133 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-02-17 14:07:35,051 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVooroo Activity` MODIFY `type` varchar(140) default 'Appel'
+2026-02-17 14:07:41,764 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:07:42,464 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:07:43,107 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:07:43,709 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:07:44,396 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-17 14:07:44,943 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-17 14:07:45,658 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:07:46,282 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-17 14:07:46,980 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:07:47,666 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:07:48,245 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-17 14:07:48,841 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-17 14:07:49,545 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:07:50,110 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2026-02-01 22:10:05,385 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:10:05,805 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
-2026-02-01 22:10:06,209 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
-2026-02-01 22:10:06,715 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:10:07,168 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:10:07,596 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
-2026-02-01 22:10:08,040 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
-2026-02-01 22:10:08,479 WARNING database DDL Query made to DB:
-ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-17 14:07:50,828 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-17 14:07:51,715 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-17 14:07:52,619 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-17 14:07:53,583 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-17 14:07:54,480 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0
+2026-02-17 14:07:55,173 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:07:56,291 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:07:56,959 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:07:57,713 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-17 14:07:58,443 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-17 14:07:59,256 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:08:00,039 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9)
+2026-02-17 14:08:00,714 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:08:01,477 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:08:02,178 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:08:02,744 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:08:03,318 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:08:04,123 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `first_response_time` decimal(21,9), MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0
+2026-02-17 14:08:04,676 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:08:05,278 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:08:05,781 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:08:06,351 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0
+2026-02-17 14:08:06,853 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0
+2026-02-17 14:08:07,351 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 14:08:07,889 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `expected_deal_value` decimal(21,9) not null default 0
+2026-02-17 14:08:08,449 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `deal_value` decimal(21,9) not null default 0
+2026-02-17 14:08:09,076 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `probability` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:08:10,059 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2026-02-17 14:08:10,585 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Deal` MODIFY `deal_value` decimal(21,9) not null default 0, MODIFY `probability` decimal(21,9) not null default 0, MODIFY `expected_deal_value` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9)
+2026-02-17 23:29:24,327 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` ADD COLUMN `test` varchar(140)
+2026-02-17 23:29:24,412 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCRM Lead` MODIFY `annual_revenue` decimal(21,9) not null default 0, MODIFY `last_response_time` decimal(21,9), MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `first_response_time` decimal(21,9), MODIFY `total` decimal(21,9) not null default 0, MODIFY `custom_expected_value` decimal(21,9) not null default 0

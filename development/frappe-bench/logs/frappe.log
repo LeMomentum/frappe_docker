@@ -457,3 +457,321 @@ Form Dict: {}
 2026-02-02 17:35:21,083 ERROR frappe New Exception collected in error log
 Site: development.localhost
 Form Dict: {'communication_name': 'os1oap7sr2', 'message': '<p>C&#39;est&nbsp;une&nbsp;reponse&nbsp;test&nbsp;depuis&nbsp;VOOROO&nbsp;CRM</p>', 'cmd': 'vooroo_saas.api.email.reply_to_email'}
+2026-02-09 15:13:20,139 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'prospect_name': {'search': '', 'completed': None, 'types': [], 'priorities': [], 'dateFilter': None, 'deal': None, 'contact': None, 'assigned_to': None}, 'reference_doctype': 'CRM Lead', 'cmd': 'vooroo_saas.api.prospect.get_activities'}
+2026-02-10 12:16:20,188 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'communication_name': 'mcn7pgtv03', 'message': '<p>Je&nbsp;vous&nbsp;en&nbsp;pris&nbsp;on&nbsp;se&nbsp;dit&nbsp;a&nbsp;merci</p>', 'cmd': 'vooroo_saas.api.email.reply_to_email'}
+2026-02-13 02:21:06,939 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:07,680 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:07,873 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:08,023 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:08,181 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:08,351 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:08,505 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:08,711 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:21:08,914 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:22:09,907 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:22:10,700 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:22:21,536 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:22:42,614 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:22:43,278 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 02:22:54,028 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-13 12:17:31,681 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'title': 'Projet test', 'status': 'Planning', 'priority': 'Medium', 'phase': 'Cadrage', 'start_date': '2026-02-13', 'end_date': '2026-03-15', 'owner_user': 'Administrator', 'organization': '', 'description': '', 'budget': 0, 'visibility': 'Team', 'cmd': 'vooroo_saas.api.project.create_project'}
+2026-02-15 01:32:58,921 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'User', 'docname': 'Administrator', 'is_private': 0, 'cmd': 'vooroo_saas.api.user.upload_user_image', 'attached_to_doctype': 'User', 'attached_to_name': 'Administrator'}
+2026-02-15 01:33:31,070 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'User', 'docname': 'Administrator', 'is_private': 0, 'cmd': 'vooroo_saas.api.user.upload_user_image', 'attached_to_doctype': 'User', 'attached_to_name': 'Administrator'}
+2026-02-16 17:24:37,040 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'cmd': 'vooroo_saas.api.contact.get_contact_timeline'}
+2026-02-16 17:24:38,392 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'sort_by': 'modified', 'sort_order': 'desc', 'cmd': 'vooroo_saas.api.contact.get_contacts'}
+2026-02-16 17:24:54,711 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'cmd': 'vooroo_saas.api.contact.get_contact_timeline'}
+2026-02-16 17:24:55,168 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'sort_by': 'modified', 'sort_order': 'desc', 'cmd': 'vooroo_saas.api.contact.get_contacts'}
+2026-02-16 17:37:08,719 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'lead_name': 'Awa', 'organization': 'Prosuma', 'status': 'Qualification', 'expected_value': 1200000, 'close_date': '2026-03-18', 'deal_owner': 'Administrator', 'lead_label': 'Tiède', 'product_service': '', 'deal_type': 'Entreprise', 'first_name': 'Awa', 'last_name': '', 'email': '', 'mobile_no': '', 'cmd': 'vooroo_saas.api.deal.create_deal'}
+2026-02-16 17:37:41,326 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'lead_name': 'Awa', 'organization': 'Prosuma', 'status': 'Qualification', 'expected_value': 1200000, 'close_date': '2026-03-18', 'deal_owner': 'Administrator', 'lead_label': 'Tiède', 'product_service': '', 'deal_type': 'Entreprise', 'first_name': 'Awa', 'last_name': '', 'email': '', 'mobile_no': '', 'cmd': 'vooroo_saas.api.deal.create_deal'}
+2026-02-16 23:05:20,449 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'sort_by': 'modified', 'sort_order': 'desc', 'cmd': 'vooroo_saas.api.contact.get_contacts'}
+2026-02-16 23:05:20,475 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'page': 1, 'page_size': 20, 'cmd': 'vooroo_saas.api.contact.get_contact_timeline'}
+2026-02-16 23:13:01,758 ERROR frappe Error while inserting deferred Error Log record: Error Log r79d86vgp4: 'Title' (HTTPSConnectionPool(host='api.frankfurter.app', port=443): Max retries exceeded with url: /latest?from=XOF&to=USD (Caused by NameResolutionError("HTTPSConnection(host='api.frankfurter.app', port=443): Failed to resolve 'api.frankfurter.app' ([Errno -3] Temporary failure in name resolution)"))) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-02-16 23:13:01,771 ERROR frappe Error while inserting deferred Error Log record: Error Log r798avp33a: 'Title' (HTTPSConnectionPool(host='api.frankfurter.app', port=443): Max retries exceeded with url: /latest?from=XOF&to=USD (Caused by NameResolutionError("HTTPSConnection(host='api.frankfurter.app', port=443): Failed to resolve 'api.frankfurter.app' ([Errno -3] Temporary failure in name resolution)"))) will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2026-02-17 11:13:45,012 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00007', 'data': '{"status":"Qualifier"}'}
+2026-02-17 12:22:24,728 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'stages_order': '[{"name":"Qualifiés","position":1},{"name":"Devis transmis","position":2},{"name":"En négociation","position":3},{"name":"Gagnés","position":4},{"name":"TEST TEST DEALS","position":5}]', 'cmd': 'vooroo_saas.api.deal.reorder_pipeline_stages'}
+2026-02-17 13:48:41,483 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.deal.export_deals'}
+2026-02-17 13:48:47,331 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'cmd': 'vooroo_saas.api.deal.export_deals'}
+2026-02-17 14:35:44,858 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-17 14:36:42,013 ERROR frappe Failed to capture exception
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 117, in capture_exception
+    set_scope(scope)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/sentry.py", line 70, in set_scope
+    path = frappe.request.path
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/env/lib/python3.12/site-packages/werkzeug/local.py", line 501, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: object is not bound
+2026-02-17 19:43:52,644 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'ACT-00029', 'cmd': 'vooroo_saas.api.activity.delete_activity'}
+2026-02-17 23:24:04,103 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'name': 'CRM-LEAD-2026-00004', 'data': '{"status":"TEST NOUVEAU"}', 'cmd': 'vooroo_saas.api.prospect.update_prospect'}

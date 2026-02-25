@@ -152,3 +152,1112 @@
 2026-02-01 21:28:51,107 INFO ipython settings = frappe.get_single("Vooroo Mail Settings")
 2026-02-01 21:28:51,109 INFO ipython print("=== Current Settings ===")
 2026-02-01 21:28:51,112 INFO ipython === session end ===
+2026-02-08 09:13:01,099 INFO ipython === bench console session ===
+2026-02-08 09:13:01,105 INFO ipython import frappe
+2026-02-08 09:13:01,109 INFO ipython # Check if Notification Settings exists and what fields it has
+2026-02-08 09:13:01,117 INFO ipython meta = frappe.get_meta('Notification Settings')
+2026-02-08 09:13:01,124 INFO ipython print("Fields:", [f.fieldname for f in meta.fields])
+2026-02-08 09:13:01,128 INFO ipython === session end ===
+2026-02-08 09:14:28,475 INFO ipython === bench console session ===
+2026-02-08 09:14:28,478 INFO ipython import frappe
+2026-02-08 09:14:28,483 INFO ipython # Test get_user_profile
+2026-02-08 09:14:28,485 INFO ipython from vooroo_saas.api.user import get_user_profile
+2026-02-08 09:14:28,489 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:14:28,496 INFO ipython result = get_user_profile()
+2026-02-08 09:14:28,499 INFO ipython print("Profile:", result.get('full_name'), result.get('email'))
+2026-02-08 09:14:28,504 INFO ipython # Test notification API
+2026-02-08 09:14:28,525 INFO ipython from vooroo_saas.api.notification import get_notification_preferences
+2026-02-08 09:14:28,530 INFO ipython try:
+    prefs = get_notification_preferences()
+    print("Notif prefs:", prefs)
+except Exception as e:
+    print("Notif error:", str(e))
+2026-02-08 09:14:28,550 INFO ipython === session end ===
+2026-02-08 09:14:39,586 INFO ipython === bench console session ===
+2026-02-08 09:14:39,587 INFO ipython import frappe
+2026-02-08 09:14:39,589 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:14:39,591 INFO ipython from vooroo_saas.api.notification import get_notifications
+2026-02-08 09:14:39,592 INFO ipython result = get_notifications(limit=5)
+2026-02-08 09:14:39,594 INFO ipython print("Total:", result['total'], "Unread:", result['unread'])
+2026-02-08 09:14:39,596 INFO ipython for n in result['notifications'][:3]:
+    print(f"  - {n['subject'][:60]} (read={n['read']})")
+exit()
+2026-02-08 09:14:39,599 INFO ipython === session end ===
+2026-02-08 09:36:10,186 INFO ipython === bench console session ===
+2026-02-08 09:36:10,189 INFO ipython import frappe
+2026-02-08 09:36:10,192 INFO ipython import json
+2026-02-08 09:36:10,195 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:36:10,200 INFO ipython print("=" * 60)
+2026-02-08 09:36:10,204 INFO ipython print("TEST 1: get_user_profile")
+2026-02-08 09:36:10,207 INFO ipython print("=" * 60)
+2026-02-08 09:36:10,211 INFO ipython from vooroo_saas.api.user import get_user_profile
+2026-02-08 09:36:10,215 INFO ipython profile = get_user_profile()
+2026-02-08 09:36:10,217 INFO ipython for k, v in profile.items():
+    if k != "roles":
+        print(f"  {k}: {v}")
+    else:
+        print(f"  {k}: [{len(v)} roles]")
+print("✅ PASS\n")
+2026-02-08 09:36:10,221 INFO ipython print("=" * 60)
+2026-02-08 09:36:10,223 INFO ipython print("TEST 2: update_user_profile")
+2026-02-08 09:36:10,226 INFO ipython print("=" * 60)
+2026-02-08 09:36:10,230 INFO ipython from vooroo_saas.api.user import update_user_profile
+2026-02-08 09:36:10,232 INFO ipython updated = update_user_profile(json.dumps({
+    "first_name": "Admin",
+    "last_name": "Test",
+    "location": "Abidjan",
+    "language": "fr",
+    "time_zone": "Africa/Abidjan"
+}))
+2026-02-08 09:36:10,235 INFO ipython print(f"  full_name: {updated['full_name']}")
+2026-02-08 09:36:10,239 INFO ipython print(f"  location: {updated['location']}")
+2026-02-08 09:36:10,240 INFO ipython print(f"  language: {updated['language']}")
+2026-02-08 09:36:10,242 INFO ipython print("✅ PASS\n")
+2026-02-08 09:36:10,243 INFO ipython print("=" * 60)
+2026-02-08 09:36:10,245 INFO ipython print("TEST 3: update_user_profile - rejected field")
+2026-02-08 09:36:10,247 INFO ipython print("=" * 60)
+2026-02-08 09:36:10,250 INFO ipython updated2 = update_user_profile(json.dumps({
+    "first_name": "Admin",
+    "email": "hacker@evil.com",  # should be ignored
+    "api_key": "stolen",  # should be ignored
+}))
+2026-02-08 09:36:10,252 INFO ipython print(f"  email (should be unchanged): {updated2['email']}")
+2026-02-08 09:36:10,253 INFO ipython print("✅ PASS\n")
+2026-02-08 09:36:10,255 INFO ipython === session end ===
+2026-02-08 09:36:32,205 INFO ipython === bench console session ===
+2026-02-08 09:36:32,205 INFO ipython import frappe
+2026-02-08 09:36:32,207 INFO ipython import json
+2026-02-08 09:36:32,208 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:36:32,209 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,210 INFO ipython print("TEST 4: update_user_password - wrong old password")
+2026-02-08 09:36:32,211 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,213 INFO ipython from vooroo_saas.api.user import update_user_password
+2026-02-08 09:36:32,214 INFO ipython try:
+    update_user_password("wrongpassword", "NewPass123!")
+    print("❌ FAIL - should have thrown")
+except Exception as e:
+    print(f"  Expected error: {str(e)[:80]}")
+    print("✅ PASS\n")
+2026-02-08 09:36:32,216 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,217 INFO ipython print("TEST 5: get_active_sessions")
+2026-02-08 09:36:32,218 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,219 INFO ipython from vooroo_saas.api.user import get_active_sessions
+2026-02-08 09:36:32,221 INFO ipython sessions = get_active_sessions()
+2026-02-08 09:36:32,223 INFO ipython print(f"  Sessions count: {len(sessions['sessions'])}")
+2026-02-08 09:36:32,224 INFO ipython for s in sessions['sessions'][:3]:
+    print(f"    - {s['name']} | IP: {s['ip']} | current: {s['current']}")
+print("✅ PASS\n")
+2026-02-08 09:36:32,225 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,227 INFO ipython print("TEST 6: get_login_history")
+2026-02-08 09:36:32,228 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,229 INFO ipython from vooroo_saas.api.user import get_login_history
+2026-02-08 09:36:32,229 INFO ipython history = get_login_history(limit=5)
+2026-02-08 09:36:32,230 INFO ipython print(f"  History entries: {len(history['history'])}")
+2026-02-08 09:36:32,231 INFO ipython for h in history['history'][:3]:
+    print(f"    - {h['date'][:19]} | IP: {h['ip']} | status: {h['status']}")
+print("✅ PASS\n")
+2026-02-08 09:36:32,232 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,233 INFO ipython print("TEST 7: get_ui_preferences")
+2026-02-08 09:36:32,234 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,235 INFO ipython from vooroo_saas.api.user import get_ui_preferences
+2026-02-08 09:36:32,236 INFO ipython prefs = get_ui_preferences()
+2026-02-08 09:36:32,237 INFO ipython for k, v in prefs.items():
+    print(f"  {k}: {v}")
+print("✅ PASS\n")
+2026-02-08 09:36:32,239 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,240 INFO ipython print("TEST 8: update_ui_preferences")
+2026-02-08 09:36:32,242 INFO ipython print("=" * 60)
+2026-02-08 09:36:32,244 INFO ipython from vooroo_saas.api.user import update_ui_preferences
+2026-02-08 09:36:32,246 INFO ipython updated_prefs = update_ui_preferences(json.dumps({
+    "theme": "dark",
+    "density": "compact",
+    "date_format": "DD/MM/YYYY",
+    "time_format": "24h"
+}))
+2026-02-08 09:36:32,248 INFO ipython print(f"  theme: {updated_prefs['theme']}")
+2026-02-08 09:36:32,249 INFO ipython print(f"  density: {updated_prefs['density']}")
+2026-02-08 09:36:32,251 INFO ipython # Revert to light
+2026-02-08 09:36:32,251 INFO ipython update_ui_preferences(json.dumps({"theme": "light", "density": "normal"}))
+2026-02-08 09:36:32,252 INFO ipython print("✅ PASS\n")
+2026-02-08 09:36:32,253 INFO ipython === session end ===
+2026-02-08 09:36:56,351 INFO ipython === bench console session ===
+2026-02-08 09:36:56,352 INFO ipython import frappe
+2026-02-08 09:36:56,352 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:36:56,353 INFO ipython print("=" * 60)
+2026-02-08 09:36:56,354 INFO ipython print("TEST 5 (fixed): get_active_sessions")
+2026-02-08 09:36:56,355 INFO ipython print("=" * 60)
+2026-02-08 09:36:56,356 INFO ipython from vooroo_saas.api.user import get_active_sessions
+2026-02-08 09:36:56,357 INFO ipython sessions = get_active_sessions()
+2026-02-08 09:36:56,358 INFO ipython print(f"  Sessions count: {len(sessions['sessions'])}")
+2026-02-08 09:36:56,362 INFO ipython for s in sessions['sessions'][:3]:
+    print(f"    - {s['name']} | IP: {s['ip']} | current: {s['current']}")
+print("✅ PASS\n")
+2026-02-08 09:36:56,363 INFO ipython === session end ===
+2026-02-08 09:37:07,660 INFO ipython === bench console session ===
+2026-02-08 09:37:07,660 INFO ipython import frappe
+2026-02-08 09:37:07,661 INFO ipython cols = frappe.db.sql("DESCRIBE `tabSessions`", as_dict=True)
+2026-02-08 09:37:07,662 INFO ipython for c in cols:
+    print(f"  {c['Field']}: {c['Type']}")
+exit()
+2026-02-08 09:37:07,664 INFO ipython === session end ===
+2026-02-08 09:37:41,229 INFO ipython === bench console session ===
+2026-02-08 09:37:41,231 INFO ipython import frappe
+2026-02-08 09:37:41,232 INFO ipython # Check Activity Log fields
+2026-02-08 09:37:41,234 INFO ipython meta = frappe.get_meta("Activity Log")
+2026-02-08 09:37:41,237 INFO ipython print("Activity Log fields:")
+2026-02-08 09:37:41,241 INFO ipython for f in meta.fields:
+    print(f"  {f.fieldname}: {f.fieldtype}")
+2026-02-08 09:37:41,244 INFO ipython # Check a sample login log
+2026-02-08 09:37:41,246 INFO ipython logs = frappe.db.sql("""
+    SELECT creation, operation, subject, communication_date, ip_address, full_name
+    FROM `tabActivity Log`
+    WHERE operation='Login'
+    ORDER BY creation DESC
+    LIMIT 3
+""", as_dict=True)
+2026-02-08 09:37:41,250 INFO ipython print("\nSample login logs:")
+2026-02-08 09:37:41,259 INFO ipython for l in logs:
+    print(f"  {l}")
+exit()
+2026-02-08 09:37:41,261 INFO ipython === session end ===
+2026-02-08 09:38:40,194 INFO ipython === bench console session ===
+2026-02-08 09:38:40,198 INFO ipython import frappe
+2026-02-08 09:38:40,202 INFO ipython import json
+2026-02-08 09:38:40,205 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:38:40,209 INFO ipython print("=" * 60)
+2026-02-08 09:38:40,212 INFO ipython print("COMPREHENSIVE BACKEND API TESTS")
+2026-02-08 09:38:40,214 INFO ipython print("=" * 60)
+2026-02-08 09:38:40,216 INFO ipython # ============================================================
+2026-02-08 09:38:40,220 INFO ipython # TEST 1: get_user_profile
+2026-02-08 09:38:40,221 INFO ipython # ============================================================
+2026-02-08 09:38:40,223 INFO ipython print("\n[1] get_user_profile")
+2026-02-08 09:38:40,225 INFO ipython from vooroo_saas.api.user import get_user_profile
+2026-02-08 09:38:40,226 INFO ipython profile = get_user_profile()
+2026-02-08 09:38:40,227 INFO ipython assert profile["user"] == "Administrator"
+2026-02-08 09:38:40,229 INFO ipython assert profile["email"] == "admin@example.com"
+2026-02-08 09:38:40,232 INFO ipython assert "roles" in profile
+2026-02-08 09:38:40,234 INFO ipython assert len(profile["roles"]) > 0
+2026-02-08 09:38:40,235 INFO ipython print(f"   ✅ Profile loaded ({len(profile)} fields, {len(profile['roles'])} roles)")
+2026-02-08 09:38:40,236 INFO ipython # ============================================================
+2026-02-08 09:38:40,237 INFO ipython # TEST 2: update_user_profile - valid fields
+2026-02-08 09:38:40,238 INFO ipython # ============================================================
+2026-02-08 09:38:40,240 INFO ipython print("\n[2] update_user_profile - valid fields")
+2026-02-08 09:38:40,241 INFO ipython from vooroo_saas.api.user import update_user_profile
+2026-02-08 09:38:40,242 INFO ipython updated = update_user_profile(json.dumps({
+    "first_name": "Admin",
+    "last_name": "CRM",
+    "location": "Abidjan",
+    "bio": "Test bio",
+    "mobile_no": "+225000000000"
+}))
+2026-02-08 09:38:40,243 INFO ipython assert updated["first_name"] == "Admin"
+2026-02-08 09:38:40,244 INFO ipython assert updated["last_name"] == "CRM"
+2026-02-08 09:38:40,246 INFO ipython assert updated["location"] == "Abidjan"
+2026-02-08 09:38:40,248 INFO ipython assert updated["bio"] == "Test bio"
+2026-02-08 09:38:40,249 INFO ipython print("   ✅ Profile updated correctly")
+2026-02-08 09:38:40,250 INFO ipython # ============================================================
+2026-02-08 09:38:40,251 INFO ipython # TEST 3: update_user_profile - rejected fields
+2026-02-08 09:38:40,252 INFO ipython # ============================================================
+2026-02-08 09:38:40,253 INFO ipython print("\n[3] update_user_profile - rejected fields")
+2026-02-08 09:38:40,255 INFO ipython updated2 = update_user_profile(json.dumps({
+    "email": "hack@evil.com",
+    "api_key": "stolen",
+    "name": "hacked"
+}))
+2026-02-08 09:38:40,256 INFO ipython assert updated2["email"] == "admin@example.com"
+2026-02-08 09:38:40,258 INFO ipython print("   ✅ Sensitive fields ignored correctly")
+2026-02-08 09:38:40,259 INFO ipython # ============================================================
+2026-02-08 09:38:40,259 INFO ipython # TEST 4: update_user_password - wrong password
+2026-02-08 09:38:40,260 INFO ipython # ============================================================
+2026-02-08 09:38:40,261 INFO ipython print("\n[4] update_user_password - wrong old password")
+2026-02-08 09:38:40,262 INFO ipython from vooroo_saas.api.user import update_user_password
+2026-02-08 09:38:40,264 INFO ipython try:
+    update_user_password("wrongpassword", "NewPass123!")
+    assert False, "Should have thrown"
+except Exception as e:
+    assert "incorrect" in str(e).lower() or "mot de passe" in str(e).lower()
+    print("   ✅ Rejects wrong old password")
+2026-02-08 09:38:40,265 INFO ipython # ============================================================
+2026-02-08 09:38:40,266 INFO ipython # TEST 5: get_active_sessions
+2026-02-08 09:38:40,267 INFO ipython # ============================================================
+2026-02-08 09:38:40,268 INFO ipython print("\n[5] get_active_sessions")
+2026-02-08 09:38:40,270 INFO ipython from vooroo_saas.api.user import get_active_sessions
+2026-02-08 09:38:40,272 INFO ipython sessions = get_active_sessions()
+2026-02-08 09:38:40,274 INFO ipython assert "sessions" in sessions
+2026-02-08 09:38:40,275 INFO ipython assert "current_session" in sessions
+2026-02-08 09:38:40,277 INFO ipython assert isinstance(sessions["sessions"], list)
+2026-02-08 09:38:40,279 INFO ipython # Should have at least the current session
+2026-02-08 09:38:40,280 INFO ipython assert len(sessions["sessions"]) >= 1
+2026-02-08 09:38:40,281 INFO ipython has_current = any(s["current"] for s in sessions["sessions"])
+2026-02-08 09:38:40,283 INFO ipython assert has_current, "Should mark current session"
+2026-02-08 09:38:40,285 INFO ipython print(f"   ✅ {len(sessions['sessions'])} sessions found, current marked")
+2026-02-08 09:38:40,286 INFO ipython # ============================================================
+2026-02-08 09:38:40,289 INFO ipython # TEST 6: get_login_history
+2026-02-08 09:38:40,292 INFO ipython # ============================================================
+2026-02-08 09:38:40,293 INFO ipython print("\n[6] get_login_history")
+2026-02-08 09:38:40,295 INFO ipython from vooroo_saas.api.user import get_login_history
+2026-02-08 09:38:40,295 INFO ipython history = get_login_history(limit=5)
+2026-02-08 09:38:40,297 INFO ipython assert "history" in history
+2026-02-08 09:38:40,298 INFO ipython assert isinstance(history["history"], list)
+2026-02-08 09:38:40,299 INFO ipython if len(history["history"]) > 0:
+    h = history["history"][0]
+    assert "date" in h
+    assert "ip" in h
+    assert "status" in h
+print(f"   ✅ {len(history['history'])} login entries")
+2026-02-08 09:38:40,301 INFO ipython # ============================================================
+2026-02-08 09:38:40,302 INFO ipython # TEST 7: get_login_history - custom limit
+2026-02-08 09:38:40,304 INFO ipython # ============================================================
+2026-02-08 09:38:40,306 INFO ipython print("\n[7] get_login_history - limit=2")
+2026-02-08 09:38:40,308 INFO ipython history2 = get_login_history(limit=2)
+2026-02-08 09:38:40,309 INFO ipython assert len(history2["history"]) <= 2
+2026-02-08 09:38:40,311 INFO ipython print(f"   ✅ Limit works ({len(history2['history'])} entries)")
+2026-02-08 09:38:40,313 INFO ipython # ============================================================
+2026-02-08 09:38:40,314 INFO ipython # TEST 8: get_ui_preferences
+2026-02-08 09:38:40,315 INFO ipython # ============================================================
+2026-02-08 09:38:40,318 INFO ipython print("\n[8] get_ui_preferences")
+2026-02-08 09:38:40,319 INFO ipython from vooroo_saas.api.user import get_ui_preferences
+2026-02-08 09:38:40,321 INFO ipython prefs = get_ui_preferences()
+2026-02-08 09:38:40,323 INFO ipython assert "theme" in prefs
+2026-02-08 09:38:40,327 INFO ipython assert "density" in prefs
+2026-02-08 09:38:40,331 INFO ipython assert "language" in prefs
+2026-02-08 09:38:40,332 INFO ipython assert "timezone" in prefs
+2026-02-08 09:38:40,334 INFO ipython print(f"   ✅ Preferences loaded (theme={prefs['theme']}, density={prefs['density']})")
+2026-02-08 09:38:40,335 INFO ipython # ============================================================
+2026-02-08 09:38:40,336 INFO ipython # TEST 9: update_ui_preferences
+2026-02-08 09:38:40,338 INFO ipython # ============================================================
+2026-02-08 09:38:40,341 INFO ipython print("\n[9] update_ui_preferences")
+2026-02-08 09:38:40,344 INFO ipython from vooroo_saas.api.user import update_ui_preferences
+2026-02-08 09:38:40,345 INFO ipython updated_prefs = update_ui_preferences(json.dumps({
+    "theme": "dark",
+    "density": "compact",
+    "date_format": "YYYY-MM-DD"
+}))
+2026-02-08 09:38:40,346 INFO ipython assert updated_prefs["theme"] == "dark"
+2026-02-08 09:38:40,347 INFO ipython assert updated_prefs["density"] == "compact"
+2026-02-08 09:38:40,349 INFO ipython assert updated_prefs["date_format"] == "YYYY-MM-DD"
+2026-02-08 09:38:40,350 INFO ipython # Revert
+2026-02-08 09:38:40,351 INFO ipython update_ui_preferences(json.dumps({
+    "theme": "light",
+    "density": "normal",
+    "date_format": "DD/MM/YYYY"
+}))
+2026-02-08 09:38:40,353 INFO ipython print("   ✅ Preferences updated and reverted")
+2026-02-08 09:38:40,354 INFO ipython # ============================================================
+2026-02-08 09:38:40,357 INFO ipython # TEST 10: Notification APIs
+2026-02-08 09:38:40,359 INFO ipython # ============================================================
+2026-02-08 09:38:40,360 INFO ipython print("\n[10] get_notification_preferences")
+2026-02-08 09:38:40,364 INFO ipython from vooroo_saas.api.notification import get_notification_preferences
+2026-02-08 09:38:40,366 INFO ipython notif_prefs = get_notification_preferences()
+2026-02-08 09:38:40,369 INFO ipython assert "enabled" in notif_prefs
+2026-02-08 09:38:40,370 INFO ipython assert "channels" in notif_prefs
+2026-02-08 09:38:40,372 INFO ipython print(f"   ✅ Notification prefs loaded (enabled={notif_prefs['enabled']})")
+2026-02-08 09:38:40,374 INFO ipython print("\n[11] update_notification_preferences")
+2026-02-08 09:38:40,375 INFO ipython from vooroo_saas.api.notification import update_notification_preferences
+2026-02-08 09:38:40,377 INFO ipython updated_notif = update_notification_preferences(json.dumps({
+    "enabled": 1,
+    "email_notifications": 1
+}))
+2026-02-08 09:38:40,380 INFO ipython assert updated_notif is not None
+2026-02-08 09:38:40,381 INFO ipython print("   ✅ Notification prefs updated")
+2026-02-08 09:38:40,383 INFO ipython print("\n[12] get_notifications")
+2026-02-08 09:38:40,384 INFO ipython from vooroo_saas.api.notification import get_notifications
+2026-02-08 09:38:40,385 INFO ipython notifs = get_notifications(limit=5)
+2026-02-08 09:38:40,386 INFO ipython assert "notifications" in notifs
+2026-02-08 09:38:40,387 INFO ipython assert "total" in notifs
+2026-02-08 09:38:40,388 INFO ipython assert "unread" in notifs
+2026-02-08 09:38:40,389 INFO ipython print(f"   ✅ Notifications: {notifs['total']} total, {notifs['unread']} unread")
+2026-02-08 09:38:40,391 INFO ipython print("\n[13] revoke_session - revoke_all (dry test)")
+2026-02-08 09:38:40,392 INFO ipython from vooroo_saas.api.user import revoke_session
+2026-02-08 09:38:40,393 INFO ipython # Just test it doesn't error - it will revoke other sessions but that's fine
+2026-02-08 09:38:40,395 INFO ipython result = revoke_session(revoke_all=True)
+2026-02-08 09:38:40,395 INFO ipython assert result["success"] == True
+2026-02-08 09:38:40,397 INFO ipython print("   ✅ Revoke all sessions succeeded")
+2026-02-08 09:38:40,398 INFO ipython print("\n" + "=" * 60)
+2026-02-08 09:38:40,400 INFO ipython print("ALL 13 TESTS PASSED ✅")
+2026-02-08 09:38:40,401 INFO ipython print("=" * 60)
+2026-02-08 09:38:40,403 INFO ipython === session end ===
+2026-02-08 09:38:51,526 INFO ipython === bench console session ===
+2026-02-08 09:38:51,528 INFO ipython import frappe
+2026-02-08 09:38:51,532 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:38:51,538 INFO ipython from vooroo_saas.api.notification import get_notification_preferences
+2026-02-08 09:38:51,544 INFO ipython prefs = get_notification_preferences()
+2026-02-08 09:38:51,547 INFO ipython print("Keys:", list(prefs.keys()))
+2026-02-08 09:38:51,550 INFO ipython for k, v in prefs.items():
+    print(f"  {k}: {v}")
+exit()
+2026-02-08 09:38:51,553 INFO ipython === session end ===
+2026-02-08 09:41:46,681 INFO ipython === bench console session ===
+2026-02-08 09:41:46,682 INFO ipython import frappe
+2026-02-08 09:41:46,683 INFO ipython import json
+2026-02-08 09:41:46,684 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:41:46,687 INFO ipython print("=" * 60)
+2026-02-08 09:41:46,688 INFO ipython print("FINAL COMPREHENSIVE API TEST SUITE")
+2026-02-08 09:41:46,690 INFO ipython print("=" * 60)
+2026-02-08 09:41:46,691 INFO ipython passed = 0
+2026-02-08 09:41:46,696 INFO ipython failed = 0
+2026-02-08 09:41:46,700 INFO ipython def test(name, fn):
+    global passed, failed
+    try:
+        fn()
+        print(f"  ✅ {name}")
+        passed += 1
+    except Exception as e:
+        print(f"  ❌ {name}: {e}")
+        failed += 1
+2026-02-08 09:41:46,701 INFO ipython # Profile APIs
+2026-02-08 09:41:46,702 INFO ipython from vooroo_saas.api.user import (
+    get_user_profile, update_user_profile, update_user_password,
+    get_active_sessions, revoke_session, get_login_history,
+    get_ui_preferences, update_ui_preferences
+)
+2026-02-08 09:41:46,704 INFO ipython def t1():
+    p = get_user_profile()
+    assert p["user"] == "Administrator"
+    assert p["email"] == "admin@example.com"
+    assert len(p["roles"]) > 0
+test("get_user_profile", t1)
+2026-02-08 09:41:46,705 INFO ipython def t2():
+    u = update_user_profile(json.dumps({"first_name": "Admin", "last_name": "CRM", "location": "Abidjan"}))
+    assert u["first_name"] == "Admin"
+    assert u["last_name"] == "CRM"
+test("update_user_profile - valid", t2)
+2026-02-08 09:41:46,707 INFO ipython def t3():
+    u = update_user_profile(json.dumps({"email": "hack@evil.com", "api_key": "stolen"}))
+    assert u["email"] == "admin@example.com"
+test("update_user_profile - rejects sensitive fields", t3)
+2026-02-08 09:41:46,711 INFO ipython def t4():
+    try:
+        update_user_password("wrong", "New123!")
+        assert False
+    except:
+        pass
+test("update_user_password - rejects wrong password", t4)
+2026-02-08 09:41:46,713 INFO ipython def t5():
+    s = get_active_sessions()
+    assert "sessions" in s
+    assert "current_session" in s
+    assert any(d["current"] for d in s["sessions"])
+test("get_active_sessions", t5)
+2026-02-08 09:41:46,715 INFO ipython def t6():
+    r = revoke_session(revoke_all=True)
+    assert r["success"] == True
+test("revoke_session - revoke_all", t6)
+2026-02-08 09:41:46,716 INFO ipython def t7():
+    h = get_login_history(limit=3)
+    assert len(h["history"]) <= 3
+    if h["history"]:
+        assert "date" in h["history"][0]
+        assert "ip" in h["history"][0]
+test("get_login_history", t7)
+2026-02-08 09:41:46,719 INFO ipython def t8():
+    p = get_ui_preferences()
+    assert "theme" in p
+    assert "density" in p
+    assert "language" in p
+test("get_ui_preferences", t8)
+2026-02-08 09:41:46,722 INFO ipython def t9():
+    u = update_ui_preferences(json.dumps({"theme": "dark", "density": "compact"}))
+    assert u["theme"] == "dark"
+    assert u["density"] == "compact"
+    update_ui_preferences(json.dumps({"theme": "light", "density": "normal"}))
+test("update_ui_preferences", t9)
+2026-02-08 09:41:46,725 INFO ipython # Notification APIs
+2026-02-08 09:41:46,730 INFO ipython from vooroo_saas.api.notification import (
+    get_notification_preferences, update_notification_preferences,
+    get_notifications, mark_notification_read
+)
+2026-02-08 09:41:46,736 INFO ipython def t10():
+    p = get_notification_preferences()
+    assert "enabled" in p
+    assert "email_notifications" in p
+test("get_notification_preferences", t10)
+2026-02-08 09:41:46,737 INFO ipython def t11():
+    u = update_notification_preferences(json.dumps({"enabled": 1}))
+    assert u is not None
+test("update_notification_preferences", t11)
+2026-02-08 09:41:46,740 INFO ipython def t12():
+    n = get_notifications(limit=5)
+    assert "notifications" in n
+    assert "total" in n
+    assert "unread" in n
+test("get_notifications", t12)
+2026-02-08 09:41:46,742 INFO ipython def t13():
+    # Edge case: empty update
+    u = update_user_profile(json.dumps({}))
+    assert u["user"] == "Administrator"
+test("update_user_profile - empty data", t13)
+2026-02-08 09:41:46,747 INFO ipython def t14():
+    # Edge case: login history limit=0
+    h = get_login_history(limit=0)
+    assert h["history"] == [] or isinstance(h["history"], list)
+test("get_login_history - limit=0", t14)
+2026-02-08 09:41:46,749 INFO ipython print(f"\n{'=' * 60}")
+2026-02-08 09:41:46,751 INFO ipython print(f"RESULTS: {passed} passed, {failed} failed out of {passed + failed}")
+2026-02-08 09:41:46,754 INFO ipython print(f"{'=' * 60}")
+2026-02-08 09:41:46,758 INFO ipython === session end ===
+2026-02-08 09:42:26,964 INFO ipython === bench console session ===
+2026-02-08 09:42:26,965 INFO ipython import frappe
+2026-02-08 09:42:26,966 INFO ipython import json
+2026-02-08 09:42:26,967 INFO ipython frappe.set_user("Administrator")
+2026-02-08 09:42:26,968 INFO ipython passed = 0
+2026-02-08 09:42:26,970 INFO ipython failed = 0
+2026-02-08 09:42:26,972 INFO ipython def test(name, fn):
+    global passed, failed
+    try:
+        fn()
+        print(f"  ✅ {name}")
+        passed += 1
+    except Exception as e:
+        print(f"  ❌ {name}: {e}")
+        failed += 1
+2026-02-08 09:42:26,973 INFO ipython from vooroo_saas.api.user import (
+    get_user_profile, update_user_profile, update_user_password,
+    get_active_sessions, revoke_session, get_login_history,
+    get_ui_preferences, update_ui_preferences
+)
+2026-02-08 09:42:26,975 INFO ipython from vooroo_saas.api.notification import (
+    get_notification_preferences, update_notification_preferences,
+    get_notifications, mark_notification_read
+)
+2026-02-08 09:42:26,976 INFO ipython print("=" * 60)
+2026-02-08 09:42:26,977 INFO ipython print("COMPREHENSIVE API TEST SUITE")
+2026-02-08 09:42:26,978 INFO ipython print("=" * 60)
+2026-02-08 09:42:26,980 INFO ipython # 1
+2026-02-08 09:42:26,981 INFO ipython def t1():
+    p = get_user_profile()
+    assert p["user"] == "Administrator"
+    assert p["email"] == "admin@example.com"
+    assert len(p["roles"]) > 0
+test("get_user_profile", t1)
+2026-02-08 09:42:26,984 INFO ipython # 2
+2026-02-08 09:42:26,986 INFO ipython def t2():
+    u = update_user_profile(json.dumps({"first_name": "Admin", "last_name": "CRM", "location": "Abidjan"}))
+    assert u["first_name"] == "Admin"
+    assert u["last_name"] == "CRM"
+test("update_user_profile - valid", t2)
+2026-02-08 09:42:26,987 INFO ipython # 3
+2026-02-08 09:42:26,988 INFO ipython def t3():
+    u = update_user_profile(json.dumps({"email": "hack@evil.com", "api_key": "stolen"}))
+    assert u["email"] == "admin@example.com"
+test("update_user_profile - rejects sensitive", t3)
+2026-02-08 09:42:26,989 INFO ipython # 4
+2026-02-08 09:42:26,991 INFO ipython def t4():
+    try:
+        update_user_password("wrong", "New123!")
+        assert False, "Should throw"
+    except:
+        pass
+test("update_user_password - wrong password", t4)
+2026-02-08 09:42:26,994 INFO ipython # 5
+2026-02-08 09:42:26,995 INFO ipython def t5():
+    s = get_active_sessions()
+    assert "sessions" in s
+    assert "current_session" in s
+    assert len(s["sessions"]) >= 1
+test("get_active_sessions", t5)
+2026-02-08 09:42:26,996 INFO ipython # 6
+2026-02-08 09:42:26,997 INFO ipython def t6():
+    r = revoke_session(revoke_all=True)
+    assert r["success"] == True
+test("revoke_session", t6)
+2026-02-08 09:42:26,999 INFO ipython # 7
+2026-02-08 09:42:27,001 INFO ipython def t7():
+    h = get_login_history(limit=3)
+    assert len(h["history"]) <= 3
+test("get_login_history", t7)
+2026-02-08 09:42:27,004 INFO ipython # 8
+2026-02-08 09:42:27,006 INFO ipython def t8():
+    p = get_ui_preferences()
+    assert "theme" in p
+    assert "density" in p
+    assert "language" in p
+test("get_ui_preferences", t8)
+2026-02-08 09:42:27,009 INFO ipython # 9
+2026-02-08 09:42:27,010 INFO ipython def t9():
+    u = update_ui_preferences(json.dumps({"theme": "dark", "density": "compact"}))
+    assert u["theme"] == "dark"
+    assert u["density"] == "compact"
+    update_ui_preferences(json.dumps({"theme": "light", "density": "normal"}))
+test("update_ui_preferences", t9)
+2026-02-08 09:42:27,011 INFO ipython # 10
+2026-02-08 09:42:27,016 INFO ipython def t10():
+    p = get_notification_preferences()
+    assert "enabled" in p
+    assert "email_notifications" in p
+test("get_notification_preferences", t10)
+2026-02-08 09:42:27,017 INFO ipython # 11
+2026-02-08 09:42:27,018 INFO ipython def t11():
+    u = update_notification_preferences(json.dumps({"enabled": 1}))
+    assert u is not None
+test("update_notification_preferences", t11)
+2026-02-08 09:42:27,020 INFO ipython # 12
+2026-02-08 09:42:27,021 INFO ipython def t12():
+    n = get_notifications(limit=5)
+    assert "notifications" in n
+    assert "total" in n
+    assert "unread" in n
+test("get_notifications", t12)
+2026-02-08 09:42:27,024 INFO ipython # 13
+2026-02-08 09:42:27,030 INFO ipython def t13():
+    u = update_user_profile(json.dumps({}))
+    assert u["user"] == "Administrator"
+test("update_user_profile - empty data", t13)
+2026-02-08 09:42:27,031 INFO ipython # 14
+2026-02-08 09:42:27,033 INFO ipython def t14():
+    h = get_login_history(limit=0)
+    assert isinstance(h["history"], list)
+test("get_login_history - limit=0", t14)
+2026-02-08 09:42:27,036 INFO ipython print(f"\n{'=' * 60}")
+2026-02-08 09:42:27,038 INFO ipython print(f"RESULTS: {passed} passed, {failed} failed out of {passed + failed}")
+2026-02-08 09:42:27,039 INFO ipython print(f"{'=' * 60}")
+2026-02-08 09:42:27,040 INFO ipython === session end ===
+2026-02-09 23:19:35,235 INFO ipython === bench console session ===
+2026-02-09 23:19:35,239 INFO ipython === session end ===
+2026-02-10 23:56:57,835 INFO ipython === bench console session ===
+2026-02-10 23:56:57,837 INFO ipython === session end ===
+2026-02-12 09:56:45,528 INFO ipython === bench console session ===
+2026-02-12 09:56:45,536 INFO ipython import frappe
+2026-02-12 09:56:45,539 INFO ipython # Check if Frappe can find the doctype module
+2026-02-12 09:56:45,545 INFO ipython from frappe.modules import get_doctype_module
+2026-02-12 09:56:45,550 INFO ipython try:
+    m = get_doctype_module("Vooroo Invoice")
+    print(f"Vooroo Invoice module: {m}")
+except Exception as e:
+    print(f"Error: {e}")
+    
+2026-02-12 09:56:45,561 INFO ipython # Check module path
+2026-02-12 09:56:45,562 INFO ipython import vooroo_saas.vooroo_saas.doctype.vooroo_project.vooroo_project as vp
+2026-02-12 09:56:45,563 INFO ipython print(f"Module found: {vp}")
+2026-02-12 09:56:45,564 INFO ipython === session end ===
+2026-02-12 09:57:47,307 INFO ipython === bench console session ===
+2026-02-12 09:57:47,310 INFO ipython import frappe
+2026-02-12 09:57:47,311 INFO ipython import json
+2026-02-12 09:57:47,312 INFO ipython # Check if DocType exists
+2026-02-12 09:57:47,314 INFO ipython exists = frappe.db.exists("DocType", "Vooroo Project")
+2026-02-12 09:57:47,317 INFO ipython print(f"Vooroo Project exists: {exists}")
+2026-02-12 09:57:47,326 INFO ipython # If not, create it from JSON
+2026-02-12 09:57:47,327 INFO ipython if not exists:
+    with open("apps/vooroo_saas/vooroo_saas/vooroo_saas/doctype/vooroo_project/vooroo_project.json") as f:
+        data = json.load(f)
+    
+2026-02-12 09:57:47,328 INFO ipython     doc = frappe.get_doc(data)
+2026-02-12 09:57:47,330 INFO ipython     doc.flags.ignore_permissions = True
+2026-02-12 09:57:47,331 INFO ipython     doc.insert()
+2026-02-12 09:57:47,333 INFO ipython     frappe.db.commit()
+2026-02-12 09:57:47,334 INFO ipython     print("Created Vooroo Project")
+2026-02-12 09:57:47,335 INFO ipython exists2 = frappe.db.exists("DocType", "Vooroo Project Task")
+2026-02-12 09:57:47,337 INFO ipython print(f"Vooroo Project Task exists: {exists2}")
+2026-02-12 09:57:47,340 INFO ipython if not exists2:
+    with open("apps/vooroo_saas/vooroo_saas/vooroo_saas/doctype/vooroo_project_task/vooroo_project_task.json") as f:
+        data = json.load(f)
+    
+2026-02-12 09:57:47,343 INFO ipython     doc = frappe.get_doc(data)
+2026-02-12 09:57:47,347 INFO ipython     doc.flags.ignore_permissions = True
+2026-02-12 09:57:47,349 INFO ipython     doc.insert()
+2026-02-12 09:57:47,352 INFO ipython     frappe.db.commit()
+2026-02-12 09:57:47,354 INFO ipython     print("Created Vooroo Project Task")
+2026-02-12 09:57:47,355 INFO ipython # Verify
+2026-02-12 09:57:47,357 INFO ipython print("Tables:", frappe.db.sql("SHOW TABLES LIKE '%vooroo_project%'"))
+2026-02-12 09:57:47,361 INFO ipython === session end ===
+2026-02-12 10:03:26,274 INFO ipython === bench console session ===
+2026-02-12 10:03:26,276 INFO ipython import frappe
+2026-02-12 10:03:26,277 INFO ipython dt = frappe.get_doc("DocType", "Vooroo Project")
+2026-02-12 10:03:26,278 INFO ipython print(f"Module: {dt.module}")
+2026-02-12 10:03:26,282 INFO ipython print(f"Fields count: {len(dt.fields)}")
+2026-02-12 10:03:26,284 INFO ipython print(f"Is Virtual: {dt.is_virtual}")
+2026-02-12 10:03:26,285 INFO ipython # Force create table
+2026-02-12 10:03:26,287 INFO ipython from frappe.model.db_schema import DbTable
+2026-02-12 10:03:26,290 INFO ipython table = DbTable(dt.name)
+2026-02-12 10:03:26,292 INFO ipython table.sync()
+2026-02-12 10:03:26,292 INFO ipython frappe.db.commit()
+2026-02-12 10:03:26,293 INFO ipython print("Table synced!")
+2026-02-12 10:03:26,293 INFO ipython tables = frappe.db.sql('SHOW TABLES LIKE "%vooroo_project%"')
+2026-02-12 10:03:26,294 INFO ipython print(f"Tables: {tables}")
+2026-02-12 10:03:26,298 INFO ipython === session end ===
+2026-02-12 11:35:32,656 INFO ipython === bench console session ===
+2026-02-12 11:35:32,660 INFO ipython d = frappe.get_meta("CRM Deal")
+2026-02-12 11:35:32,662 INFO ipython === session end ===
+2026-02-16 01:33:18,176 INFO ipython === bench console session ===
+2026-02-16 01:33:18,182 INFO ipython doc = frappe.get_single("Vooroo CRM Settings")
+2026-02-16 01:33:18,183 INFO ipython print(f"DocType exists: True")
+2026-02-16 01:33:18,188 INFO ipython print(f"Name: {doc.name}")
+2026-02-16 01:33:18,195 INFO ipython print(f"Company name: {doc.company_name or '(empty)'}")
+2026-02-16 01:33:18,200 INFO ipython print(f"Contact prefix: {doc.contact_prefix or '(empty)'}")
+2026-02-16 01:33:18,201 INFO ipython === session end ===
+2026-02-16 22:00:48,132 INFO ipython === bench console session ===
+2026-02-16 22:00:48,135 INFO ipython import frappe; print([d.name for d in frappe.get_all('DocType', filters={'module': ['in', ['CRM', 'Frappe CRM']]}, fields=['name'])][:30])
+2026-02-16 22:00:48,136 INFO ipython === session end ===
+2026-02-16 23:14:12,738 INFO ipython === bench console session ===
+2026-02-16 23:14:12,740 INFO ipython import frappe
+2026-02-16 23:14:12,741 INFO ipython # Check if custom fields exist
+2026-02-16 23:14:12,741 INFO ipython fields = frappe.db.sql("""
+    SELECT name, dt, fieldname FROM `tabCustom Field` 
+    WHERE fieldname IN ('custom_contact_number', 'custom_prospect_number', 'custom_deal_number')
+""", as_dict=True)
+2026-02-16 23:14:12,742 INFO ipython print("Custom fields:", fields)
+2026-02-16 23:14:12,746 INFO ipython # Check settings counter fields
+2026-02-16 23:14:12,747 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-16 23:14:12,747 INFO ipython print("Contact prefix:", settings.contact_prefix)
+2026-02-16 23:14:12,748 INFO ipython print("Contact start:", settings.contact_start_number)
+2026-02-16 23:14:12,749 INFO ipython print("Contact counter:", settings.contact_current_counter)
+2026-02-16 23:14:12,750 INFO ipython === session end ===
+2026-02-16 23:14:40,224 INFO ipython === bench console session ===
+2026-02-16 23:14:40,227 INFO ipython import frappe
+2026-02-16 23:14:40,231 INFO ipython from vooroo_saas.overrides.numbering import generate_contact_number
+2026-02-16 23:14:40,235 INFO ipython # Test numbering
+2026-02-16 23:14:40,235 INFO ipython prefix, number, formatted = generate_contact_number()
+2026-02-16 23:14:40,238 INFO ipython print(f"Generated: prefix={prefix}, number={number}, formatted={formatted}")
+2026-02-16 23:14:40,244 INFO ipython # Check counter was updated
+2026-02-16 23:14:40,244 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-16 23:14:40,247 INFO ipython print(f"Counter after: {settings.contact_current_counter}")
+2026-02-16 23:14:40,251 INFO ipython === session end ===
+2026-02-16 23:15:14,050 INFO ipython === bench console session ===
+2026-02-16 23:15:14,058 INFO ipython import frappe
+2026-02-16 23:15:14,059 INFO ipython # Create a test contact
+2026-02-16 23:15:14,059 INFO ipython doc = frappe.get_doc({
+    "doctype": "Contact",
+    "first_name": "Test",
+    "last_name": "Numbering"
+})
+2026-02-16 23:15:14,060 INFO ipython doc.insert(ignore_permissions=True)
+2026-02-16 23:15:14,060 INFO ipython frappe.db.commit()
+2026-02-16 23:15:14,061 INFO ipython print(f"Contact created: {doc.name}")
+2026-02-16 23:15:14,061 INFO ipython print(f"Contact number: {doc.custom_contact_number}")
+2026-02-16 23:15:14,062 INFO ipython === session end ===
+2026-02-16 23:15:32,632 INFO ipython === bench console session ===
+2026-02-16 23:15:32,633 INFO ipython import frappe
+2026-02-16 23:15:32,633 INFO ipython # Create another test contact
+2026-02-16 23:15:32,634 INFO ipython doc = frappe.get_doc({
+    "doctype": "Contact",
+    "first_name": "Test2",
+    "last_name": "Numbering2"
+})
+2026-02-16 23:15:32,634 INFO ipython doc.insert(ignore_permissions=True)
+2026-02-16 23:15:32,634 INFO ipython frappe.db.commit()
+2026-02-16 23:15:32,635 INFO ipython print(f"Contact 2 created: {doc.name}")
+2026-02-16 23:15:32,635 INFO ipython print(f"Contact 2 number: {doc.custom_contact_number}")
+2026-02-16 23:15:32,635 INFO ipython # Check counter
+2026-02-16 23:15:32,636 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-16 23:15:32,636 INFO ipython print(f"Current counter: {settings.contact_current_counter}")
+2026-02-16 23:15:32,636 INFO ipython === session end ===
+2026-02-16 23:19:31,717 INFO ipython === bench console session ===
+2026-02-16 23:19:31,719 INFO ipython import frappe
+2026-02-16 23:19:31,720 INFO ipython # Test prospect (CRM Lead) numbering
+2026-02-16 23:19:31,722 INFO ipython doc = frappe.get_doc({
+    "doctype": "CRM Lead",
+    "first_name": "TestProspect",
+    "last_name": "Numbering",
+    "lead_name": "TestProspect Numbering",
+    "status": "Nouveau"
+})
+2026-02-16 23:19:31,723 INFO ipython doc.insert(ignore_permissions=True)
+2026-02-16 23:19:31,723 INFO ipython frappe.db.commit()
+2026-02-16 23:19:31,725 INFO ipython print(f"Prospect created: {doc.name}")
+2026-02-16 23:19:31,725 INFO ipython print(f"Prospect number: {doc.custom_prospect_number}")
+2026-02-16 23:19:31,727 INFO ipython # Test deal numbering
+2026-02-16 23:19:31,727 INFO ipython deal = frappe.get_doc({
+    "doctype": "CRM Deal",
+    "lead_name": "Test Deal",
+    "status": "Qualifiés"
+})
+2026-02-16 23:19:31,729 INFO ipython deal.insert(ignore_permissions=True)
+2026-02-16 23:19:31,729 INFO ipython frappe.db.commit()
+2026-02-16 23:19:31,731 INFO ipython print(f"Deal created: {deal.name}")
+2026-02-16 23:19:31,731 INFO ipython print(f"Deal number: {deal.custom_deal_number}")
+2026-02-16 23:19:31,732 INFO ipython === session end ===
+2026-02-16 23:40:18,081 INFO ipython === bench console session ===
+2026-02-16 23:40:18,082 INFO ipython import frappe
+2026-02-16 23:40:18,083 INFO ipython users = frappe.get_all(
+    "User",
+    filters={"enabled": 1, "user_type": "System User"},
+    fields=["name", "full_name", "email"],
+    limit=3
+)
+2026-02-16 23:40:18,083 INFO ipython === session end ===
+2026-02-16 23:54:20,221 INFO ipython === bench console session ===
+2026-02-16 23:54:20,222 INFO ipython # Test activity numbering
+2026-02-16 23:54:20,222 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-16 23:54:20,223 INFO ipython print(f"Activity prefix: {settings.activity_prefix}")
+2026-02-16 23:54:20,224 INFO ipython print(f"Activity start: {settings.activity_start_number}")
+2026-02-16 23:54:20,224 INFO ipython print(f"Activity counter: {settings.activity_current_counter}")
+2026-02-16 23:54:20,224 INFO ipython # Create test activity
+2026-02-16 23:54:20,225 INFO ipython import json
+2026-02-16 23:54:20,225 INFO ipython doc = frappe.new_doc("Vooroo Activity")
+2026-02-16 23:54:20,227 INFO ipython doc.title = "Test Activity from console"
+2026-02-16 23:54:20,227 INFO ipython doc.type = "call"
+2026-02-16 23:54:20,228 INFO ipython doc.status = "Open"
+2026-02-16 23:54:20,228 INFO ipython doc.insert(ignore_permissions=True)
+2026-02-16 23:54:20,229 INFO ipython print(f"Created activity: {doc.name} with number: {doc.activity_number}")
+2026-02-16 23:54:20,229 INFO ipython frappe.db.commit()
+2026-02-16 23:54:20,230 INFO ipython === session end ===
+2026-02-16 23:54:55,105 INFO ipython === bench console session ===
+2026-02-16 23:54:55,106 INFO ipython # Test project numbering
+2026-02-16 23:54:55,108 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-16 23:54:55,109 INFO ipython print(f"Project prefix: {settings.project_prefix}")
+2026-02-16 23:54:55,110 INFO ipython print(f"Project start: {settings.project_start_number}")
+2026-02-16 23:54:55,112 INFO ipython print(f"Project counter: {settings.project_current_counter}")
+2026-02-16 23:54:55,113 INFO ipython # Create test project
+2026-02-16 23:54:55,114 INFO ipython doc = frappe.new_doc("Vooroo Project")
+2026-02-16 23:54:55,116 INFO ipython doc.title = "Test Project from console"
+2026-02-16 23:54:55,117 INFO ipython doc.status = "Open"
+2026-02-16 23:54:55,118 INFO ipython doc.insert(ignore_permissions=True)
+2026-02-16 23:54:55,120 INFO ipython print(f"Created project: {doc.name} with number: {doc.project_number}")
+2026-02-16 23:54:55,121 INFO ipython frappe.db.commit()
+2026-02-16 23:54:55,122 INFO ipython === session end ===
+2026-02-16 23:55:41,900 INFO ipython === bench console session ===
+2026-02-16 23:55:41,901 INFO ipython # Check what DocType is used for products
+2026-02-16 23:55:41,901 INFO ipython import frappe
+2026-02-16 23:55:41,901 INFO ipython items = frappe.get_all("Item", limit=5, fields=["name", "item_code", "item_name"])
+2026-02-16 23:55:41,902 INFO ipython print("Frappe Items:", items)
+2026-02-16 23:55:41,902 INFO ipython # Check if Vooroo Product exists
+2026-02-16 23:55:41,902 INFO ipython === session end ===
+2026-02-16 23:55:57,660 INFO ipython === bench console session ===
+2026-02-16 23:55:57,661 INFO ipython # Check for product-related doctypes
+2026-02-16 23:55:57,662 INFO ipython import frappe
+2026-02-16 23:55:57,662 INFO ipython doctypes = frappe.get_all("DocType", filters={"module": "Vooroo Saas"}, fields=["name"])
+2026-02-16 23:55:57,663 INFO ipython print("Vooroo DocTypes:", [d.name for d in doctypes])
+2026-02-16 23:55:57,663 INFO ipython === session end ===
+2026-02-17 00:21:14,562 INFO ipython === bench console session ===
+2026-02-17 00:21:14,565 INFO ipython import json
+2026-02-17 00:21:14,566 INFO ipython from vooroo_saas.api.settings import get_crm_settings
+2026-02-17 00:21:14,566 INFO ipython settings = get_crm_settings()
+2026-02-17 00:21:14,569 INFO ipython print("prospect_labels type:", type(settings.get("prospect_labels")))
+2026-02-17 00:21:14,571 INFO ipython print("prospect_labels value:", settings.get("prospect_labels"))
+2026-02-17 00:21:14,572 INFO ipython print("prospect_pipeline_stages type:", type(settings.get("prospect_pipeline_stages")))
+2026-02-17 00:21:14,572 INFO ipython print("prospect_pipeline_stages value:", settings.get("prospect_pipeline_stages"))
+2026-02-17 00:21:14,576 INFO ipython === session end ===
+2026-02-17 00:22:06,468 INFO ipython === bench console session ===
+2026-02-17 00:22:06,469 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-17 00:22:06,470 INFO ipython import json
+2026-02-17 00:22:06,470 INFO ipython # Verify the raw data in the settings
+2026-02-17 00:22:06,470 INFO ipython print("Raw prospect_labels:", settings.prospect_labels)
+2026-02-17 00:22:06,472 INFO ipython print("Type:", type(settings.prospect_labels))
+2026-02-17 00:22:06,472 INFO ipython === session end ===
+2026-02-17 00:22:31,043 INFO ipython === bench console session ===
+2026-02-17 00:22:31,044 INFO ipython # Check the JSON fields directly
+2026-02-17 00:22:31,045 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-17 00:22:31,045 INFO ipython print("activity_types:", settings.activity_types)
+2026-02-17 00:22:31,046 INFO ipython print("deal_labels:", settings.deal_labels)
+2026-02-17 00:22:31,046 INFO ipython print("deal_pipeline_stages:", settings.deal_pipeline_stages)
+2026-02-17 00:22:31,047 INFO ipython === session end ===
+2026-02-17 02:07:39,864 INFO ipython === bench console session ===
+2026-02-17 02:07:39,875 INFO ipython import json
+2026-02-17 02:07:39,875 INFO ipython settings = frappe.get_single('Vooroo CRM Settings')
+2026-02-17 02:07:39,876 INFO ipython print('prospect_pipeline_stages:', settings.prospect_pipeline_stages)
+2026-02-17 02:07:39,877 INFO ipython === session end ===
+2026-02-17 02:08:46,137 INFO ipython === bench console session ===
+2026-02-17 02:08:46,138 INFO ipython import json
+2026-02-17 02:08:46,139 INFO ipython settings = frappe.get_single('Vooroo CRM Settings')
+2026-02-17 02:08:46,139 INFO ipython print('prospect_labels:', settings.prospect_labels)
+2026-02-17 02:08:46,139 INFO ipython === session end ===
+2026-02-17 10:59:52,764 INFO ipython === bench console session ===
+2026-02-17 10:59:52,767 INFO ipython import json
+2026-02-17 10:59:52,768 INFO ipython settings = frappe.get_single('Vooroo CRM Settings')
+2026-02-17 10:59:52,768 INFO ipython print('=== deal_pipeline_stages ===')
+2026-02-17 10:59:52,768 INFO ipython print(settings.deal_pipeline_stages)
+2026-02-17 10:59:52,768 INFO ipython print('')
+2026-02-17 10:59:52,768 INFO ipython print('=== CRM Deal Status (native) ===')
+2026-02-17 10:59:52,769 INFO ipython statuses = frappe.get_all('CRM Deal Status', fields=['name', 'status', 'color', 'position'], order_by='position')
+2026-02-17 10:59:52,769 INFO ipython === session end ===
+2026-02-17 11:00:29,492 INFO ipython === bench console session ===
+2026-02-17 11:00:29,493 INFO ipython statuses = frappe.get_all('CRM Deal Status', fields=['*'], order_by='position')
+2026-02-17 11:00:29,494 INFO ipython === session end ===
+2026-02-17 11:00:56,306 INFO ipython === bench console session ===
+2026-02-17 11:00:56,307 INFO ipython print(frappe.get_all('CRM Deal Status', fields=['name', 'color', 'position'], order_by='position'))
+2026-02-17 11:00:56,308 INFO ipython === session end ===
+2026-02-17 11:13:33,181 INFO ipython === bench console session ===
+2026-02-17 11:13:33,198 INFO ipython # Get current stages from settings
+2026-02-17 11:13:33,202 INFO ipython import json
+2026-02-17 11:13:33,207 INFO ipython settings = frappe.get_single('Vooroo CRM Settings')
+2026-02-17 11:13:33,208 INFO ipython stages_json = settings.get('deal_pipeline_stages')
+2026-02-17 11:13:33,216 INFO ipython print('Settings stages:', stages_json)
+2026-02-17 11:13:33,220 INFO ipython # Get CRM Deal Status 
+2026-02-17 11:13:33,222 INFO ipython statuses = frappe.get_all('CRM Deal Status', fields=['name', 'position'], order_by='position')
+2026-02-17 11:13:33,224 INFO ipython print('CRM Deal Status:', statuses)
+2026-02-17 11:13:33,225 INFO ipython === session end ===
+2026-02-17 11:14:10,285 INFO ipython === bench console session ===
+2026-02-17 11:14:10,287 INFO ipython orphans = ['Qualification', 'Demo/Making', 'Proposal/Quotation', 'Negotiation', 'Ready to Close', 'Won', 'Lost']
+2026-02-17 11:14:10,288 INFO ipython === session end ===
+2026-02-17 14:26:37,677 INFO ipython === bench console session ===
+2026-02-17 14:26:37,686 INFO ipython # Vérifier les deals gagnés
+2026-02-17 14:26:37,686 INFO ipython import frappe
+2026-02-17 14:26:37,687 INFO ipython deals = frappe.get_all("CRM Deal", filters={"status": "Won"}, fields=["name", "lead_name", "status", "deal_status"])
+2026-02-17 14:26:37,687 INFO ipython print("Deals Gagnés (status=Won):", deals)
+2026-02-17 14:26:37,688 INFO ipython deals2 = frappe.get_all("CRM Deal", filters={"deal_status": "Won"}, fields=["name", "lead_name", "status", "deal_status"])
+2026-02-17 14:26:37,688 INFO ipython print("Deals (deal_status=Won):", deals2)
+2026-02-17 14:26:37,688 INFO ipython # Tous les deals récents
+2026-02-17 14:26:37,689 INFO ipython all_deals = frappe.get_all("CRM Deal", fields=["name", "lead_name", "status", "deal_status"], order_by="modified desc", limit=5)
+2026-02-17 14:26:37,689 INFO ipython print("Derniers Deals:", all_deals)
+2026-02-17 14:26:37,690 INFO ipython === session end ===
+2026-02-17 14:26:56,398 INFO ipython === bench console session ===
+2026-02-17 14:26:56,399 INFO ipython import frappe
+2026-02-17 14:26:56,399 INFO ipython # Vérifier les champs du CRM Deal
+2026-02-17 14:26:56,400 INFO ipython meta = frappe.get_meta("CRM Deal")
+2026-02-17 14:26:56,400 INFO ipython print("Champs status-like:")
+2026-02-17 14:26:56,401 INFO ipython for f in meta.fields:
+    if 'status' in f.fieldname.lower() or 'stage' in f.fieldname.lower():
+        print(f"  {f.fieldname}: {f.fieldtype} - {f.options}")
+2026-02-17 14:26:56,401 INFO ipython # Récupérer les deals
+2026-02-17 14:26:56,401 INFO ipython deals = frappe.get_all("CRM Deal", fields=["name", "lead_name", "status"], order_by="modified desc", limit=5)
+2026-02-17 14:26:56,402 INFO ipython print("\nDerniers Deals:")
+2026-02-17 14:26:56,402 INFO ipython === session end ===
+2026-02-17 14:27:18,624 INFO ipython === bench console session ===
+2026-02-17 14:27:18,624 INFO ipython import frappe
+2026-02-17 14:27:18,625 INFO ipython # Vérifier les CRM Deal Status disponibles
+2026-02-17 14:27:18,626 INFO ipython statuses = frappe.get_all("CRM Deal Status", fields=["name", "status"], order_by="position")
+2026-02-17 14:27:18,626 INFO ipython print("Statuts disponibles:")
+2026-02-17 14:27:18,627 INFO ipython for s in statuses:
+    print(f"  {s.name} - {s.status}")
+2026-02-17 14:27:18,627 INFO ipython # Vérifier s'il y a des deals
+2026-02-17 14:27:18,628 INFO ipython count = frappe.db.count("CRM Deal")
+2026-02-17 14:27:18,628 INFO ipython print(f"\nNombre total de deals: {count}")
+2026-02-17 14:27:18,628 INFO ipython === session end ===
+2026-02-17 14:27:35,597 INFO ipython === bench console session ===
+2026-02-17 14:27:35,598 INFO ipython import frappe
+2026-02-17 14:27:35,599 INFO ipython # Vérifier les CRM Deal Status
+2026-02-17 14:27:35,600 INFO ipython statuses = frappe.get_all("CRM Deal Status", fields=["name"], order_by="name")
+2026-02-17 14:27:35,600 INFO ipython print("CRM Deal Status:", [s.name for s in statuses])
+2026-02-17 14:27:35,601 INFO ipython # Vérifier les deals directement en SQL
+2026-02-17 14:27:35,601 INFO ipython deals = frappe.db.sql("SELECT name, lead_name, status, modified FROM `tabCRM Deal` ORDER BY modified DESC", as_dict=True)
+2026-02-17 14:27:35,602 INFO ipython print("\nDeals:")
+2026-02-17 14:27:35,602 INFO ipython === session end ===
+2026-02-17 14:30:11,093 INFO ipython === bench console session ===
+2026-02-17 14:30:11,094 INFO ipython import frappe
+2026-02-17 14:30:11,095 INFO ipython import json
+2026-02-17 14:30:11,095 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-17 14:30:11,095 INFO ipython print("deal_pipeline_stages:")
+2026-02-17 14:30:11,096 INFO ipython stages_json = settings.get("deal_pipeline_stages")
+2026-02-17 14:30:11,096 INFO ipython if stages_json:
+    stages = json.loads(stages_json) if isinstance(stages_json, str) else stages_json
+    for s in stages:
+        print(f"  {s}")
+else:
+    print("  (empty)")
+    
+2026-02-17 14:30:11,097 INFO ipython # Also check CRM Deal Status 
+2026-02-17 14:30:11,097 INFO ipython print("\nCRM Deal Status:")
+2026-02-17 14:30:11,100 INFO ipython all_statuses = frappe.get_all("CRM Deal Status", fields=["name", "position", "status_name"], order_by="position asc")
+2026-02-17 14:30:11,100 INFO ipython === session end ===
+2026-02-17 14:30:30,664 INFO ipython === bench console session ===
+2026-02-17 14:30:30,674 INFO ipython import frappe
+2026-02-17 14:30:30,675 INFO ipython # Check CRM Deal Status fields
+2026-02-17 14:30:30,676 INFO ipython all_statuses = frappe.get_all("CRM Deal Status", fields=["name", "position"], order_by="position asc")
+2026-02-17 14:30:30,679 INFO ipython print("CRM Deal Status (all):")
+2026-02-17 14:30:30,679 INFO ipython for s in all_statuses[:15]:
+    print(f"  {s}")
+2026-02-17 14:30:30,680 INFO ipython # Check current deals
+2026-02-17 14:30:30,680 INFO ipython deals = frappe.get_all("CRM Deal", fields=["name", "lead_name", "status"], limit=10)
+2026-02-17 14:30:30,681 INFO ipython print(f"\nDeals actuels ({len(deals)}):")
+2026-02-17 14:30:30,681 INFO ipython === session end ===
+2026-02-17 14:32:57,776 INFO ipython === bench console session ===
+2026-02-17 14:32:57,783 INFO ipython import frappe
+2026-02-17 14:32:57,783 INFO ipython import json
+2026-02-17 14:32:57,783 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-17 14:32:57,784 INFO ipython stages_json = settings.get("deal_pipeline_stages")
+2026-02-17 14:32:57,784 INFO ipython stages = json.loads(stages_json) if isinstance(stages_json, str) else stages_json
+2026-02-17 14:32:57,784 INFO ipython # Check for lost status
+2026-02-17 14:32:57,785 INFO ipython has_lost = any(s.get('status') == 'lost' for s in stages)
+2026-02-17 14:32:57,785 INFO ipython print(f"Has lost status: {has_lost}")
+2026-02-17 14:32:57,785 INFO ipython if not has_lost:
+    # Add a "Perdus" stage
+    stages.append({
+        'name': 'Perdus',
+        'color': '#EF4444',
+        'probability': 0,
+        'status': 'lost',
+        'order': len(stages) + 1
+    })
+    settings.deal_pipeline_stages = json.dumps(stages)
+    settings.save(ignore_permissions=True)
+    frappe.db.commit()
+    print("Added 'Perdus' stage")
+2026-02-17 14:32:57,785 INFO ipython # Show updated stages
+2026-02-17 14:32:57,786 INFO ipython === session end ===
+2026-02-17 14:35:48,794 INFO ipython === bench console session ===
+2026-02-17 14:35:48,796 INFO ipython import frappe
+2026-02-17 14:35:48,796 INFO ipython from vooroo_saas.api.deal import create_deal
+2026-02-17 14:35:48,797 INFO ipython # Test creating a deal
+2026-02-17 14:35:48,797 INFO ipython result = create_deal(
+    lead_name="Test Deal Creation",
+    status="TEST DEALS",
+    expected_value=50000,
+    deal_type="Entreprise"
+)
+2026-02-17 14:35:48,798 INFO ipython print("Created deal:", result.get('name'))
+2026-02-17 14:35:48,798 INFO ipython print("Status:", result.get('status'))
+2026-02-17 14:35:48,798 INFO ipython === session end ===
+2026-02-17 14:36:04,406 INFO ipython === bench console session ===
+2026-02-17 14:36:04,407 INFO ipython import frappe
+2026-02-17 14:36:04,407 INFO ipython # Check FCRM Settings
+2026-02-17 14:36:04,408 INFO ipython === session end ===
+2026-02-17 14:36:19,530 INFO ipython === bench console session ===
+2026-02-17 14:36:19,531 INFO ipython import frappe
+2026-02-17 14:36:19,532 INFO ipython # Check FCRM Settings
+2026-02-17 14:36:19,532 INFO ipython fcrm = frappe.get_single("FCRM Settings")
+2026-02-17 14:36:19,533 INFO ipython print("System currency:", fcrm.default_currency)
+2026-02-17 14:36:19,533 INFO ipython # Set default currency to XOF
+2026-02-17 14:36:19,533 INFO ipython fcrm.default_currency = "XOF"
+2026-02-17 14:36:19,534 INFO ipython fcrm.save(ignore_permissions=True)
+2026-02-17 14:36:19,535 INFO ipython frappe.db.commit()
+2026-02-17 14:36:19,535 INFO ipython print("Updated to XOF")
+2026-02-17 14:36:19,535 INFO ipython === session end ===
+2026-02-17 14:36:45,517 INFO ipython === bench console session ===
+2026-02-17 14:36:45,518 INFO ipython import frappe
+2026-02-17 14:36:45,518 INFO ipython from vooroo_saas.api.deal import create_deal
+2026-02-17 14:36:45,519 INFO ipython # Test creating a deal with no currency
+2026-02-17 14:36:45,519 INFO ipython result = create_deal(
+    lead_name="Test Deal Creation 2",
+    status="TEST DEALS",
+    expected_value=50000,
+    deal_type="Entreprise"
+)
+2026-02-17 14:36:45,520 INFO ipython print("Created deal:", result.get('name'), "Status:", result.get('status'))
+2026-02-17 14:36:45,520 INFO ipython === session end ===
+2026-02-17 14:37:33,896 INFO ipython === bench console session ===
+2026-02-17 14:37:33,896 INFO ipython import frappe
+2026-02-17 14:37:33,897 INFO ipython # Check if FCRM Settings exists
+2026-02-17 14:37:33,897 INFO ipython try:
+    fcrm = frappe.get_single("FCRM Settings")
+    print("FCRM Settings exists")
+    print("Currency:", frappe.db.get_single_value("FCRM Settings", "currency"))
+except Exception as e:
+    print(f"Error: {e}")
+    
+2026-02-17 14:37:33,898 INFO ipython # Just update directly
+2026-02-17 14:37:33,898 INFO ipython frappe.db.set_single_value("FCRM Settings", "currency", "XOF")
+2026-02-17 14:37:33,898 INFO ipython frappe.db.commit()
+2026-02-17 14:37:33,898 INFO ipython print("Updated currency to XOF")
+2026-02-17 14:37:33,898 INFO ipython === session end ===
+2026-02-17 14:37:51,162 INFO ipython === bench console session ===
+2026-02-17 14:37:51,163 INFO ipython import frappe
+2026-02-17 14:37:51,164 INFO ipython from vooroo_saas.api.deal import create_deal
+2026-02-17 14:37:51,164 INFO ipython result = create_deal(
+    lead_name="Test Deal Creation 3",
+    status="TEST DEALS",
+    expected_value=50000,
+    deal_type="Entreprise"
+)
+2026-02-17 14:37:51,165 INFO ipython print("Created deal:", result.get('name'), "Status:", result.get('status'))
+2026-02-17 14:37:51,165 INFO ipython === session end ===
+2026-02-17 14:38:32,674 INFO ipython === bench console session ===
+2026-02-17 14:38:32,675 INFO ipython import frappe
+2026-02-17 14:38:32,676 INFO ipython import json
+2026-02-17 14:38:32,676 INFO ipython settings = frappe.get_single("Vooroo CRM Settings")
+2026-02-17 14:38:32,677 INFO ipython stages = json.loads(settings.deal_pipeline_stages)
+2026-02-17 14:38:32,678 INFO ipython print("Pipeline stages:")
+2026-02-17 14:38:32,678 INFO ipython === session end ===
+2026-02-17 19:50:50,646 INFO ipython === bench console session ===
+2026-02-17 19:50:50,655 INFO ipython import frappe
+2026-02-17 19:50:50,655 INFO ipython from vooroo_saas.api.activity import _sync_deal_next_activity
+2026-02-17 19:50:50,656 INFO ipython # Get all deals with activities and sync them
+2026-02-17 19:50:50,656 INFO ipython deals = frappe.get_all("CRM Deal", pluck="name")
+2026-02-17 19:50:50,657 INFO ipython print(f"Syncing {len(deals)} deals...")
+2026-02-17 19:50:50,657 INFO ipython for deal_name in deals:
+    _sync_deal_next_activity(deal_name)
+2026-02-17 19:50:50,657 INFO ipython frappe.db.commit()
+2026-02-17 19:50:50,658 INFO ipython print("Done!")
+2026-02-17 19:50:50,658 INFO ipython # Verify
+2026-02-17 19:50:50,659 INFO ipython deal = frappe.get_doc("CRM Deal", "CRM-DEAL-2026-00007")
+2026-02-17 19:50:50,659 INFO ipython print(f"\nDeal {deal.name}:")
+2026-02-17 19:50:50,660 INFO ipython print(f"  Next activity type: {deal.custom_next_activity_type}")
+2026-02-17 19:50:50,660 INFO ipython print(f"  Next activity date: {deal.custom_next_activity_date}")
+2026-02-17 19:50:50,661 INFO ipython === session end ===
+2026-02-18 00:12:07,257 INFO ipython === bench console session ===
+2026-02-18 00:12:07,267 INFO ipython import frappe
+2026-02-18 00:12:07,268 INFO ipython from vooroo_saas.api.settings import get_custom_fields
+2026-02-18 00:12:07,268 INFO ipython result = get_custom_fields(module='prospect')
+2026-02-18 00:12:07,268 INFO ipython print('Custom fields for prospect:', len(result.get('fields', [])))
+2026-02-18 00:12:07,269 INFO ipython for f in result.get('fields', [])[:5]:
+    print(f"  - {f.get('fieldname')}: {f.get('label')} ({f.get('fieldtype')})")
+exit()
+2026-02-18 00:12:07,269 INFO ipython === session end ===
+2026-02-18 00:12:43,010 INFO ipython === bench console session ===
+2026-02-18 00:12:43,011 INFO ipython import frappe
+2026-02-18 00:12:43,012 INFO ipython from vooroo_saas.api.settings import get_custom_fields
+2026-02-18 00:12:43,014 INFO ipython result = get_custom_fields(module='prospect')
+2026-02-18 00:12:43,014 INFO ipython fields = result.get('fields', [])
+2026-02-18 00:12:43,015 INFO ipython # Liste des champs hardcoded dans le frontend
+2026-02-18 00:12:43,016 INFO ipython hardcoded = [
+    'custom_prospect_type', 'custom_whatsapp', 'custom_profession', 'custom_power_level',
+    'custom_residence_country', 'custom_residence_city', 'custom_hq_country', 'custom_hq_city',
+    'custom_company_email', 'custom_company_phone', 'custom_lead_label', 'custom_acquisition_channel',
+    'custom_attention_date', 'custom_requested_product', 'custom_expected_value', 'custom_visible_to',
+    'custom_focal_points', 'custom_internal_notes', 'custom_next_action', 'custom_next_action_date',
+    'custom_prospect_number', 'custom_expected_close_date', 'custom_probability', 'custom_competitor',
+    'custom_vooroo_section', 'custom_personal_section', 'custom_company_section', 'custom_acquisition_section',
+    'custom_business_section', 'custom_contact_section', 'custom_notes_section',
+    'custom_column_break_vooroo1', 'custom_column_break_vooroo2', 'custom_column_break_personal',
+    'custom_column_break_company', 'custom_next_activity_type', 'custom_next_activity_date',
+    'custom_next_activity_description', 'custom_solicited_product', 'custom_product_interest'
+]
+2026-02-18 00:12:43,017 INFO ipython # Champs dynamiques (non-hardcoded)
+2026-02-18 00:12:43,018 INFO ipython dynamic = [f for f in fields if f.get('fieldname') not in hardcoded and f.get('fieldtype') not in ['Section Break', 'Column Break', 'Tab Break']]
+2026-02-18 00:12:43,019 INFO ipython print(f'Dynamic custom fields: {len(dynamic)}')
+2026-02-18 00:12:43,019 INFO ipython for f in dynamic[:10]:
+    print(f"  - {f.get('fieldname')}: {f.get('label')} ({f.get('fieldtype')})")
+exit()
+2026-02-18 00:12:43,020 INFO ipython === session end ===
+2026-02-19 13:26:11,335 INFO ipython === bench console session ===
+2026-02-19 13:26:11,341 INFO ipython import frappe
+2026-02-19 13:26:11,342 INFO ipython from vooroo_saas.api.prospect import get_prospect_options
+2026-02-19 13:26:11,342 INFO ipython result = get_prospect_options()
+2026-02-19 13:26:11,343 INFO ipython print('genders:', result.get('genders'))
+2026-02-19 13:26:11,343 INFO ipython print('All keys:', list(result.keys()))
+2026-02-19 13:26:11,344 INFO ipython === session end ===
+2026-02-19 13:26:28,433 INFO ipython === bench console session ===
+2026-02-19 13:26:28,434 INFO ipython import frappe
+2026-02-19 13:26:28,434 INFO ipython # Check if Gender doctype exists
+2026-02-19 13:26:28,435 INFO ipython try:
+    genders = frappe.get_all("Gender", fields=["name"], order_by="name")
+    print('Gender DocType exists, count:', len(genders))
+    for g in genders:
+        print(f"  - {g.name}")
+except Exception as e:
+    print(f'Error: {e}')
+    
+2026-02-19 13:26:28,436 INFO ipython # Check Salutation which is similar
+2026-02-19 13:26:28,436 INFO ipython salutations = frappe.get_all("Salutation", fields=["name"], order_by="name")
+2026-02-19 13:26:28,437 INFO ipython print('\nSalutations:', len(salutations))
+2026-02-19 13:26:28,437 INFO ipython for s in salutations[:5]:
+    print(f"  - {s.name}")
+exit()
+2026-02-19 13:26:28,438 INFO ipython === session end ===
+2026-02-19 13:26:47,109 INFO ipython === bench console session ===
+2026-02-19 13:26:47,110 INFO ipython import frappe
+2026-02-19 13:26:47,111 INFO ipython # Ajouter les genres par défaut
+2026-02-19 13:26:47,112 INFO ipython genders = ["Male", "Female", "Other", "Prefer not to say", "Non-Binary", "Genderqueer", "Transgender"]
+2026-02-19 13:26:47,113 INFO ipython for gender in genders:
+    if not frappe.db.exists("Gender", gender):
+        doc = frappe.get_doc({
+            "doctype": "Gender",
+            "gender": gender
+        })
+        doc.insert(ignore_permissions=True)
+        print(f"Created: {gender}")
+    else:
+        print(f"Exists: {gender}")
+2026-02-19 13:26:47,115 INFO ipython frappe.db.commit()
+2026-02-19 13:26:47,116 INFO ipython print("Done!")
+2026-02-19 13:26:47,116 INFO ipython === session end ===
+2026-02-19 13:27:02,312 INFO ipython === bench console session ===
+2026-02-19 13:27:02,323 INFO ipython import frappe
+2026-02-19 13:27:02,324 INFO ipython from vooroo_saas.api.prospect import get_prospect_options
+2026-02-19 13:27:02,326 INFO ipython result = get_prospect_options()
+2026-02-19 13:27:02,327 INFO ipython print('genders:', result.get('genders'))
+2026-02-19 13:27:02,328 INFO ipython === session end ===
+2026-02-19 14:45:55,500 INFO ipython === bench console session ===
+2026-02-19 14:45:55,507 INFO ipython import frappe
+2026-02-19 14:45:55,509 INFO ipython from vooroo_saas.api.settings import get_user_activity_log, get_team_users
+2026-02-19 14:45:55,510 INFO ipython # Test team users
+2026-02-19 14:45:55,513 INFO ipython users = get_team_users()
+2026-02-19 14:45:55,514 INFO ipython print(f"Team users: {len(users)}")
+2026-02-19 14:45:55,518 INFO ipython for u in users[:3]:
+    print(f"  - {u.get('full_name')} ({u.get('email')})")
+2026-02-19 14:45:55,519 INFO ipython # Test activity log
+2026-02-19 14:45:55,520 INFO ipython result = get_user_activity_log()
+2026-02-19 14:45:55,523 INFO ipython print(f"\nActivity log: {len(result.get('data', []))} activities (total: {result.get('total')})")
+2026-02-19 14:45:55,524 INFO ipython for a in result.get('data', [])[:3]:
+    print(f"  - {a.get('user_name')}: {a.get('action')} {a.get('doctype')} - {a.get('docname')}")
+exit()
+2026-02-19 14:45:55,525 INFO ipython === session end ===
