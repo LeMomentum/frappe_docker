@@ -1,0 +1,44 @@
+# ============================================================================
+# CUTOVER LIVE — staging.lemomentum.tech servi par le frontend standalone
+# ============================================================================
+#
+# Ce fichier bascule la route LIVE `staging.lemomentum.tech` du bench Frappe
+# (frappe-svc, dynamic.yml priorité 5) vers le conteneur frontend autonome
+# `vooroo-frontend-ghcr` (nginx servant landing + CRM en statique et proxant
+# l'API + le back-office vers Frappe). Priorité 50 > 5 → gagne sur frappe-https.
+#
+# Seul l'hôte EXACT `staging.lemomentum.tech` est basculé. Le wildcard
+# `*.staging.lemomentum.tech` (tenants) reste sur Frappe (dynamic.yml, prio 10)
+# car le conteneur a `FRAPPE_SITE_HOST` figé sur le site principal.
+#
+# Le back-office Frappe (/vooroo_adm_backoffice, /app-admin, /app) et les assets
+# /assets/vooroo_saas/ + /assets/frappe/ sont proxiés vers le bench par nginx.
+#
+# Cert : wildcard *.staging.lemomentum.tech existant (DNS-challenge Cloudflare).
+# Redirection HTTP→HTTPS : déjà couverte par `frappe-http` (dynamic.yml).
+#
+# ───────────────────────────────────────────────────────────────────────────
+# ROLLBACK (retour immédiat au bench Frappe, sans coupure) :
+#     rm /home/vooroo/frappe_docker/.devcontainer/traefik/live-cutover.yml
+#   Traefik recharge à chaud (file.watch=true) → `frappe-https` (prio 5)
+#   reprend la main et staging.lemomentum.tech repasse sur le bench.
+# ───────────────────────────────────────────────────────────────────────────
+http:
+  routers:
+    frappe-live-cutover-https:
+      rule: "Host(`staging.lemomentum.tech`)"
+      entrypoints:
+        - websecure
+      priority: 50
+      tls:
+        certResolver: le
+        domains:
+          - main: "staging.lemomentum.tech"
+            sans:
+              - "*.staging.lemomentum.tech"
+      service: frappe-live-cutover-svc
+  services:
+    frappe-live-cutover-svc:
+      loadBalancer:
+        servers:
+          - url: "http://vooroo-frontend-ghcr:80"

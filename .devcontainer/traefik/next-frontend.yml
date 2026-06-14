@@ -1,0 +1,31 @@
+# Frontend standalone (test parallèle) — next.staging.lemomentum.tech
+#
+# Expose le conteneur `vooroo-frontend-ghcr` (image vooroo-frontend, nginx
+# servant landing + CRM en statique et proxant l'API vers Frappe) sur un
+# hostname DÉDIÉ, SANS toucher la route live `staging.lemomentum.tech`.
+#
+# Priorité 50 : passe AVANT le routeur wildcard frappe (HostRegexp, priorité 10)
+# pour que next.staging soit servi par le nouveau frontend et non par le bench.
+# Cert : wildcard *.staging.lemomentum.tech existant (DNS-challenge Cloudflare).
+#
+# Rollback : supprimer ce fichier (Traefik recharge à chaud) → next.staging
+# repasse au comportement par défaut. La route live n'est jamais modifiée.
+http:
+  routers:
+    next-frontend-https:
+      rule: "Host(`next.staging.lemomentum.tech`)"
+      entrypoints:
+        - websecure
+      priority: 50
+      tls:
+        certResolver: le
+        domains:
+          - main: "staging.lemomentum.tech"
+            sans:
+              - "*.staging.lemomentum.tech"
+      service: next-frontend-svc
+  services:
+    next-frontend-svc:
+      loadBalancer:
+        servers:
+          - url: "http://vooroo-frontend-ghcr:80"
