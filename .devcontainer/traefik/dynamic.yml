@@ -1,0 +1,50 @@
+http:
+  routers:
+    # Route wildcard : *.staging.lemomentum.tech
+    frappe-wildcard-https:
+      rule: "HostRegexp(`{subdomain:[a-z0-9-]+}.staging.lemomentum.tech`)"
+      entrypoints:
+        - websecure
+      tls:
+        certResolver: le
+        domains:
+          - main: "staging.lemomentum.tech"
+            sans:
+              - "*.staging.lemomentum.tech"
+      service: frappe-svc
+      priority: 10
+
+    # Route principale : staging.lemomentum.tech
+    frappe-https:
+      rule: "Host(`staging.lemomentum.tech`)"
+      entrypoints:
+        - websecure
+      tls:
+        certResolver: le
+        domains:
+          - main: "staging.lemomentum.tech"
+            sans:
+              - "*.staging.lemomentum.tech"
+      service: frappe-svc
+      priority: 5
+
+    # Redirect HTTP → HTTPS (wildcard + principal)
+    frappe-http:
+      rule: "HostRegexp(`{host:(staging|[a-z0-9-]+\\.staging)\\.lemomentum\\.tech}`)"
+      entrypoints:
+        - web
+      middlewares:
+        - redirect-https
+      service: frappe-svc
+
+  middlewares:
+    redirect-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    frappe-svc:
+      loadBalancer:
+        servers:
+          - url: "http://frappe_docker_devcontainer-frappe-1:8000"

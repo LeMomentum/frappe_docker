@@ -1,0 +1,22 @@
+# Assistant Commercial Vooroo (Grinning Cat) — assistant.staging.lemomentum.tech
+# Priorité 100 : doit passer AVANT le routeur wildcard frappe (HostRegexp, priorité 10).
+# Cert : wildcard *.staging.lemomentum.tech existant (DNS-challenge Cloudflare).
+http:
+  routers:
+    assistant-https:
+      rule: "Host(`assistant.staging.lemomentum.tech`)"
+      entrypoints:
+        - websecure
+      priority: 100
+      tls:
+        certResolver: le
+        domains:
+          - main: "staging.lemomentum.tech"
+            sans:
+              - "*.staging.lemomentum.tech"
+      service: assistant-svc
+  services:
+    assistant-svc:
+      loadBalancer:
+        servers:
+          - url: "http://grinning_cat_core:80"
